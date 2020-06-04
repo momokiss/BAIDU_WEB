@@ -18,4 +18,7 @@
 
 <p align="center">
   <h3 align="center">Juster Libraries:</h3>
-  <p al
+  <p align="center">
+    <a href="https://github.com/juster-finance/juster-core">Core</a>
+    ·
+    <a href="https://github.com/
