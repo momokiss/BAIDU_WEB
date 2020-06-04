@@ -6,4 +6,8 @@
     Decentralized Betting Protocol
     <br />
     <br />
-    <a href="https://app.juster.fi/">Applica
+    <a href="https://app.juster.fi/">Application</a>
+    ·
+    <a href="https://discord.gg/FeGDCkHhnB">Discord</a>
+    ·
+    <a href="https://app.juster.fi/docs">Doc
