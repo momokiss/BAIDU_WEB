@@ -21,4 +21,13 @@
   <p align="center">
     <a href="https://github.com/juster-finance/juster-core">Core</a>
     ·
-    <a href="https://github.com/
+    <a href="https://github.com/juster-finance/juster-sdk">SDK</a>
+    ·
+    <a href="https://github.com/juster-finance/juster-dipdup">DipDup</a>
+  </p>
+</p>
+
+
+<br />
+
+<p 
