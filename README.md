@@ -30,4 +30,6 @@
 
 <br />
 
-<p 
+<p align="center">
+  <img src="https://img.shields.io/badge/Release-1.0%3A%20Mainnet%20Lanuch-red"/>
+  <a href="hhttp
