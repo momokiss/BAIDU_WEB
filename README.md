@@ -32,4 +32,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Release-1.0%3A%20Mainnet%20Lanuch-red"/>
-  <a href="hhttps://github.com/best-lucky1030/Juster-App/stargazers"><img src="https://img.shields.io/github/stars/juster-finance/juster-app" alt="Github Star
+  <a href="hhttps://github.com/best-lucky1030/Juster-App/stargazers"><img src="https://img.shields.io/github/stars/juster-finance/juster-app" alt="Github Stars"></a>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
+  <a href="hhttps://github.com/best-lucky1030/Juster-App
