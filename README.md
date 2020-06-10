@@ -35,4 +35,4 @@
   <a href="hhttps://github.com/best-lucky1030/Juster-App/stargazers"><img src="https://img.shields.io/github/stars/juster-finance/juster-app" alt="Github Stars"></a>
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
   <a href="hhttps://github.com/best-lucky1030/Juster-App/issues"><img src="https://img.shields.io/github/issues-raw/juster-finance/juster-app"/></a>
-  <a href="hhttps://github.com/best-
+  <a href="hhttps://github.com/best-lucky1030/Juster-App/pulse"><img src="https://img.shields.io/github/commit-activity/m/juster-finance/juster-app" alt="Commits-per-month"><
