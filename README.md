@@ -46,4 +46,5 @@
 
 # Decentralized Betting Protocol
 
-[Juster](https:
+[Juster](https://app.juster.fi) is an on-chain smart contract platform
+allowing users to take part in an automated betting market by
