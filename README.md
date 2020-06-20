@@ -50,4 +50,9 @@
 allowing users to take part in an automated betting market by
 creating events, providing liquidity to them, and making bets. 
 
-Our main goal is to provide the most transparent betting system for everyone. At the initial stage, we will give you the opportunity to bet on price changes of different curren
+Our main goal is to provide the most transparent betting system for everyone. At the initial stage, we will give you the opportunity to bet on price changes of different currency pairs (ETH-USD, BTC-USD & XTZ-USD).
+
+# Glossary
+
+### Event
+Juster’s contract data structure, consisting of a bunch of parameters an
