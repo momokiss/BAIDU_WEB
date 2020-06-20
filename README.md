@@ -48,3 +48,6 @@
 
 [Juster](https://app.juster.fi) is an on-chain smart contract platform
 allowing users to take part in an automated betting market by
+creating events, providing liquidity to them, and making bets. 
+
+Our main goal is to provide the most tra
