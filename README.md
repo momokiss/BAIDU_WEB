@@ -61,4 +61,7 @@ Juster’s contract data structure, consisting of a bunch of parameters and asso
 An on-chain operation that represents a bet of a certain amount of tez on one of an Event’s outcomes.
 
 ### Liquidity Providing
-An on-chain operation that represents adding of a certain amount of tokens to the Event as a l
+An on-chain operation that represents adding of a certain amount of tokens to the Event as a liquidity.
+
+### Submissions (Total Value Locked)
+Liquidity + Bets. Submissions consist of provided liquidity and bet
