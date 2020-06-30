@@ -55,4 +55,9 @@ Our main goal is to provide the most transparent betting system for everyone. At
 # Glossary
 
 ### Event
-Juster’s contract data structure, consisting of a bunch of parameters and associated with some off-chain event through an on-chain oracle’s data feed. Each Juster’s Event has two possible outcomes S and ̅S that is determi
+Juster’s contract data structure, consisting of a bunch of parameters and associated with some off-chain event through an on-chain oracle’s data feed. Each Juster’s Event has two possible outcomes S and ̅S that is determined using the oracle data.
+
+### Bet
+An on-chain operation that represents a bet of a certain amount of tez on one of an Event’s outcomes.
+
+#
