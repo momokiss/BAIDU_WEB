@@ -73,4 +73,19 @@ The moment of time when the final data can be retrived from the oracle to define
 The time interval from the end of accepting bets period to the event 
 
 ### Reward
-The amount that will be available for withdrawal after the Event is closed in case of correctly guessing the Event out
+The amount that will be available for withdrawal after the Event is closed in case of correctly guessing the Event outcome
+
+<br/>
+<br/>
+
+---
+# Developers
+
+### Setup
+
+1. Clone this repo
+```sh
+  git clone hhttps://github.com/best-lucky1030/Juster-App
+```
+
+2. Open pr
