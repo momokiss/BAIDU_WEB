@@ -72,4 +72,5 @@ The moment of time when the final data can be retrived from the oracle to define
 ### Measure Period
 The time interval from the end of accepting bets period to the event 
 
-### Rewa
+### Reward
+The amount that will be available for withdrawal after the Event is closed in case of correctly guessing the Event out
