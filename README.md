@@ -64,4 +64,7 @@ An on-chain operation that represents a bet of a certain amount of tez on one of
 An on-chain operation that represents adding of a certain amount of tokens to the Event as a liquidity.
 
 ### Submissions (Total Value Locked)
-Liquidity + Bets. Submissions consist of provided liquidity and bet
+Liquidity + Bets. Submissions consist of provided liquidity and bets. Most often used for aggregated statistics.
+
+### Close Time
+The moment of time when the final data can be retrived from the or
