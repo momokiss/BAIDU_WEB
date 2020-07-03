@@ -67,4 +67,9 @@ An on-chain operation that represents adding of a certain amount of tokens to th
 Liquidity + Bets. Submissions consist of provided liquidity and bets. Most often used for aggregated statistics.
 
 ### Close Time
-The moment of time when the final data can be retrived from the or
+The moment of time when the final data can be retrived from the oracle to define the Event outcome and the Event can be closed.
+
+### Measure Period
+The time interval from the end of accepting bets period to the event 
+
+### Rewa
