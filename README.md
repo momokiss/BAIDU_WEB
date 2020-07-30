@@ -105,4 +105,13 @@ The amount that will be available for withdrawal after the Event is closed in ca
 
 <br/>
 
-### 
+### Project Structure
+[Work in Progress]
+
+<br/>
+
+
+### Built With
+
+- [Vue (v3)](https://vuejs.org/)
+- [Apollo](https://www.apollo
