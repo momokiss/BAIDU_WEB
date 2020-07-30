@@ -88,4 +88,21 @@ The amount that will be available for withdrawal after the Event is closed in ca
   git clone hhttps://github.com/best-lucky1030/Juster-App
 ```
 
-2. Open pr
+2. Open project folder
+```sh
+  cd Juster-App
+```
+
+3. Install dependencies
+```sh
+  yarn
+```
+
+4. Run in development mode
+```sh
+  yarn serve
+```
+
+<br/>
+
+### 
