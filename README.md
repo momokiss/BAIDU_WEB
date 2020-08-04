@@ -114,4 +114,6 @@ The amount that will be available for withdrawal after the Event is closed in ca
 ### Built With
 
 - [Vue (v3)](https://vuejs.org/)
-- [Apollo](https://www.apollo
+- [Apollo](https://www.apollographql.com/)
+- [D3](https://d3js.org/)
+- [Pinia](https://pinia.vuejs.org/)
