@@ -25,4 +25,9 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://app.juster.fi/markets/XTZ-USD<
+    <loc>https://app.juster.fi/markets/XTZ-USD</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://app.juster.fi/docs</loc>
