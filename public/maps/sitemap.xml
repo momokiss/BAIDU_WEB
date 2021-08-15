@@ -31,3 +31,10 @@
   </url>
   <url>
     <loc>https://app.juster.fi/docs</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://app.juster.fi/policy</loc>
+  </url>
+  <url>
+    <loc>https://app.jus
