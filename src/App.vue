@@ -127,3 +127,118 @@ html {
 	opacity: 0;
 	transform: scale(0.95);
 }
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.35s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.fastfade-enter-active,
+.fastfade-leave-active {
+	transition: opacity 0.15s ease;
+}
+
+.fastfade-enter-from,
+.fastfade-leave-to {
+	opacity: 0;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+
+	overflow-x: hidden;
+
+	/* overflow-y: auto; */
+	height: 100vh;
+}
+
+.app_wrapper {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+	padding-top: 80px;
+}
+
+:root {
+	/** Application */
+	--app-bg: #1b1b1b;
+
+	/** General */
+	--blue: #457ee8;
+	--red: #e05c43;
+	--orange: #ef8456;
+	--green: #1aa168;
+	--yellow: #f5b72b;
+	--purple: #855ad1;
+
+	/** Button */
+	--btn-success-bg: #1aa168;
+	--btn-success-bg-hover: #24af75;
+
+	--btn-primary-bg: #276ef1;
+	--btn-primary-bg-hover: #1f60da;
+
+	--btn-secondary-bg: #252628;
+	--btn-secondary-bg-hover: #2d2f31;
+
+	/** Text */
+	--text-primary: rgba(255, 255, 255, 0.9);
+	--text-secondary: rgba(255, 255, 255, 0.7);
+	--text-tertiary: rgba(255, 255, 255, 0.4);
+	--text-white: rgba(255, 255, 255, 0.95);
+	--text-black: rgba(0, 0, 0, 0.9);
+	--text-blue: #6d9cf3;
+
+	/** Icon */
+	--icon: #bbbfc9;
+	--icon-high: #fff;
+
+	/** Card */
+	--card-bg: #171717;
+
+	/** Notification */
+	--notification-bg: #27282b;
+
+	/** Dropdown */
+	--dropdown-bg: #252525;
+
+	/** Toggle */
+	--toggle-bg: #393939;
+
+	/** Settings */
+	--settings-nav-bg: rgba(0, 0, 0, 0.4);
+
+	/** Label */
+	--label-bg: #222222;
+
+	/** Opacity */
+	--opacity-80: rgba(255, 255, 255, 0.8);
+	--opacity-60: rgba(255, 255, 255, 0.6);
+	--opacity-40: rgba(255, 255, 255, 0.4);
+	--opacity-20: rgba(255, 255, 255, 0.2);
+	--opacity-10: rgba(255, 255, 255, 0.1);
+	--opacity-05: rgba(255, 255, 255, 0.05);
+
+	/** Other */
+	--border: rgb(48, 50, 54);
+	--border-highlight: rgb(57, 59, 63);
+	--separator: rgba(255, 255, 255, 0.08);
+
+	--dot: rgba(255, 255, 255, 0.06);
+}
+
+[theme="light"] {
+	/** Application */
+	--app-bg: #f6f6f6;
+
+	/** General */
+	--blue: #276ef1;
+	--red: #e05c43;
+	--orange: #ef8456;
