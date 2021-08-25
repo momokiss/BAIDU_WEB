@@ -8,4 +8,9 @@ import { juster } from "@/services/sdk"
  */
 import { getMarkets } from "@/graphql/queries/markets"
 
-export const fet
+export const fetchMarkets = async () => {
+  try {
+    const { data } = await juster.apollo.query({ query: getMarkets })
+    return data.currencyPair
+  } catch (error) {
+    
