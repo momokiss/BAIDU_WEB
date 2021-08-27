@@ -9,4 +9,8 @@ import { juster } from "@/services/sdk"
 import {
   getQuotesByMarket,
   getQuoteByTimestamp,
-  
+  getQuoteByRange,
+  getTVLByEventId,
+} from "@/graphql/queries/quotes"
+
+export const fetchQuotesByMarket = async ({ id, l
