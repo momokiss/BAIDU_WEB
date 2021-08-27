@@ -13,4 +13,9 @@ import {
   getTVLByEventId,
 } from "@/graphql/queries/quotes"
 
-export const fetchQuotesByMarket = async ({ id, l
+export const fetchQuotesByMarket = async ({ id, limit, offset }) => {
+  try {
+    if (!id || !limit)
+      throw new Error(
+        `${(id == undefined && "ID") ||
+        (li
