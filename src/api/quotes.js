@@ -18,4 +18,6 @@ export const fetchQuotesByMarket = async ({ id, limit, offset }) => {
     if (!id || !limit)
       throw new Error(
         `${(id == undefined && "ID") ||
-        (li
+        (limit == undefined && "limit")} is required`,
+      )
+    if (typeof id !== "number") throw new Error("ID must be a 
