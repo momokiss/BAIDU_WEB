@@ -36,4 +36,8 @@ export const fetchQuotesByMarket = async ({ id, limit, offset }) => {
   }
 }
 
-export const fetchQuoteByRange = async
+export const fetchQuoteByRange = async ({ id, tsGt, tsLt }) => {
+  try {
+    const { data } = await juster.apollo.query({
+      query: getQuoteByRange,
+      variables: {
