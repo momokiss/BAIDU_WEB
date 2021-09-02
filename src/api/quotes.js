@@ -23,4 +23,11 @@ export const fetchQuotesByMarket = async ({ id, limit, offset }) => {
     if (typeof id !== "number") throw new Error("ID must be a Number")
     if (typeof limit !== "number") throw new Error("Limit must be a Number")
 
-    const { data } = await juster.apollo.query
+    const { data } = await juster.apollo.query({
+      query: getQuotesByMarket,
+      variables: { id, limit, offset },
+    })
+    return data.quotesWma
+  } catch (error) {
+    console.error(
+      `Error d
