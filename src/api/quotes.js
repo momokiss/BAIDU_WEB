@@ -30,4 +30,10 @@ export const fetchQuotesByMarket = async ({ id, limit, offset }) => {
     return data.quotesWma
   } catch (error) {
     console.error(
-      `Error d
+      `Error during fetching quotes by id \n\n ${error.name}: ${error.message}`,
+    )
+    return []
+  }
+}
+
+export const fetchQuoteByRange = async
