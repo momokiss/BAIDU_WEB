@@ -40,4 +40,10 @@ export const fetchQuoteByRange = async ({ id, tsGt, tsLt }) => {
   try {
     const { data } = await juster.apollo.query({
       query: getQuoteByRange,
-      variables: {
+      variables: { id, tsGt, tsLt },
+    })
+
+    return data.quotesWma
+  } catch (error) {
+    console.error(
+      `Error during fetching quote
