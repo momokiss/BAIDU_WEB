@@ -62,4 +62,12 @@ export const fetchQuoteByTimestamp = async ({ id, ts }) => {
     return data.quotesWma
   } catch (error) {
     console.error(
-      `Error during fetching quote
+      `Error during fetching quote by ts & id \n\n ${error.name}: ${error.message}`,
+    )
+    return []
+  }
+}
+
+/** TVL */
+export const fetchEventTVL = async ({ id }) => {
+  try
