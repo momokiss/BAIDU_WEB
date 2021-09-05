@@ -56,4 +56,10 @@ export const fetchQuoteByTimestamp = async ({ id, ts }) => {
   try {
     const { data } = await juster.apollo.query({
       query: getQuoteByTimestamp,
-      variables: { i
+      variables: { id, ts },
+    })
+
+    return data.quotesWma
+  } catch (error) {
+    console.error(
+      `Error during fetching quote
