@@ -52,4 +52,8 @@ export const fetchQuoteByRange = async ({ id, tsGt, tsLt }) => {
   }
 }
 
-export const fetchQuoteByTimestamp = async ({ id, 
+export const fetchQuoteByTimestamp = async ({ id, ts }) => {
+  try {
+    const { data } = await juster.apollo.query({
+      query: getQuoteByTimestamp,
+      variables: { i
