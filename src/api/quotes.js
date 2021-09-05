@@ -46,4 +46,10 @@ export const fetchQuoteByRange = async ({ id, tsGt, tsLt }) => {
     return data.quotesWma
   } catch (error) {
     console.error(
-      `Error during fetching quote
+      `Error during fetching quote by range ts & id \n\n ${error.name}: ${error.message}`,
+    )
+    return []
+  }
+}
+
+export const fetchQuoteByTimestamp = async ({ id, 
