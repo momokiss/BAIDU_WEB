@@ -70,4 +70,10 @@ export const fetchQuoteByTimestamp = async ({ id, ts }) => {
 
 /** TVL */
 export const fetchEventTVL = async ({ id }) => {
-  try
+  try {
+    const { data } = await juster.apollo.query({
+      query: getTVLByEventId,
+      variables: { id },
+    })
+
+    return dat
