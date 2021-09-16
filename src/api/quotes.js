@@ -79,4 +79,8 @@ export const fetchEventTVL = async ({ id }) => {
     return data.totalValueLocked
   } catch (error) {
     console.error(
-      `Error during fetching tvl by event id \n\n ${erro
+      `Error during fetching tvl by event id \n\n ${error.name}: ${error.message}`,
+    )
+    return []
+  }
+}
