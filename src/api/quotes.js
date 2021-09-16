@@ -76,4 +76,7 @@ export const fetchEventTVL = async ({ id }) => {
       variables: { id },
     })
 
-    return dat
+    return data.totalValueLocked
+  } catch (error) {
+    console.error(
+      `Error during fetching tvl by event id \n\n ${erro
