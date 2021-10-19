@@ -9,4 +9,10 @@ import { DateTime } from "luxon"
  * Services
  */
 import { juster, switchNetwork, currentNetwork } from "@/services/sdk"
-import { capitalizeFirstLetter } from "../..
+import { capitalizeFirstLetter } from "../../services/utils/global"
+
+/**
+ * Constants
+ */
+// eslint-disable-next-line no-unused-vars
+import { Networks } from "@/services/const
