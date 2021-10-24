@@ -15,4 +15,15 @@ import { capitalizeFirstLetter } from "../../services/utils/global"
  * Constants
  */
 // eslint-disable-next-line no-unused-vars
-import { Networks } from "@/services/const
+import { Networks } from "@/services/constants"
+
+/**
+ * Store
+ */
+import { useMarketStore } from "@/store/market"
+const marketStore = useMarketStore()
+
+/**
+ * UI
+ */
+// import Button from "@/componen
