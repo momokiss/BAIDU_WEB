@@ -28,4 +28,9 @@ const marketStore = useMarketStore()
  */
 // import Button from "@/components/ui/Button"
 // import Tooltip from "@/components/ui/Tooltip"
-// import { Dropdown, DropdownItem, DropdownTitle } from "
+// import { Dropdown, DropdownItem, DropdownTitle } from "@/components/ui/Dropdown"
+
+// eslint-disable-next-line no-unused-vars
+const router = useRouter()
+
+/** Watch for DipDup
