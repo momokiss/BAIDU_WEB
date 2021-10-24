@@ -33,4 +33,11 @@ const marketStore = useMarketStore()
 // eslint-disable-next-line no-unused-vars
 const router = useRouter()
 
-/** Watch for DipDup
+/** Watch for DipDup, Quotes, Network */
+let checkInterval = null
+
+const initCurrentDt = DateTime.now()
+
+const STATUSES = {
+	LOADING: "Loading..",
+	GOOD: 
