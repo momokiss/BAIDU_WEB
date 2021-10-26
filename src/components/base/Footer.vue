@@ -52,4 +52,9 @@ const status = reactive({
 
 // eslint-disable-next-line vue/return-in-computed-property
 const statusBlock = computed(() => {
-	i
+	if (
+		status.dipdup === STATUSES.GOOD &&
+		status.network === STATUSES.GOOD &&
+		status.quotes == STATUSES.GOOD
+	) {
+		return { tex
