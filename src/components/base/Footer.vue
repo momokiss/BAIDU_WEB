@@ -40,4 +40,11 @@ const initCurrentDt = DateTime.now()
 
 const STATUSES = {
 	LOADING: "Loading..",
-	GOOD: 
+	GOOD: "Good",
+	DELAYED: "Delayed",
+}
+
+const status = reactive({
+	dipdup: STATUSES.LOADING,
+	network: STATUSES.LOADING,
+	
