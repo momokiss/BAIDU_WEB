@@ -47,4 +47,9 @@ const STATUSES = {
 const status = reactive({
 	dipdup: STATUSES.LOADING,
 	network: STATUSES.LOADING,
-	
+	quotes: STATUSES.LOADING,
+})
+
+// eslint-disable-next-line vue/return-in-computed-property
+const statusBlock = computed(() => {
+	i
