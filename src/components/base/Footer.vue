@@ -57,4 +57,7 @@ const statusBlock = computed(() => {
 		status.network === STATUSES.GOOD &&
 		status.quotes == STATUSES.GOOD
 	) {
-		return { tex
+		return { text: "All systems online", color: "green" }
+	} else if (
+		status.dipdup === STATUSES.DELAYED &&
+		status.network === STATUSES.DELAYED &
