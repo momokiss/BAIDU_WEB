@@ -69,4 +69,10 @@ const statusBlock = computed(() => {
 		status.network !== STATUSES.GOOD ||
 		status.quotes !== STATUSES.GOOD
 	) {
-		return { text: "
+		return { text: "Some systems delayed", color: "yellow" }
+	}
+})
+
+const checkDipdup = async () => {
+	const urlToCheck =
+		currentNetwork.va
