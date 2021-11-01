@@ -65,4 +65,8 @@ const statusBlock = computed(() => {
 	) {
 		return { text: "All systems delayed", color: "red" }
 	} else if (
-		status.dipd
+		status.dipdup !== STATUSES.GOOD ||
+		status.network !== STATUSES.GOOD ||
+		status.quotes !== STATUSES.GOOD
+	) {
+		return { text: "
