@@ -75,4 +75,6 @@ const statusBlock = computed(() => {
 
 const checkDipdup = async () => {
 	const urlToCheck =
-		currentNetwork.va
+		currentNetwork.value == "mainnet"
+			? "https://juster.dipdup.net/api/rest/dipdupHead?name=https://api.tzkt.io"
+			: "https://api
