@@ -77,4 +77,7 @@ const checkDipdup = async () => {
 	const urlToCheck =
 		currentNetwork.value == "mainnet"
 			? "https://juster.dipdup.net/api/rest/dipdupHead?name=https://api.tzkt.io"
-			: "https://api
+			: "https://api.ithacanet.juster.fi/api/rest/dipdupHead?name=https://api.ithacanet.tzkt.io"
+	const {
+		data: { dipdupHeadByPk },
+	} = await ax
