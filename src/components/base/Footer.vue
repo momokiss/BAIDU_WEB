@@ -80,4 +80,8 @@ const checkDipdup = async () => {
 			: "https://api.ithacanet.juster.fi/api/rest/dipdupHead?name=https://api.ithacanet.tzkt.io"
 	const {
 		data: { dipdupHeadByPk },
-	} = await ax
+	} = await axios.get(urlToCheck)
+
+	const dipdupDt = DateTime.fromISO(dipdupHeadByPk.timestamp)
+	const dipdupDiff = initCurrentDt
+		.diff(d
