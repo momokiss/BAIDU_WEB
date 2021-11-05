@@ -90,4 +90,10 @@ const checkDipdup = async () => {
 	if (dipdupDiff.minutes >= 1) {
 		status.dipdup = STATUSES.DELAYED
 	} else {
-		sta
+		status.dipdup = STATUSES.GOOD
+	}
+}
+
+const checkNetwork = async () => {
+	const { data } = await axios.get(
+		`https://rpc.tz
