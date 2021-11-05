@@ -84,4 +84,10 @@ const checkDipdup = async () => {
 
 	const dipdupDt = DateTime.fromISO(dipdupHeadByPk.timestamp)
 	const dipdupDiff = initCurrentDt
-		.diff(d
+		.diff(dipdupDt, ["minutes", "seconds"])
+		.toObject()
+
+	if (dipdupDiff.minutes >= 1) {
+		status.dipdup = STATUSES.DELAYED
+	} else {
+		sta
