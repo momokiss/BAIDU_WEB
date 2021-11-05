@@ -96,4 +96,8 @@ const checkDipdup = async () => {
 
 const checkNetwork = async () => {
 	const { data } = await axios.get(
-		`https://rpc.tz
+		`https://rpc.tzkt.io/${currentNetwork.value == "mainnet" ? "mainnet" : "ithacanet"
+		}/chains/main/blocks/head/header`,
+	)
+
+	const networkDt = DateTime.fro
