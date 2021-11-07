@@ -100,4 +100,9 @@ const checkNetwork = async () => {
 		}/chains/main/blocks/head/header`,
 	)
 
-	const networkDt = DateTime.fro
+	const networkDt = DateTime.fromISO(data.timestamp)
+	const networkDiff = initCurrentDt
+		.diff(networkDt, ["minutes", "seconds"])
+		.toObject()
+
+	if (networkDiff.minute
