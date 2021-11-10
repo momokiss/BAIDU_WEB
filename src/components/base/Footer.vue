@@ -105,4 +105,12 @@ const checkNetwork = async () => {
 		.diff(networkDt, ["minutes", "seconds"])
 		.toObject()
 
-	if (networkDiff.minute
+	if (networkDiff.minutes >= 1) {
+		status.network = STATUSES.DELAYED
+	} else {
+		status.network = STATUSES.GOOD
+	}
+}
+
+const checkQuotes = () => {
+	c
