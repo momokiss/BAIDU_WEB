@@ -113,4 +113,9 @@ const checkNetwork = async () => {
 }
 
 const checkQuotes = () => {
-	c
+	const quotesDiff = initCurrentDt
+		.diff(
+			DateTime.fromISO(
+				marketStore.markets["XTZ-USD"].quotes[0].timestamp,
+			),
+			
