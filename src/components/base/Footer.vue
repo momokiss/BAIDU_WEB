@@ -118,4 +118,11 @@ const checkQuotes = () => {
 			DateTime.fromISO(
 				marketStore.markets["XTZ-USD"].quotes[0].timestamp,
 			),
-			
+			["minutes"],
+		)
+		.toObject()
+
+	if (quotesDiff.minutes >= 3) {
+		status.quotes = STATUSES.DELAYED
+	} else {
+		status.quo
