@@ -125,4 +125,9 @@ const checkQuotes = () => {
 	if (quotesDiff.minutes >= 3) {
 		status.quotes = STATUSES.DELAYED
 	} else {
-		status.quo
+		status.quotes = STATUSES.GOOD
+	}
+}
+
+const handleSwitch = (network) => {
+	juster.sdk._provider.client.clearActiveAccount().then(async
