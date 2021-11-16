@@ -137,3 +137,12 @@ const handleSwitch = (network) => {
 
 marketStore.$subscribe((mutation, state) => {
 	if (state.markets["XTZ-USD"].quotes.length) {
+		checkQuotes()
+	}
+})
+
+onMounted(async () => {
+	checkDipdup()
+	checkNetwork()
+
+	checkInterval = setInterval(async () => 
