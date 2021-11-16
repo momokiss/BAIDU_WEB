@@ -145,4 +145,16 @@ onMounted(async () => {
 	checkDipdup()
 	checkNetwork()
 
-	checkInterval = setInterval(async () => 
+	checkInterval = setInterval(async () => {
+		checkDipdup()
+		checkNetwork()
+		checkQuotes()
+	}, 30000)
+})
+
+onBeforeUnmount(() => {
+	clearInterval(checkInterval)
+})
+</script>
+
+<templ
