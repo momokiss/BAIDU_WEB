@@ -130,4 +130,10 @@ const checkQuotes = () => {
 }
 
 const handleSwitch = (network) => {
-	juster.sdk._provider.client.clearActiveAccount().then(async
+	juster.sdk._provider.client.clearActiveAccount().then(async () => {
+		switchNetwork(network)
+	})
+}
+
+marketStore.$subscribe((mutation, state) => {
+	if (state.markets["XTZ-USD"].quotes.length) {
