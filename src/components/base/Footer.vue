@@ -157,4 +157,9 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<templ
+<template>
+	<div :class="$style.wrapper">
+		<div :class="$style.base">
+			<div :class="$style.content">
+				<div :class="$style.logo">
+					<Ico
