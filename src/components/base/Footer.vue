@@ -162,4 +162,9 @@ onBeforeUnmount(() => {
 		<div :class="$style.base">
 			<div :class="$style.content">
 				<div :class="$style.logo">
-					<Ico
+					<Icon name="logo_symbol" size="32" />
+				</div>
+
+				<div :class="$style.columns">
+					<div :class="$style.column">
+						<div :class="$sty
