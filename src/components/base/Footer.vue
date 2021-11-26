@@ -178,4 +178,8 @@ onBeforeUnmount(() => {
 						<div :class="$style.name">Learn</div>
 						<router-link to="/docs" :class="$style.link">Documentation</router-link>
 						<router-link to="/docs/developers" :class="$style.link">Developers</router-link>
-						<router-link to="/docs/faq
+						<router-link to="/docs/faq" :class="$style.link">FAQ</router-link>
+					</div>
+
+					<div :class="$style.column">
+						<div :class="$style.name">Misc<
