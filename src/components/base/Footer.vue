@@ -193,3 +193,6 @@ onBeforeUnmount(() => {
 			<div :class="$style.bottom">
 				<div :class="$style.block">
 					<div :class="$style.left">
+						<Tooltip position="top">
+							<a href="https://status.juster.fi" target="_blank">
+								<Button type="secondary" size="small
