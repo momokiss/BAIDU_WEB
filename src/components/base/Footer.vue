@@ -200,4 +200,9 @@ onBeforeUnmount(() => {
 									$style[statusBlock.color],
 								]">
 									<Icon name="bolt" size="12" />{{
-								
+											statusBlock.text
+									}}
+								</Button>
+							</a>
+
+							<template #content><span>DipDup:</span> {{ status.dipdu
