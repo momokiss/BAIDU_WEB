@@ -195,4 +195,9 @@ onBeforeUnmount(() => {
 					<div :class="$style.left">
 						<Tooltip position="top">
 							<a href="https://status.juster.fi" target="_blank">
-								<Button type="secondary" size="small
+								<Button type="secondary" size="small" :class="[
+									$style.footer_btn,
+									$style[statusBlock.color],
+								]">
+									<Icon name="bolt" size="12" />{{
+								
