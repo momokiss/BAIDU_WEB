@@ -205,4 +205,8 @@ onBeforeUnmount(() => {
 								</Button>
 							</a>
 
-							<template #content><span>DipDup:</span> {{ status.dipdu
+							<template #content><span>DipDup:</span> {{ status.dipdup
+							}}<br /><span>Network:</span> {{ status.network
+}}<br /><span>Quotes:</span>
+								{{ status.quotes }}</template>
+						</Tooltip>
