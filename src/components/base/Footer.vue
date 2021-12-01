@@ -219,4 +219,9 @@ onBeforeUnmount(() => {
 										? $style.green
 										: $style.yellow,
 								]">
-									<Icon name="network" size="12
+									<Icon name="network" size="12" />{{
+											capitalizeFirstLetter(currentNetwork)
+									}}
+									<Icon name="arrow" size="12" />
+								</Button>
+							
