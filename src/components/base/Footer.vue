@@ -215,4 +215,8 @@ onBeforeUnmount(() => {
 							<template #trigger>
 								<Button type="secondary" size="small" :class="[
 									$style.footer_btn,
-		
+									currentNetwork == 'mainnet'
+										? $style.green
+										: $style.yellow,
+								]">
+									<Icon name="network" size="12
