@@ -210,3 +210,9 @@ onBeforeUnmount(() => {
 }}<br /><span>Quotes:</span>
 								{{ status.quotes }}</template>
 						</Tooltip>
+
+						<Dropdown side="top">
+							<template #trigger>
+								<Button type="secondary" size="small" :class="[
+									$style.footer_btn,
+		
