@@ -224,4 +224,8 @@ onBeforeUnmount(() => {
 									}}
 									<Icon name="arrow" size="12" />
 								</Button>
-							
+							</template>
+
+							<template #dropdown>
+								<DropdownTitle>Network</DropdownTitle>
+								<DropdownItem @click="handleSwitch(
