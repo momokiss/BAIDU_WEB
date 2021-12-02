@@ -233,3 +233,8 @@ onBeforeUnmount(() => {
 										currentNetwork == 'mainnet'
 											? 'checkcircle'
 											: 'network'
+									" size="12" />Mainnet
+								</DropdownItem>
+								<DropdownItem @click="handleSwitch('testnet')">
+									<Icon :name="
+	
