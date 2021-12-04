@@ -241,4 +241,10 @@ onBeforeUnmount(() => {
 											? 'checkcircle'
 											: 'network'
 									" size="12" />Ithacanet
-								</DropdownI
+								</DropdownItem>
+							</template>
+						</Dropdown>
+					</div>
+
+					<div :class="$style.right">
+						<a href="https://discord.gg/FeGDC
