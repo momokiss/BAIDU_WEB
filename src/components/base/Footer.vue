@@ -237,4 +237,8 @@ onBeforeUnmount(() => {
 								</DropdownItem>
 								<DropdownItem @click="handleSwitch('testnet')">
 									<Icon :name="
-	
+										currentNetwork == 'ithacanet'
+											? 'checkcircle'
+											: 'network'
+									" size="12" />Ithacanet
+								</DropdownI
