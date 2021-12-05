@@ -253,4 +253,7 @@ onBeforeUnmount(() => {
 								<Icon name="arrowrighttop" size="16" />
 							</Button>
 						</a>
-						<a href="https://twitter.com/Juster_fi" target="_b
+						<a href="https://twitter.com/Juster_fi" target="_blank" rel="nofolow noreferrer">
+							<Button type="secondary" size="small" :class="$style.footer_btn">
+								Twitter
+								<Icon name="
