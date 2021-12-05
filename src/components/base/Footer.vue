@@ -249,4 +249,8 @@ onBeforeUnmount(() => {
 					<div :class="$style.right">
 						<a href="https://discord.gg/FeGDCkHhnB" target="_blank" rel="nofolow noreferrer">
 							<Button type="secondary" size="small" :class="$style.footer_btn">
-								Di
+								Discord
+								<Icon name="arrowrighttop" size="16" />
+							</Button>
+						</a>
+						<a href="https://twitter.com/Juster_fi" target="_b
