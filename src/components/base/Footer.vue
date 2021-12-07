@@ -262,4 +262,11 @@ onBeforeUnmount(() => {
 						<a href="https://github.com/juster-finance" target="_blank" rel="nofolow noreferrer">
 							<Button type="secondary" size="small" :class="$style.footer_btn">
 								GitHub
-								<Icon name="arro
+								<Icon name="arrowrighttop" size="16" />
+							</Button>
+						</a>
+					</div>
+				</div>
+
+				<div :class="$style.block">
+					<div 
