@@ -269,4 +269,7 @@ onBeforeUnmount(() => {
 				</div>
 
 				<div :class="$style.block">
-					<div 
+					<div :class="$style.copyrights">
+						<div :class="$style.year">© 2022</div>
+						<span>Juster 1.0.</span> Market data provided by
+						Coinbas
