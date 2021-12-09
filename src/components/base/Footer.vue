@@ -277,4 +277,15 @@ onBeforeUnmount(() => {
 
 					<div :class="$style.warning">
 						Participation in gambling is prohibited for persons
-				
+						under the age of 21+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<style module>
+.wrapper {
+	width: 100%;
+
