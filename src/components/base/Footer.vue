@@ -298,4 +298,12 @@ onBeforeUnmount(() => {
 .base {
 	width: 100%;
 	max-width: 1250px;
-	margi
+	margin: 0 32px;
+	padding: 50px 0;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 60px;
