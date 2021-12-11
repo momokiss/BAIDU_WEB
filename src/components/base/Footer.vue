@@ -307,3 +307,17 @@ onBeforeUnmount(() => {
 	justify-content: space-between;
 	align-items: flex-start;
 	gap: 60px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	fill: var(--text-primary);
+}
+
+.columns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15
