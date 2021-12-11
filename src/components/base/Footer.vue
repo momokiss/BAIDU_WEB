@@ -289,3 +289,13 @@ onBeforeUnmount(() => {
 .wrapper {
 	width: 100%;
 
+	display: flex;
+	justify-content: center;
+
+	border-top: 1px solid var(--border);
+}
+
+.base {
+	width: 100%;
+	max-width: 1250px;
+	margi
