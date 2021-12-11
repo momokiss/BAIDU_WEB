@@ -320,4 +320,16 @@ onBeforeUnmount(() => {
 .columns {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 15
+	gap: 150px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.name {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(-
