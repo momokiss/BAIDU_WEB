@@ -332,4 +332,15 @@ onBeforeUnmount(() => {
 .name {
 	font-size: 14px;
 	font-weight: 600;
-	color: var(-
+	color: var(--text-primary);
+}
+
+.link {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--text-tertiary);
+
+	transition: color 0.2s ease;
+}
+
+.l
