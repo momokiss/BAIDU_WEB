@@ -343,4 +343,13 @@ onBeforeUnmount(() => {
 	transition: color 0.2s ease;
 }
 
-.l
+.link:hover {
+	color: var(--text-primary);
+}
+
+.bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	mar
