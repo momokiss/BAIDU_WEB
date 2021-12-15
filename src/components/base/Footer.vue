@@ -352,4 +352,15 @@ onBeforeUnmount(() => {
 	flex-direction: column;
 	gap: 24px;
 
-	mar
+	margin-top: 50px;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left,
+.right {
+	display: fl
