@@ -372,4 +372,12 @@ onBeforeUnmount(() => {
 	color: var(--text-secondary);
 }
 
-.footer_btn.
+.footer_btn.green svg:first-child {
+	fill: var(--green);
+}
+
+.footer_btn.yellow svg:first-child {
+	fill: var(--yellow);
+}
+
+.footer_btn.red s
