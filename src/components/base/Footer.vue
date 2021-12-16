@@ -363,4 +363,13 @@ onBeforeUnmount(() => {
 
 .left,
 .right {
-	display: fl
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.footer_btn {
+	color: var(--text-secondary);
+}
+
+.footer_btn.
