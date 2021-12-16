@@ -380,4 +380,15 @@ onBeforeUnmount(() => {
 	fill: var(--yellow);
 }
 
-.footer_btn.red s
+.footer_btn.red svg:first-child {
+	fill: var(--red);
+}
+
+.copyrights {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	font-size: 14px;
+	font-weight: 600;
+	
