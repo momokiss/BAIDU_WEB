@@ -402,3 +402,14 @@ onBeforeUnmount(() => {
 .year {
 	font-weight: 500;
 }
+
+.warning {
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+}
+
+@media (max-width: 900px) {
+	.content {
+		flex-directio
