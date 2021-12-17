@@ -391,4 +391,14 @@ onBeforeUnmount(() => {
 
 	font-size: 14px;
 	font-weight: 600;
-	
+	color: var(--text-tertiary);
+	white-space: nowrap;
+}
+
+.copyrights span {
+	color: var(--text-secondary);
+}
+
+.year {
+	font-weight: 500;
+}
