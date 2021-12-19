@@ -424,3 +424,13 @@ onBeforeUnmount(() => {
 
 @media (max-width: 700px) {
 	.columns {
+		gap: 50px;
+		flex-direction: column;
+	}
+
+	.column {
+		align-items: center;
+	}
+
+	.copyrights {
+		flex
