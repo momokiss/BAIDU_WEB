@@ -433,4 +433,13 @@ onBeforeUnmount(() => {
 	}
 
 	.copyrights {
-		flex
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.warning {
+		text-align: center;
+		line-height: 1.6;
+	}
+}
+</style>
