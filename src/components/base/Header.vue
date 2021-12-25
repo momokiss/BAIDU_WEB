@@ -274,3 +274,133 @@ const pkh = computed(() => accountStore.pkh)
 				<Tooltip v-if="currentNetwork !== Networks.MAINNET" side="right">
 					<div :class="$style.testnet_warning">
 						<Icon name="hammer" size="16" />
+
+						<span>Ithaca Network</span>
+					</div>
+
+					<template v-slot:content>
+						Ithaca in use.
+						<span>Switching the network in the footer</span>
+					</template>
+				</Tooltip>
+
+				<RewardAlert :class="$style.reward_alert" />
+
+				<div :class="$style.buttons">
+					<!-- todo: sep component -->
+					<div v-if="!pkh" :class="$style.signin_button">
+						<div @click="handleLogin" :class="$style.signin">
+							Sign in
+						</div>
+						<div @click="handleCustomLogin" :class="$style.custom_signin">
+							<Icon name="settings" size="14" />
+						</div>
+					</div>
+
+					<Dropdown>
+						<template #trigger>
+							<div :class="$style.avatar">
+								<img v-if="pkh" :src="`https://services.tzkt.io/v1/avatars/${pkh}`" alt="avatar" />
+							</div>
+						</template>
+
+						<template #dropdown>
+							<div @click="handleOpenProfile" :class="$style.profile">
+								<Icon name="user" size="16" />
+
+								<div :class="$style.info">
+									<div :class="$style.address">
+										{{
+												`${accountStore.pkh.slice(
+													0,
+													5,
+												)}..${accountStore.pkh.slice(
+													accountStore.pkh.length - 3,
+													accountStore.pkh.length,
+												)}`
+										}}
+									</div>
+									<div :class="$style.balance">
+										{{ accountStore.balance }}
+										ꜩ
+									</div>
+								</div>
+							</div>
+
+							<DropdownItem @click="handleOpenWithdrawals">
+								<div :class="$style.dropdown_icon">
+									<Icon name="money" size="16" />
+								</div>
+								Withdrawals
+							</DropdownItem>
+
+							<DropdownDivider />
+
+							<a href="https://github.com/juster-finance/juster-app/releases" target="_blank">
+								<DropdownItem>
+									<Icon name="merge" size="16" />Releases
+								</DropdownItem>
+							</a>
+							<a href="https://app.juster.fi/docs" target="_blank">
+								<DropdownItem>
+									<Icon name="book" size="16" />Documentation
+								</DropdownItem>
+							</a>
+							<DropdownItem @click="accountStore.showOnboarding = true">
+								<Icon name="help" size="16" />Onboarding
+							</DropdownItem>
+
+							<DropdownDivider />
+
+							<DropdownItem @click="handleLogout">
+								<Icon name="logout" size="16" />Logout
+							</DropdownItem>
+						</template>
+					</Dropdown>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<ThePendingTransaction v-if="accountStore.pendingTransaction.awaiting" />
+</template>
+
+<style module>
+.wrapper {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-height: 80px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-bottom: 1px solid var(--border);
+	z-index: 2;
+}
+
+@supports (backdrop-filter: blur(5px)) {
+	.wrapper {
+		backdrop-filter: blur(5px);
+	}
+}
+
+@supports not (backdrop-filter: blur(5px)) {
+	.wrapper {
+		background: var(--app-bg);
+	}
+}
+
+.base {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	max-width: 1250px;
+	width: 100%;
+
+	margin: 0 32px;
+}
+
+.right {
