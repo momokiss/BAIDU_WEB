@@ -404,3 +404,162 @@ const pkh = computed(() => accountStore.pkh)
 }
 
 .right {
+	display: flex;
+	align-items: center;
+}
+
+.base .left {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	gap: 12px;
+}
+
+.logo svg {
+	fill: var(--text-primary);
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	font-size: 13px;
+	line-height: 1.1;
+	font-weight: 600;
+	color: var(--text-tertiary);
+	fill: var(--text-tertiary);
+
+	padding: 0 12px;
+	height: 32px;
+	border-radius: 6px;
+	cursor: pointer;
+
+	transition: all 0.2s ease;
+}
+
+.link.active {
+	background: var(--opacity-05);
+	color: var(--text-primary);
+	fill: var(--text-primary);
+}
+
+.link.disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.link:hover {
+	color: var(--text-primary);
+	background: var(--opacity-05);
+}
+
+.buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.reward_alert {
+	margin-right: 8px;
+}
+
+.testnet_warning {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	border-radius: 6px;
+	background: var(--yellow);
+	height: 28px;
+
+	padding: 0 8px;
+	margin-right: 16px;
+
+	font-size: 13px;
+	line-height: 1.1px;
+	font-weight: 600;
+	color: var(--text-black);
+	fill: var(--text-black);
+}
+
+.signin_button {
+	height: 30px;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+
+	display: flex;
+	align-items: center;
+
+	transition: transform 0.2s ease;
+}
+
+.signin_button:active {
+	transform: translateY(1px);
+}
+
+.signin {
+	font-size: 13px;
+	line-height: 28px;
+	font-weight: 600;
+	color: var(--text-primary);
+	background: var(--btn-primary-bg);
+
+	padding: 0 10px 0 12px;
+	border-radius: 6px 0 0 6px;
+	border-right: 2px solid rgba(0, 0, 0, 0.1);
+
+	transition: background 0.2s ease;
+}
+
+.signin:hover {
+	background: var(--btn-primary-bg-hover);
+}
+
+.custom_signin {
+	display: flex;
+	align-items: center;
+	height: 28px;
+	border-radius: 0 6px 6px 0;
+	padding: 0 10px;
+
+	fill: var(--text-secondary);
+	background: var(--btn-primary-bg);
+
+	transition: background 0.2s ease;
+}
+
+.custom_signin:hover {
+	background: var(--btn-primary-bg-hover);
+}
+
+.avatar {
+	position: relative;
+}
+
+.avatar img {
+	display: flex;
+	width: 24px;
+	padding: 4px;
+	box-sizing: content-box;
+
+	background: var(--btn-secondary-bg);
+	border-radius: 8px;
+
+	transition: all 0.2s ease;
+}
+
+.avatar:hover img {
+	background: var(--btn-secondary-bg-hover);
+}
+
+.avatar:active img {
+	transform: translateY(1px);
+}
