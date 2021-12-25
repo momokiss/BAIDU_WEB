@@ -686,3 +686,48 @@ const pkh = computed(() => accountStore.pkh)
 	font-weight: 600;
 	color: var(--text-primary);
 }
+
+.mobile_menu__description {
+	font-size: 13px;
+	line-height: 1.1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+}
+
+.mobile_menu_icon {
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	background: var(--btn-secondary-bg);
+
+	transition: all 0.2s ease;
+
+	margin-right: 16px;
+}
+
+.mobile_menu_icon svg {
+	fill: var(--text-primary);
+}
+
+.mobile_menu_icon:hover {
+	background: var(--btn-secondary-bg-hover);
+}
+
+.mobile_menu_icon:active {
+	transform: translateY(1px);
+}
+
+@media (max-width: 700px) {
+	.mobile_menu {
+		display: initial;
+	}
+
+	.mobile_menu_icon {
+		display: flex;
+	}
+}
+</style>
