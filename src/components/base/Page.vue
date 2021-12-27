@@ -9,3 +9,13 @@ export default defineComponent({
 
 <template>
   <div :class="$style.wrapper">
+    <div :class="$style.content">
+      <slot />
+    </div>
+  </div>
+</template>
+
+<style module>
+.wrapper {
+  display: flex;
+  flex-direction
