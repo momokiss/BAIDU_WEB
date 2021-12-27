@@ -18,4 +18,14 @@ export default defineComponent({
 <style module>
 .wrapper {
   display: flex;
-  flex-direction
+  flex-direction: column;
+  align-items: center;
+  margin: 0 32px 100px 32px;
+  padding-top: 40px;
+
+  flex: 1;
+}
+
+.content {
+  width: 100%;
+  max-width:
