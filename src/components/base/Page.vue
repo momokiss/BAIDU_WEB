@@ -28,4 +28,13 @@ export default defineComponent({
 
 .content {
   width: 100%;
-  max-width:
+  max-width: 1250px;
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 0 24px 100px 24px;
+    padding-top: 24px;
+  }
+}
+</style>
