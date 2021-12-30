@@ -30,3 +30,14 @@ export default {
 			)
 		},
 	},
+}
+</script>
+
+<template>
+	<svg viewBox="0 0 24 24" :width="size" :height="size" :style="calcSize" role="img">
+		<path v-if="!isSplitted(name)" :d="getPath(name)" />
+		<template v-else>
+			<path v-for="path in getPath(name)" :key="path.id" :d="path.path" :style="{ opacity: path.opacity }" />
+		</template>
+	</svg>
+</template>
