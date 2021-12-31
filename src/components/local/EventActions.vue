@@ -166,3 +166,77 @@ const btnType = computed(() => {
 
 .action.primary:hover {
   background: #1f4fa8;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.left span {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.action .higher_icon {
+  fill: var(--green);
+}
+
+.action .lower_icon {
+  fill: var(--orange);
+}
+
+.action.primary .higher_icon {
+  fill: var(--text-secondary);
+}
+
+.action.primary .lower_icon {
+  fill: var(--text-secondary);
+}
+
+.action .ratio {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+
+  font-size: 11px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ratio svg {
+  fill: var(--text-tertiary);
+}
+
+.action.primary .ratio {
+  color: var(--text-tertiary);
+}
+
+.divider {
+  height: 100%;
+  width: 1px;
+
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.withdraw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 12px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  border-radius: 6px;
+  background: var(--green);
+
+  width: 100%;
+  height: 32px;
+}
+</style>
