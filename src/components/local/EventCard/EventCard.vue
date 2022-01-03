@@ -185,3 +185,135 @@ const handleBet = (target) => {
 	/** disable Bet / Liquidity right after betsCloseTime */
 	if (
 		startStatus.value == "Finished" ||
+		props.event.totalLiquidityProvided == 0
+	)
+		return
+
+	analytics.log("showBetModal", { where: "event_card" })
+
+	showBetModal.value = true
+}
+
+/** Withdraw */
+const isWithdrawing = ref(false)
+const handleWithdraw = () => {
+	isWithdrawing.value = true
+
+	analytics.log("clickWithdraw", { where: "event_card" })
+
+	juster.sdk
+		.withdraw(props.event.id, accountStore.pkh)
+		.then((op) => {
+			/** Pending transaction label */
+			accountStore.pendingTransaction.awaiting = true
+
+			op.confirmation()
+				.then((result) => {
+					accountStore.pendingTransaction.awaiting = false
+					isWithdrawing.value = false
+
+					/** rm won position from store */
+					accountStore.positionsForWithdrawal =
+						accountStore.positionsForWithdrawal.filter(
+							(position) => position.event.id != props.event.id,
+						)
+
+					updateWithdrawals()
+
+					if (!result.completed) {
+						// todo: handle it?
+					}
+				})
+				.catch(() => {
+					accountStore.pendingTransaction.awaiting = false
+					isWithdrawing.value = false
+				})
+
+			notificationsStore.create({
+				notification: {
+					type: "success",
+					title: "Withdrawal request sent",
+					description:
+						"Processing takes about 10-30 seconds. Funds will appear in your wallet soon",
+					autoDestroy: true,
+				},
+			})
+
+			analytics.log("onWithdraw", {
+				eventId: props.event.id,
+			})
+		})
+		.catch(() => {
+			accountStore.pendingTransaction.awaiting = false
+			isWithdrawing.value = false
+		})
+}
+
+const handleParticipants = () => {
+	showParticipantsModal.value = true
+
+	analytics.log("showParticipantsModal", { where: "event_card" })
+}
+
+const copy = (target) => {
+	if (target == "id") {
+		notificationsStore.create({
+			notification: {
+				type: "success",
+				title: "Event ID copied to clipboard",
+				description: "Use Ctrl+V to paste",
+				autoDestroy: true,
+			},
+		})
+
+		toClipboard(props.event.id)
+	}
+	if (target == "url") {
+		notificationsStore.create({
+			notification: {
+				type: "success",
+				title: "Event URL copied to clipboard",
+				description: "Use Ctrl+V to paste",
+				autoDestroy: true,
+			},
+		})
+
+		toClipboard(location)
+	}
+}
+
+/** Context menu */
+const contextMenuStyles = reactive({
+	top: 0,
+	left: 0,
+})
+const contextMenuHandler = (e) => {
+	e.preventDefault()
+
+	analytics.log("showContextMenu")
+
+	contextMenuStyles.top = `${e.clientY}px`
+	contextMenuStyles.left = `${e.clientX}px`
+
+	openContextMenu.value = !openContextMenu.value
+}
+
+onMounted(async () => {
+	if (card.value)
+		card.value.addEventListener("contextmenu", contextMenuHandler)
+
+	if (props.event.status === "FINISHED") return
+
+	/** Subscription, TODO: refactor */
+	subscription.value = await juster.gql
+		.subscription({
+			event: [
+				{
+					where: { id: { _eq: props.event.id } },
+				},
+				{
+					id: true,
+					poolAboveEq: true,
+					poolBelow: true,
+					totalLiquidityShares: true,
+					totalValueLocked: true,
