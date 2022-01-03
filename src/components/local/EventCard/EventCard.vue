@@ -317,3 +317,135 @@ onMounted(async () => {
 					poolBelow: true,
 					totalLiquidityShares: true,
 					totalValueLocked: true,
+					totalLiquidityProvided: true,
+					createdTime: true,
+					creatorId: true,
+					betsCloseTime: true,
+					liquidityPercent: true,
+					status: true,
+					startRate: true,
+					closedRate: true,
+					winnerBets: true,
+					bets: {
+						id: true,
+						side: true,
+						reward: true,
+						amount: true,
+						createdTime: true,
+						userId: true,
+					},
+					deposits: {
+						amountAboveEq: true,
+						amountBelow: true,
+						eventId: true,
+						id: true,
+						userId: true,
+						createdTime: true,
+						shares: true,
+					},
+				},
+			],
+		})
+		.subscribe({
+			next: (data) => {
+				const { event: newEvent } = data
+
+				marketStore.updEvent(newEvent[0])
+			},
+			error: console.error,
+		})
+})
+
+onBeforeUnmount(() => {
+	card.value.removeEventListener("contextmenu", contextMenuHandler)
+})
+
+onUnmounted(() => {
+	if (
+		// eslint-disable-next-line no-prototype-builtins
+		subscription.value.hasOwnProperty("_state") &&
+		!subscription.value?.closed
+	) {
+		subscription.value.unsubscribe()
+	}
+
+	destroyStartCountdown()
+	destroyFinishCountdown()
+})
+</script>
+
+<template>
+	<router-link :to="`/events/${event.id}`">
+		<div ref="card" :class="$style.wrapper">
+			<BetModal :show="showBetModal" :event="event" :preselectedSide="preselectedSide" @onBet="showBetModal = false"
+				@onClose="showBetModal = false" />
+			<LiquidityModal :show="showLiquidityModal" :event="event" @onClose="showLiquidityModal = false" />
+			<ParticipantsModal :show="showParticipantsModal" @onClose="showParticipantsModal = false" :event="event" />
+
+			<Dropdown :forceOpen="openContextMenu" @onClose="openContextMenu = false" :class="$style.dropdown"
+				:style="{ ...contextMenuStyles }">
+				<template v-slot:dropdown>
+					<router-link :to="`/events/${event.id}`" target="_blank">
+						<DropdownItem>
+							<Icon name="open" size="16" />Open in new tab
+						</DropdownItem>
+					</router-link>
+
+					<DropdownDivider />
+
+					<DropdownItem @click.prevent="handleParticipants">
+						<Icon name="users" size="16" />View participants
+					</DropdownItem>
+					<DropdownItem disabled>
+						<Icon name="notifications" size="16" />Notifiy me
+					</DropdownItem>
+
+					<DropdownDivider />
+
+					<DropdownItem @click.prevent="copy('id')">
+						<Icon name="copy" size="16" />Copy ID
+					</DropdownItem>
+					<DropdownItem @click.prevent="copy('url')">
+						<Icon name="copy" size="16" />Copy URL
+					</DropdownItem>
+				</template>
+			</Dropdown>
+
+			<div :class="$style.header">
+				<div :class="$style.symbol_imgs">
+					<img :src="getCurrencyIcon(symbol.split('-')[0])" alt="symbol" />
+					<img :src="getCurrencyIcon('USD')" alt="symbol" />
+				</div>
+
+				<div :class="$style.users">
+					<Tooltip position="bottom" side="right">
+						<div :class="$style.participants">
+							<img v-for="participantAvatar in participantsAvatars.slice(
+								0,
+								3,
+							)" :key="participantAvatar" :src="`https://services.tzkt.io/v1/avatars/${participantAvatar}`" :class="[
+	$style.user_avatar,
+	$style.participant,
+]" alt="avatar" />
+							<div v-if="participantsAvatars.length > 3" :class="[
+								$style.participant,
+								$style.more_participants,
+							]">
+								+{{ participantsAvatars.length - 3 }}
+							</div>
+						</div>
+
+						<template v-slot:content>Participants ({{
+								participantsAvatars.length
+						}})</template>
+					</Tooltip>
+
+					<Tooltip position="bottom" side="right">
+						<div :class="$style.creator">
+							<template v-if="
+								verifiedMakers[currentNetwork].includes(
+									event.creatorId,
+								)
+							">
+								<Icon name="logo_symbol" size="24" />
+								<Icon name="verified" size="16" :class="$style.verified_icon" />
