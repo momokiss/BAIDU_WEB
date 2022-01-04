@@ -449,3 +449,124 @@ onUnmounted(() => {
 							">
 								<Icon name="logo_symbol" size="24" />
 								<Icon name="verified" size="16" :class="$style.verified_icon" />
+							</template>
+
+							<template v-else>
+								<img :src="`https://services.tzkt.io/v1/avatars/${event.creatorId}`" :class="$style.user_avatar"
+									alt="avatar" />
+							</template>
+						</div>
+
+						<template v-slot:content>{{
+								verifiedMakers[currentNetwork].includes(
+									event.creatorId,
+								)
+									? "Recurring event from Juster"
+									: "Custom event from user"
+						}}</template>
+					</Tooltip>
+				</div>
+			</div>
+
+			<div :class="$style.title">
+				<img v-if="event.winnerBets == 'ABOVE_EQ'" :src="require('@/assets/icons/higher_won.svg')"
+					alt="won_side_icon" />
+				<img v-else-if="event.winnerBets == 'BELOW'" :src="require('@/assets/icons/lower_won.svg')"
+					alt="won_side_icon" />
+				<Icon v-else name="sides" size="16" />
+				{{
+						supportedMarkets[symbol] &&
+						supportedMarkets[symbol].description
+				}}
+				<span>price event</span>
+			</div>
+
+			<div :class="$style.timing">
+				<div :class="$style.days">
+					{{ `${timing.start.day} ${timing.start.month}` }}
+				</div>
+
+				<div :class="$style.dot" />
+
+				<div :class="$style.hrs">
+					{{ timing.start.time }}
+				</div>
+			</div>
+
+			<div :class="$style.badges">
+				<Tooltip v-if="startStatus == 'In progress' && event.status == 'NEW'" position="bottom" side="left">
+					<Badge size="small" color="green" :class="$style.main_badge">
+						<Icon name="event_new" size="12" />New
+					</Badge>
+
+					<template v-slot:content>
+						The event is available for betting and providing
+						liquidity
+					</template>
+				</Tooltip>
+				<Tooltip v-else-if="
+					startStatus == 'Finished' && event.status == 'NEW'
+				" position="bottom" side="left">
+					<Badge color="yellow" :class="$style.main_badge">
+						<Icon name="event_new" size="12" />Starting
+					</Badge>
+
+					<template v-slot:content>Betting is closed. The event is starting</template>
+				</Tooltip>
+				<Tooltip v-else-if="event.status == 'STARTED'" position="bottom" side="left">
+					<Badge color="yellow" :class="$style.main_badge">
+						<Icon name="event_active" size="12" />Running
+					</Badge>
+					<template v-slot:content>Betting is closed. The end of the event is
+						pending</template>
+				</Tooltip>
+				<Tooltip v-else-if="event.status == 'FINISHED'" position="bottom" side="left">
+					<Badge color="gray" :class="$style.main_badge">
+						<Icon name="event_finished" size="12" />Finished
+					</Badge>
+					<template v-slot:content>The event is closed, winning side determined</template>
+				</Tooltip>
+				<Tooltip v-else-if="event.status == 'CANCELED'" position="bottom" side="left">
+					<Badge color="orange" :class="$style.main_badge">
+						<Icon name="stop" size="12" />Canceled
+					</Badge>
+					<template v-slot:content>This event has been canceled, funds returned</template>
+				</Tooltip>
+
+				<!-- Duration Badge -->
+				<Badge color="gray" :class="$style.badge">
+					<Icon name="time" size="12" />
+					<div>
+						{{
+								toReadableDuration({
+									seconds: event.measurePeriod,
+									asObject: true,
+								}).val
+						}}
+						<span>{{
+								pluralize(
+									toReadableDuration({
+										seconds: event.measurePeriod,
+										asObject: true,
+									}).val,
+									toReadableDuration({
+										seconds: event.measurePeriod,
+										asObject: true,
+									}).text,
+								)
+						}}</span>
+					</div>
+				</Badge>
+
+				<!-- Hot Event Badge -->
+				<Tooltip v-if="event.bets.length >= 6" position="bottom" side="right">
+					<Badge color="purple" :class="$style.badge">
+						<Icon name="bolt" size="12" />
+					</Badge>
+
+					<template v-slot:content>High-demand event</template>
+				</Tooltip>
+
+				<!-- Custom Badge -->
+				<Tooltip v-if="
+					!verifiedMakers[currentNetwork].includes(
