@@ -570,3 +570,122 @@ onUnmounted(() => {
 				<!-- Custom Badge -->
 				<Tooltip v-if="
 					!verifiedMakers[currentNetwork].includes(
+						event.creatorId,
+					)
+				" position="bottom" side="left">
+					<Badge color="yellow" :class="$style.badge">
+						<Icon name="bolt" size="12" /> Custom
+					</Badge>
+
+					<template v-slot:content>Custom event from user</template>
+				</Tooltip>
+
+				<!-- TVL Badge -->
+				<Tooltip position="bottom" side="right">
+					<Badge v-if="userTVL" color="gray" :class="$style.badge">
+						<img :src="`https://services.tzkt.io/v1/avatars/${accountStore.pkh}`" :class="$style.my_avatar"
+							alt="avatar" />
+						{{ abbreviateNumber(userTVL) }} ꜩ
+					</Badge>
+
+					<template v-slot:content>My TVL: Bets + Liquidity</template>
+				</Tooltip>
+			</div>
+
+			<div :class="$style.hints">
+				<div v-if="startStatus == 'In progress'" :class="[$style.hint, $style.gray]">
+					<Icon name="time" size="14" />
+					<div>
+						Starting
+						<span>
+							{{
+									DateTime.fromISO(event.betsCloseTime)
+										.setLocale("en")
+										.toRelative()
+							}}
+						</span>
+					</div>
+				</div>
+
+				<div v-else-if="
+					startStatus == 'Finished' && event.status == 'NEW'
+				" :class="[$style.hint, $style.gray]">
+					<Icon name="time" size="14" />
+					<div>Starting</div>
+				</div>
+
+				<div v-else-if="
+					startStatus == 'Finished' && event.status == 'STARTED'
+				" :class="[$style.hint, $style.yellow]">
+					<Icon name="time" size="14" />
+					<div>
+						Ending
+						<span>
+							{{
+									DateTime.fromISO(event.betsCloseTime)
+										.plus({ second: event.measurePeriod })
+										.setLocale("en")
+										.toRelative()
+							}}
+						</span>
+					</div>
+				</div>
+
+				<div v-else-if="event.status == 'FINISHED'" :class="[$style.hint, $style.gray]">
+					<Icon name="time" size="14" />
+					<div>
+						Ended
+						<span>
+							{{
+									DateTime.fromISO(event.betsCloseTime, {
+										locale: "en",
+									})
+										.plus({ second: event.measurePeriod })
+										.toRelative()
+							}}
+						</span>
+					</div>
+				</div>
+
+				<div v-if="event.status == 'CANCELED'" :class="[$style.hint, $style.red]">
+					<Icon name="flag" size="14" />
+					<div><span>Canceled</span> Measurement delay</div>
+				</div>
+
+				<Tooltip v-if="event.status !== 'FINISHED'" position="top" side="left" textAlign="left">
+					<div :class="[
+						$style.hint,
+						liquidityLevel.text == 'Low' && $style.red,
+						liquidityLevel.text == 'Medium' && $style.yellow,
+						liquidityLevel.text == 'High' && $style.green,
+						liquidityLevel.text == 'Ultra' && $style.red,
+					]">
+						<Icon :name="liquidityLevel.icon" size="14" />
+
+						<div>
+							<span>{{ liquidityLevel.text }}</span>
+							liquidity
+						</div>
+					</div>
+
+					<template #content>
+						<span>Total Value Locked:</span>
+						{{ event.totalValueLocked }} <br />
+						<span>Total Liquidity Provided:</span>
+						{{ event.totalLiquidityProvided }}
+					</template>
+				</Tooltip>
+
+				<Tooltip v-if="event.winnerBets == 'BELOW'" side="left">
+					<div :class="[$style.hint, $style.red]">
+						<Icon name="lower" size="14" />
+						<div><span>Fall</span> won</div>
+					</div>
+
+					<template #content><span>Start rate - Closed rate =</span> <br />
+						{{
+								(
+									event.closedRate * 100 -
+									event.startRate * 100
+								).toFixed(2)
+						}}</template>
