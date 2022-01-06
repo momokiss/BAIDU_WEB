@@ -689,3 +689,134 @@ onUnmounted(() => {
 									event.startRate * 100
 								).toFixed(2)
 						}}</template>
+				</Tooltip>
+
+				<Tooltip v-if="event.winnerBets == 'ABOVE_EQ'" side="left">
+					<div :class="[$style.hint, $style.green]">
+						<Icon name="higher" size="14" />
+						<div><span>Rise</span> won</div>
+					</div>
+
+					<template #content><span>Start rate - Closed rate =</span> <br />
+						{{
+								(
+									event.closedRate * 100 -
+									event.startRate * 100
+								).toFixed(2)
+						}}</template>
+				</Tooltip>
+			</div>
+
+			<EventActions @onBet="handleBet" @onWithdraw="handleWithdraw" :event="event" :isWon="hasWonBet"
+				:positionForWithdraw="positionForWithdraw" :disabled="
+					event.totalLiquidityProvided == 0 ||
+					startStatus == 'Finished'
+				" :isWithdrawing="isWithdrawing" />
+		</div>
+	</router-link>
+</template>
+
+<style module>
+.wrapper {
+	background: var(--card-bg);
+	border-radius: 10px;
+	border: 1px solid var(--border);
+
+	padding: 20px;
+	max-width: 617px;
+
+	transition: all 0.2s ease;
+}
+
+.wrapper:hover {
+	border: 1px solid var(--border-highlight);
+}
+
+.dropdown {
+	position: absolute;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 20px;
+}
+
+.symbol_imgs {
+	position: relative;
+
+	width: 30px;
+	height: 30px;
+}
+
+.symbol_imgs img {
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+}
+
+.symbol_imgs img:first-child {
+	position: absolute;
+	z-index: 1;
+	outline: 3px solid var(--card-bg);
+}
+
+.symbol_imgs img:last-child {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.users {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.participants {
+	display: flex;
+}
+
+.participant {
+	margin-left: -6px;
+}
+
+.creator {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	fill: var(--text-secondary);
+
+	width: 30px;
+	height: 30px;
+}
+
+.verified_icon {
+	fill: var(--orange);
+	background: var(--card-bg);
+	border-radius: 50%;
+
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	box-sizing: content-box;
+}
+
+.user_avatar {
+	width: 30px;
+	height: 30px;
+
+	background: rgb(35, 35, 35);
+	border-radius: 50px;
+	outline: 3px solid var(--card-bg);
+
+	padding: 2px;
+}
+
+.more_participants {
+	width: 30px;
+	height: 30px;
