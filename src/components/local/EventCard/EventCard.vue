@@ -820,3 +820,129 @@ onUnmounted(() => {
 .more_participants {
 	width: 30px;
 	height: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 11px;
+	line-height: 1.1;
+	font-weight: 700;
+	color: var(--text-blue);
+
+	background: rgb(35, 35, 35);
+	border-radius: 50px;
+	outline: 3px solid var(--card-bg);
+}
+
+.title {
+	display: flex;
+	align-items: center;
+
+	height: 20px;
+
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 16px;
+	color: var(--text-primary);
+
+	margin-bottom: 8px;
+}
+
+.title img {
+	display: flex;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 6px;
+}
+
+.title svg {
+	display: flex;
+
+	fill: var(--text-tertiary);
+
+	margin-right: 6px;
+}
+
+.title span {
+	color: var(--text-tertiary);
+
+	margin-left: 4px;
+}
+
+.timing {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 600;
+	color: var(--text-secondary);
+
+	margin-bottom: 16px;
+}
+
+.days {
+	color: var(--text-tertiary);
+}
+
+.hrs span {
+	color: var(--text-tertiary);
+}
+
+.dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--border);
+}
+
+.badges {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 24px;
+}
+
+.main_badge {
+	margin-right: 8px;
+}
+
+.badge {
+	margin-right: 4px;
+}
+
+.hints {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	height: 40px;
+
+	margin-bottom: 24px;
+}
+
+.hint {
+	display: flex;
+	align-items: center;
+
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 600;
+	color: var(--text-tertiary);
+}
+
+.hint.red svg {
+	fill: var(--red);
+}
+
+.hint.yellow svg {
+	fill: var(--yellow);
+}
+
+.hint.green svg {
+	fill: var(--green);
+}
