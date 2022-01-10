@@ -946,3 +946,33 @@ onUnmounted(() => {
 .hint.green svg {
 	fill: var(--green);
 }
+
+.hint span {
+	color: var(--text-secondary);
+}
+
+.hint svg {
+	margin-right: 8px;
+}
+
+.hint.yellow {
+	fill: var(--yellow);
+}
+
+.hint.green {
+	fill: var(--green);
+}
+
+.hint.red {
+	fill: var(--red);
+}
+
+.hint.gray {
+	fill: var(--text-secondary);
+}
+
+.my_avatar {
+	width: 16px;
+	height: 16px;
+}
+</style>
