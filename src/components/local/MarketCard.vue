@@ -11,4 +11,10 @@ import Button from "@/components/ui/Button"
 /**
  * Local
  */
-import MarketStatu
+import MarketStatus from "./MarketStatus"
+
+/**
+ * Services
+ */
+import { numberWithSymbol, calcChange } from "@/services/utils/amounts"
+import { support
