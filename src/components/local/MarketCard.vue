@@ -23,4 +23,9 @@ import { prepareQuotesForD3 } from "@/services/utils/quotes"
 /**
  * Store
  */
-import { useMarketStore } 
+import { useMarketStore } from "@/store/market"
+
+export default defineComponent({
+  name: "MarketCard",
+  props: {
+    market: Obj
