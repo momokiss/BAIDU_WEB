@@ -28,4 +28,11 @@ import { useMarketStore } from "@/store/market"
 export default defineComponent({
   name: "MarketCard",
   props: {
-    market: Obj
+    market: Object,
+  },
+
+  setup(props) {
+    const { market } = toRefs(props)
+    const marketStore = useMarketStore()
+
+   
