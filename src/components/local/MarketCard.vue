@@ -39,4 +39,9 @@ export default defineComponent({
       return marketStore.markets[market.value.symbol]?.quotes
     })
 
-    const price = computed(() =>
+    const price = computed(() => {
+      return {
+        integer: numberWithSymbol(
+          quotes.value[0].price.toString().split(".")[0],
+          ",",
+     
