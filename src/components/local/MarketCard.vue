@@ -35,4 +35,8 @@ export default defineComponent({
     const { market } = toRefs(props)
     const marketStore = useMarketStore()
 
-   
+    const quotes = computed(() => {
+      return marketStore.markets[market.value.symbol]?.quotes
+    })
+
+    const price = computed(() =>
