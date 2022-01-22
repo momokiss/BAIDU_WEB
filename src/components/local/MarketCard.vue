@@ -44,4 +44,10 @@ export default defineComponent({
         integer: numberWithSymbol(
           quotes.value[0].price.toString().split(".")[0],
           ",",
-     
+        ),
+        fraction: quotes.value[0].price.toString().split(".")[1],
+      }
+    })
+
+    const color = ref("grey")
+ 
