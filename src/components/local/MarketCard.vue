@@ -50,4 +50,9 @@ export default defineComponent({
     })
 
     const color = ref("grey")
+    const change = computed(() => {
+      if (!quotes.value) return
+
+      if (!market.value.historyPrice) return { text: "Loading" }
+
  
