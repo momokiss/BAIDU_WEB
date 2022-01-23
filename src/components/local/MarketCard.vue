@@ -55,4 +55,7 @@ export default defineComponent({
 
       if (!market.value.historyPrice) return { text: "Loading" }
 
- 
+      const { diff, percent, isIncreased } = calcChange(
+        quotes.value[0].price,
+        market.value.historyPrice,
+  
