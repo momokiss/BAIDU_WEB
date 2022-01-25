@@ -58,4 +58,6 @@ export default defineComponent({
       const { diff, percent, isIncreased } = calcChange(
         quotes.value[0].price,
         market.value.historyPrice,
-  
+      )
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      color.value = isIncrea
