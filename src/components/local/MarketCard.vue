@@ -60,4 +60,10 @@ export default defineComponent({
         market.value.historyPrice,
       )
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      color.value = isIncrea
+      color.value = isIncreased ? "green" : "red"
+
+      return {
+        text: `${numberWithSymbol(
+          diff.toFixed(2),
+          ",",
+        )}, ${percent
