@@ -66,4 +66,10 @@ export default defineComponent({
         text: `${numberWithSymbol(
           diff.toFixed(2),
           ",",
-        )}, ${percent
+        )}, ${percent.toFixed(2)}%, 1W`,
+        trend: isIncreased ? "rise" : "fall",
+      }
+    })
+
+    const draw = () => {
+      const marg
