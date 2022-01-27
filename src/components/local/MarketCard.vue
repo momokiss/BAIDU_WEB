@@ -72,4 +72,6 @@ export default defineComponent({
     })
 
     const draw = () => {
-      const marg
+      const margin = { top: 20, right: 20, bottom: 20, left: 0 },
+        width = 500 - margin.left - margin.right,
+        height = 140 - margin.top - mar
