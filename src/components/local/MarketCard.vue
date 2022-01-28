@@ -74,4 +74,9 @@ export default defineComponent({
     const draw = () => {
       const margin = { top: 20, right: 20, bottom: 20, left: 0 },
         width = 500 - margin.left - margin.right,
-        height = 140 - margin.top - mar
+        height = 140 - margin.top - margin.bottom
+
+      d3.select(`#chart_${market.value.id} > *`).remove()
+
+      const svg = d3
+        .select(`#chart_${market.val
