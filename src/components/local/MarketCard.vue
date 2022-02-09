@@ -79,4 +79,7 @@ export default defineComponent({
       d3.select(`#chart_${market.value.id} > *`).remove()
 
       const svg = d3
-        .select(`#chart_${market.val
+        .select(`#chart_${market.value.id}`)
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom
