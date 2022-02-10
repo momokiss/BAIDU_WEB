@@ -86,4 +86,9 @@ export default defineComponent({
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`)
 
-      const data = prepareQuotesForD3({ quot
+      const data = prepareQuotesForD3({ quotes: quotes.value })
+
+      const x = d3
+        .scaleTime()
+        .domain(d3.extent(data, (d) => d.date))
+        .r
