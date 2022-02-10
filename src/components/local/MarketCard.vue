@@ -91,4 +91,10 @@ export default defineComponent({
       const x = d3
         .scaleTime()
         .domain(d3.extent(data, (d) => d.date))
-        .r
+        .range([0, width])
+
+      const y = d3
+        .scaleLinear()
+        .domain([
+          d3.min(data, (d) => +d.value),
+         
