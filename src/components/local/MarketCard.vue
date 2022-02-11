@@ -97,4 +97,10 @@ export default defineComponent({
         .scaleLinear()
         .domain([
           d3.min(data, (d) => +d.value),
-         
+          d3.max(data, (d) => +d.value),
+        ])
+        .range([height, 0])
+
+      svg.append("path")
+        .datum(data)
+        .attr("fill", "
