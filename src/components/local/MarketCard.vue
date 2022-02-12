@@ -103,4 +103,9 @@ export default defineComponent({
 
       svg.append("path")
         .datum(data)
-        .attr("fill", "
+        .attr("fill", "none")
+        .attr(
+          "stroke",
+          change.value.trend == "rise" ? "#1aa168" : "#e05c43",
+        )
+        .attr("s
