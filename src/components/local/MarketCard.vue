@@ -108,4 +108,10 @@ export default defineComponent({
           "stroke",
           change.value.trend == "rise" ? "#1aa168" : "#e05c43",
         )
-        .attr("s
+        .attr("stroke-width", 1.5)
+        .attr(
+          "d",
+          d3
+            .line()
+            .x((d) => x(d.date))
+     
