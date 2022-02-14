@@ -114,4 +114,9 @@ export default defineComponent({
           d3
             .line()
             .x((d) => x(d.date))
-     
+            .y((d) => y(d.value)),
+        )
+
+      svg.append("circle")
+        .attr("cx", x(data[data.length - 1].date))
+        .attr("c
