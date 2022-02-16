@@ -119,4 +119,8 @@ export default defineComponent({
 
       svg.append("circle")
         .attr("cx", x(data[data.length - 1].date))
-        .attr("c
+        .attr("cy", y(data[data.length - 1].value))
+        .attr("r", 2)
+        .attr("fill", "#fff")
+
+      /** animated ci
