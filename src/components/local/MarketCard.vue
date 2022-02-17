@@ -129,4 +129,8 @@ export default defineComponent({
         .attr("cx", x(data[data.length - 1].date))
         .attr("cy", y(data[data.length - 1].value))
         .attr("fill", "rgba(255,255,255,0.07)")
-        .attr("stroke", 
+        .attr("stroke", "rgba(255,255,255, 0.5)")
+        .attr("stroke-width", "2px")
+
+      svg.select("#animated_circle")
+     
