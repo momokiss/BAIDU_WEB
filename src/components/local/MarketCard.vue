@@ -133,4 +133,5 @@ export default defineComponent({
         .attr("stroke-width", "2px")
 
       svg.select("#animated_circle")
-     
+        .html(`<animate id="ac1" attributeType="SVG" attributeName="r" begin="1s;ac1.end+2s" dur="1.5s" from="1%" to="10%" />
+              <anima
