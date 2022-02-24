@@ -154,3 +154,8 @@ export default defineComponent({
      * Select quote on hover
      */
     let selectedQuote = ref({})
+
+    const selectedPrice = computed(() => {
+      return {
+        integer: numberWithSymbol(
+          selectedQuote.value.value.toString().sp
