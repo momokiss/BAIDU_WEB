@@ -145,4 +145,12 @@ export default defineComponent({
     })
 
     watch(change, () => {
-      if (change.va
+      if (change.value.text == "Loading") return
+
+      draw()
+    })
+
+    /**
+     * Select quote on hover
+     */
+    let selectedQuote = ref({})
