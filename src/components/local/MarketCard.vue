@@ -158,4 +158,11 @@ export default defineComponent({
     const selectedPrice = computed(() => {
       return {
         integer: numberWithSymbol(
-          selectedQuote.value.value.toString().sp
+          selectedQuote.value.value.toString().split(".")[0],
+          ",",
+        ),
+        fraction: selectedQuote.value.value.toString().split(".")[1],
+      }
+    })
+
+    const on
