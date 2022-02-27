@@ -165,4 +165,8 @@ export default defineComponent({
       }
     })
 
-    const on
+    const onMouseMove = ({ layerX }) => {
+      const data = prepareQuotesForD3({ quotes: quotes.value })
+
+      const xScale = d3
+        .
