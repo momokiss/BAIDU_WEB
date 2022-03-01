@@ -169,4 +169,8 @@ export default defineComponent({
       const data = prepareQuotesForD3({ quotes: quotes.value })
 
       const xScale = d3
-        .
+        .scaleTime()
+        .domain(d3.extent(data, (d) => d.date))
+        .range([0, 500])
+
+      const exactDate = xScale.invert(
