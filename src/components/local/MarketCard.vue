@@ -173,4 +173,6 @@ export default defineComponent({
         .domain(d3.extent(data, (d) => d.date))
         .range([0, 500])
 
-      const exactDate = xScale.invert(
+      const exactDate = xScale.invert(layerX)
+      const diffs = data.map((d) => Math.abs(d.date - exactDate))
+      const snapIndex = diffs.indexOf(Math.min(...diffs
