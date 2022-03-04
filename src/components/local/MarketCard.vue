@@ -175,4 +175,10 @@ export default defineComponent({
 
       const exactDate = xScale.invert(layerX)
       const diffs = data.map((d) => Math.abs(d.date - exactDate))
-      const snapIndex = diffs.indexOf(Math.min(...diffs
+      const snapIndex = diffs.indexOf(Math.min(...diffs))
+
+      selectedQuote.value = data[snapIndex]
+
+      /** draw dots */
+      const circles = d3.selectAll(
+        `#chart_${market.
