@@ -187,4 +187,8 @@ export default defineComponent({
 
       const svg = d3.select(`#chart_${market.value.id} > svg`)
       svg.append("line")
-        .a
+        .attr("x1", layerX)
+        .attr("x2", layerX)
+        .attr("y1", 140)
+        .attr("y2", 0)
+        .attr("stroke"
