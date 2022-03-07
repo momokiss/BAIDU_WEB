@@ -181,4 +181,10 @@ export default defineComponent({
 
       /** draw dots */
       const circles = d3.selectAll(
-        `#chart_${market.
+        `#chart_${market.value.id} > svg > line`,
+      )
+      circles.remove()
+
+      const svg = d3.select(`#chart_${market.value.id} > svg`)
+      svg.append("line")
+        .a
