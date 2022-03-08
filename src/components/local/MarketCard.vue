@@ -191,4 +191,8 @@ export default defineComponent({
         .attr("x2", layerX)
         .attr("y1", 140)
         .attr("y2", 0)
-        .attr("stroke"
+        .attr("stroke", "rgba(255,255,255, 0.5)")
+        .attr("stroke-width", 2)
+        .attr("stroke-dasharray", "2 8")
+    }
+    const onMouseLeave = (
