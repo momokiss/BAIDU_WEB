@@ -200,4 +200,13 @@ export default defineComponent({
 
       const circles = d3.selectAll(
         `#chart_${market.value.id} > svg > line`,
-     
+      )
+      circles.remove()
+    }
+
+    return {
+      change,
+      color,
+      quotes,
+      price,
+      selectedPrice,
