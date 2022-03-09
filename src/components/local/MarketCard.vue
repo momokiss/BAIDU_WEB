@@ -195,4 +195,9 @@ export default defineComponent({
         .attr("stroke-width", 2)
         .attr("stroke-dasharray", "2 8")
     }
-    const onMouseLeave = (
+    const onMouseLeave = () => {
+      selectedQuote.value = {}
+
+      const circles = d3.selectAll(
+        `#chart_${market.value.id} > svg > line`,
+     
