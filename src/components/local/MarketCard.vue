@@ -210,3 +210,10 @@ export default defineComponent({
       quotes,
       price,
       selectedPrice,
+      numberWithSymbol,
+      supportedMarkets,
+      onMouseMove,
+      onMouseLeave,
+      selectedQuote,
+    }
+ 
