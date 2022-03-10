@@ -216,4 +216,11 @@ export default defineComponent({
       onMouseLeave,
       selectedQuote,
     }
- 
+  },
+
+  // eslint-disable-next-line vue/no-reserved-component-names
+  components: { MarketStatus, Button },
+})
+</script>
+
+<template>
