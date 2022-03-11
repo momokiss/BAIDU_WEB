@@ -227,4 +227,10 @@ export default defineComponent({
   <div :class="$style.wrapper">
     <div :class="$style.header">
       <div :class="$style.left">
-        <h3 :
+        <h3 :class="$style.symbol">
+          {{ market.symbol }}
+
+          <MarketStatus />
+        </h3>
+        <div :class="$style.description">
+         
