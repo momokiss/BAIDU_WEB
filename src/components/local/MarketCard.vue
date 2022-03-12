@@ -238,4 +238,7 @@ export default defineComponent({
       </div>
 
       <!-- Current price -->
-      <div v-if="!selectedQuote.valu
+      <div v-if="!selectedQuote.value" :class="$style.right">
+        <div v-if="quotes.length" :class="$style.price">
+          {{ price.integer
+          }}<spa
