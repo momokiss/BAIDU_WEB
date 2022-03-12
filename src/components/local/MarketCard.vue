@@ -233,4 +233,9 @@ export default defineComponent({
           <MarketStatus />
         </h3>
         <div :class="$style.description">
-         
+          {{ supportedMarkets[market.symbol].description }}
+        </div>
+      </div>
+
+      <!-- Current price -->
+      <div v-if="!selectedQuote.valu
