@@ -244,4 +244,8 @@ export default defineComponent({
           }}<span>.{{ price.fraction.slice(0, 2) }} USD</span>
         </div>
 
-        <div v-if="quotes.length && change" :class="[$style.diff, $styl
+        <div v-if="quotes.length && change" :class="[$style.diff, $style[color]]">
+          <Icon name="carret" size="12" /> {{ change.text }}
+        </div>
+      </div>
+      <!-- Selected quo
