@@ -241,4 +241,7 @@ export default defineComponent({
       <div v-if="!selectedQuote.value" :class="$style.right">
         <div v-if="quotes.length" :class="$style.price">
           {{ price.integer
-          }}<spa
+          }}<span>.{{ price.fraction.slice(0, 2) }} USD</span>
+        </div>
+
+        <div v-if="quotes.length && change" :class="[$style.diff, $styl
