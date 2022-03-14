@@ -248,4 +248,8 @@ export default defineComponent({
           <Icon name="carret" size="12" /> {{ change.text }}
         </div>
       </div>
-      <!-- Selected quo
+      <!-- Selected quote -->
+      <div v-else :class="$style.right">
+        <div :class="$style.price">
+          {{ selectedPrice.integer
+    
