@@ -252,4 +252,9 @@ export default defineComponent({
       <div v-else :class="$style.right">
         <div :class="$style.price">
           {{ selectedPrice.integer
-    
+          }}<span>.{{ selectedPrice.fraction.slice(0, 2) }} USD</span>
+        </div>
+
+        <div :class="$style.date">
+          {{
+ 
