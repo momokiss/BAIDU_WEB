@@ -257,4 +257,7 @@ export default defineComponent({
 
         <div :class="$style.date">
           {{
- 
+              new Date(selectedQuote.date)
+                .toLocaleTimeString()
+                .split(":")
+                .sli
