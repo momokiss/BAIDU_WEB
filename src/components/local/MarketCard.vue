@@ -260,4 +260,12 @@ export default defineComponent({
               new Date(selectedQuote.date)
                 .toLocaleTimeString()
                 .split(":")
-                .sli
+                .slice(0, 2)
+                .join(":")
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div :class="$style.chart">
+      <div :id="`chart_${market.id}`" @mou
