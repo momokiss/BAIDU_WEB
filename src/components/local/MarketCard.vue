@@ -268,4 +268,8 @@ export default defineComponent({
     </div>
 
     <div :class="$style.chart">
-      <div :id="`chart_${market.id}`" @mou
+      <div :id="`chart_${market.id}`" @mousemove="onMouseMove" @mouseleave="onMouseLeave" />
+    </div>
+
+    <div :class="$style.bottom">
+      <div :clas
