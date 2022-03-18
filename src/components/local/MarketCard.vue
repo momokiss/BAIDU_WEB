@@ -272,4 +272,8 @@ export default defineComponent({
     </div>
 
     <div :class="$style.bottom">
-      <div :clas
+      <div :class="$style.actions">
+        <router-link :to="`/markets/${market.symbol}`" :class="$style.action">Open Market</router-link>
+      </div>
+
+   
