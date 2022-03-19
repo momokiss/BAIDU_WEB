@@ -276,4 +276,8 @@ export default defineComponent({
         <router-link :to="`/markets/${market.symbol}`" :class="$style.action">Open Market</router-link>
       </div>
 
-   
+      <div :class="$style.timeframe">
+        <Icon name="bolt" size="12" />Real-time
+      </div>
+    </div>
+  <
