@@ -287,4 +287,16 @@ export default defineComponent({
 .wrapper {
   background: var(--card-bg);
   border-radius: 10px;
-  border: 1p
+  border: 1px solid var(--border);
+
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.symbol {
+  display: flex;
+  ali
