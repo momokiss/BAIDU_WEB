@@ -280,4 +280,11 @@ export default defineComponent({
         <Icon name="bolt" size="12" />Real-time
       </div>
     </div>
-  <
+  </div>
+</template>
+
+<style module>
+.wrapper {
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1p
