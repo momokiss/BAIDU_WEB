@@ -306,4 +306,16 @@ export default defineComponent({
 .description {
   font-size: 13px;
   font-weight: 500;
-  color: var(--text-t
+  color: var(--text-tertiary);
+
+  margin-top: 8px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price {
+  f
