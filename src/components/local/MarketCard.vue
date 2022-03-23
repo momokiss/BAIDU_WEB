@@ -318,4 +318,13 @@ export default defineComponent({
 }
 
 .price {
-  f
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+
+  min-height: 20px;
+
+  margin-bottom: 6px;
+}
+
+.price span
