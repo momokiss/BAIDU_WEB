@@ -327,4 +327,15 @@ export default defineComponent({
   margin-bottom: 6px;
 }
 
-.price span
+.price span {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.diff {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  fo
