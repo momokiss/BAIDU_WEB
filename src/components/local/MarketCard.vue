@@ -346,4 +346,14 @@ export default defineComponent({
 
 .diff.grey {
   color: rgba(255, 255, 255, 0.3);
-  fill: rgba(255, 255
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.diff.green {
+  color: var(--green);
+  fill: var(--green);
+}
+
+.diff.red {
+  color: var(--red);
+  fill: v
