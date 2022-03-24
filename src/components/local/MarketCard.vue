@@ -338,4 +338,12 @@ export default defineComponent({
   gap: 6px;
 
   font-size: 12px;
-  fo
+  font-weight: 500;
+  color: var(--green);
+
+  fill: var(--green);
+}
+
+.diff.grey {
+  color: rgba(255, 255, 255, 0.3);
+  fill: rgba(255, 255
