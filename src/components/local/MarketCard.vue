@@ -356,4 +356,14 @@ export default defineComponent({
 
 .diff.red {
   color: var(--red);
-  fill: v
+  fill: var(--red);
+}
+
+.diff.red svg {
+  transform: rotate(180deg);
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiar
