@@ -379,3 +379,7 @@ export default defineComponent({
   position: relative;
 
   height: 140px;
+  margin: 12px 0 0 0;
+
+  background-image: radial-gradient(var(--dot) 1.5px, transparent 0px);
+  backgro
