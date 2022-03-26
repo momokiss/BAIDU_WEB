@@ -366,4 +366,16 @@ export default defineComponent({
 .date {
   font-size: 12px;
   font-weight: 500;
-  color: var(--text-tertiar
+  color: var(--text-tertiary);
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  overflow: hidden;
+
+  position: relative;
+
+  height: 140px;
