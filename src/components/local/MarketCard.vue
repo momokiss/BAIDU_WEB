@@ -382,4 +382,9 @@ export default defineComponent({
   margin: 12px 0 0 0;
 
   background-image: radial-gradient(var(--dot) 1.5px, transparent 0px);
-  backgro
+  background-size: 10px 10px;
+}
+
+.chart>div {
+  /* See #15 and https://github.com/w3c/uievents/issues/135 */
+  position: relative
