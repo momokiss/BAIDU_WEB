@@ -387,4 +387,16 @@ export default defineComponent({
 
 .chart>div {
   /* See #15 and https://github.com/w3c/uievents/issues/135 */
-  position: relative
+  position: relative;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  fill
