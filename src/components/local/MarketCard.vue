@@ -399,4 +399,13 @@ export default defineComponent({
   font-weight: 500;
   color: var(--text-tertiary);
 
-  fill
+  fill: var(--opacity-20);
+}
+
+.wrapper:hover .actions {
+  opacity: 1;
+}
+
+.bottom {
+  display: flex;
+  align-items: cen
