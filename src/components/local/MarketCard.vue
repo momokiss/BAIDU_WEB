@@ -417,4 +417,15 @@ export default defineComponent({
 .actions {
   display: flex;
   align-items: center;
-  g
+  gap: 12px;
+
+  opacity: 0.5;
+
+  transition: opacity 0.2s ease;
+}
+
+.action {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  color: va
