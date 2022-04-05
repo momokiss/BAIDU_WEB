@@ -408,4 +408,13 @@ export default defineComponent({
 
 .bottom {
   display: flex;
-  align-items: cen
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  g
