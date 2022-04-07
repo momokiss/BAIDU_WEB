@@ -438,4 +438,10 @@ export default defineComponent({
   gap: 8px;
 
   padding: 4px 6px 4px 4px;
-  border-radius:
+  border-radius: 6px;
+  border: 1px solid var(--border);
+
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-te
