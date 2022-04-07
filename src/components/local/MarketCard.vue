@@ -428,4 +428,14 @@ export default defineComponent({
   font-size: 12px;
   line-height: 1;
   font-weight: 600;
-  color: va
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.timeframe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 4px 6px 4px 4px;
+  border-radius:
