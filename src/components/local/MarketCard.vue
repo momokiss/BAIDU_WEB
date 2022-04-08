@@ -444,4 +444,15 @@ export default defineComponent({
   font-size: 12px;
   line-height: 1;
   font-weight: 500;
-  color: var(--text-te
+  color: var(--text-tertiary);
+}
+
+.timeframe svg {
+  fill: var(--opacity-20);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border
