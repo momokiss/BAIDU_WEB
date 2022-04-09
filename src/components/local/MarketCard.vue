@@ -455,4 +455,6 @@ export default defineComponent({
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--border
+  background: var(--border);
+}
+</style>
