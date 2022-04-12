@@ -122,3 +122,9 @@ export default defineComponent({
   left: 0;
   background: var(--green);
 }
+
+.fill.lower {
+  right: 0;
+  background: var(--orange);
+}
+</style>
