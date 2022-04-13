@@ -16,4 +16,12 @@ import { useAccountStore } from "@/store/account"
  */
 import Tooltip from "@/components/ui/Tooltip"
 
-const accountStore = useAccoun
+const accountStore = useAccountStore()
+
+const reward = computed(() => {
+  const total = accountStore.wonPositions.reduce(
+    (acc, curr) => (acc += curr.value),
+    0,
+  )
+
+  return f(t
