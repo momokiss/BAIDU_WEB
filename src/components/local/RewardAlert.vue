@@ -24,4 +24,10 @@ const reward = computed(() => {
     0,
   )
 
-  return f(t
+  return f(total)
+})
+</script>
+
+<template>
+  <router-link v-if="accountStore.wonPositions.length" to="/withdrawals">
+   
