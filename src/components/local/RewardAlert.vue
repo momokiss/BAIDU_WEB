@@ -30,4 +30,8 @@ const reward = computed(() => {
 
 <template>
   <router-link v-if="accountStore.wonPositions.length" to="/withdrawals">
-   
+    <Tooltip side="right">
+      <div :class="$style.wrapper">
+        <Icon name="crown" size="14" />
+
+        <div v-if="reward % 1 == 0" :
