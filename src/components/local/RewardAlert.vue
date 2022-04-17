@@ -34,4 +34,8 @@ const reward = computed(() => {
       <div :class="$style.wrapper">
         <Icon name="crown" size="14" />
 
-        <div v-if="reward % 1 == 0" :
+        <div v-if="reward % 1 == 0" :class="$style.reward">
+          <span>{{ reward[0] }}</span> ꜩ
+        </div>
+        <div v-else :class="$style.reward">
+          <span>{
