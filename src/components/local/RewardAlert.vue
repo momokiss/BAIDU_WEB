@@ -42,4 +42,11 @@ const reward = computed(() => {
         </div>
       </div>
 
-      <template #con
+      <template #content>Available funds for withdrawal</template>
+    </Tooltip>
+  </router-link>
+</template>
+
+<style module>
+.wrapper {
+  display: f
