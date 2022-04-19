@@ -38,4 +38,8 @@ const reward = computed(() => {
           <span>{{ reward[0] }}</span> ꜩ
         </div>
         <div v-else :class="$style.reward">
-          <span>{
+          <span>{{ reward.split(".")[0] }}</span>.{{ reward.split(".")[1] }} ꜩ
+        </div>
+      </div>
+
+      <template #con
