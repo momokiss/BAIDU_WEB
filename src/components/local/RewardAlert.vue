@@ -49,4 +49,12 @@ const reward = computed(() => {
 
 <style module>
 .wrapper {
-  display: f
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 32px;
+  border-radius: 8px;
+  background: var(--btn-secondary-bg);
+
+  padding: 
