@@ -57,4 +57,14 @@ const reward = computed(() => {
   border-radius: 8px;
   background: var(--btn-secondary-bg);
 
-  padding: 
+  padding: 0 12px 0 10px;
+
+  transition: all 0.2s ease;
+}
+
+.wrapper:hover {
+  background: var(--btn-secondary-bg-hover);
+}
+
+.wrapper:active {
+  transform: t
