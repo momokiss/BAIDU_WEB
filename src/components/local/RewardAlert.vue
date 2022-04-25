@@ -67,4 +67,14 @@ const reward = computed(() => {
 }
 
 .wrapper:active {
-  transform: t
+  transform: translateY(1px);
+}
+
+.wrapper svg {
+  fill: var(--green);
+}
+
+.reward {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-tertiar
