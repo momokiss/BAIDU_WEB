@@ -153,3 +153,100 @@ export default defineComponent({
         </div>
       </div>
     </div>
+
+    <div :class="$style.pool">
+      <div :style="{ width: `${abovePercent - 1}%` }" :class="[$style.fill, $style.rise]" />
+      <div :style="{ width: `${belowPercent - 1}%`, right: 0 }" :class="[$style.fill, $style.fall]" />
+    </div>
+  </div>
+</template>
+
+<style module>
+.wrapper {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 16px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.name {
+  font-size: 12px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.name span {
+  color: var(--text-tertiary);
+}
+
+.size {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  fill: var(--opacity-40);
+
+  font-size: 11px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.size span {
+  color: var(--text-tertiary);
+}
+
+.pool {
+  position: relative;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 50px;
+  background: var(--opacity-10);
+
+  margin-bottom: 4px;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 0%;
+
+  height: 4px;
+  border-radius: 50px;
+
+  transition: width 0.5s ease;
+}
+
+.fill.rise {
+  background: var(--green);
+}
+
+.fill.fall {
+  background: var(--orange);
+}
+</style>
