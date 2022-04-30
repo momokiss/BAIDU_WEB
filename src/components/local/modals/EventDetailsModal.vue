@@ -14,4 +14,10 @@ import { toReadableDuration } from "@/services/utils/date"
 
 const props = defineProps({ show: { type: Boolean }, event: { type: Object } })
 
-c
+const eventDuration = computed(() =>
+  toReadableDuration({ seconds: props.event.measurePeriod }),
+)
+</script>
+
+<template>
+  <Modal :show="sho
