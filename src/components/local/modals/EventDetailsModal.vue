@@ -10,4 +10,8 @@ import Modal from "@/components/ui/Modal"
 /**
  * Services
  */
-import {
+import { toReadableDuration } from "@/services/utils/date"
+
+const props = defineProps({ show: { type: Boolean }, event: { type: Object } })
+
+c
