@@ -23,4 +23,8 @@ const eventDuration = computed(() =>
   <Modal :show="show" width="500" closable @onClose="$emit('onClose')">
     <div :class="$style.title">Event details</div>
 
-    <div :class="$style
+    <div :class="$style.subtitle">General</div>
+    <div :class="$style.params">
+      <div :class="$style.param">
+        <span>
+          <Icon
