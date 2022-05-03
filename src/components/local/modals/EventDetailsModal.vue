@@ -27,4 +27,9 @@ const eventDuration = computed(() =>
     <div :class="$style.params">
       <div :class="$style.param">
         <span>
-          <Icon
+          <Icon name="hash" size="12" />Event ID
+        </span>
+        <span>{{ event.id }}</span>
+      </div>
+
+      <div :class="$styl
