@@ -32,4 +32,8 @@ const eventDuration = computed(() =>
         <span>{{ event.id }}</span>
       </div>
 
-      <div :class="$styl
+      <div :class="$style.param">
+        <span>
+          <Icon :name="
+            (event.status == 'NEW' && 'event_new') ||
+            (event.status == 'STARTED
