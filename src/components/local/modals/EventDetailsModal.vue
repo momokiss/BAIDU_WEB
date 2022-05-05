@@ -36,4 +36,7 @@ const eventDuration = computed(() =>
         <span>
           <Icon :name="
             (event.status == 'NEW' && 'event_new') ||
-            (event.status == 'STARTED
+            (event.status == 'STARTED' && 'event_active') ||
+            (event.status == 'FINISHED' && 'event_finished')
+          " size="12" />Status
+        </
