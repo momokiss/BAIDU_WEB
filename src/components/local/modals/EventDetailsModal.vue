@@ -39,4 +39,10 @@ const eventDuration = computed(() =>
             (event.status == 'STARTED' && 'event_active') ||
             (event.status == 'FINISHED' && 'event_finished')
           " size="12" />Status
-        </
+        </span>
+        <span>{{ event.status }}</span>
+      </div>
+
+      <div :class="$style.param">
+        <span>
+          <Icon name="sides" si
