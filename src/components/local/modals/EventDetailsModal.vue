@@ -54,4 +54,9 @@ const eventDuration = computed(() =>
         <span>
           <Icon name="money" size="12" />Total Value Locked
         </span>
-      
+        <span>{{ event.totalValueLocked }}</span>
+      </div>
+
+      <div :class="$style.param">
+        <span>
+          <Icon name="time" si
