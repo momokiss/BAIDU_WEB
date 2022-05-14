@@ -59,4 +59,10 @@ const eventDuration = computed(() =>
 
       <div :class="$style.param">
         <span>
-          <Icon name="time" si
+          <Icon name="time" size="12" />Measure Period
+        </span>
+        <span>{{ eventDuration }}</span>
+      </div>
+    </div>
+
+    <div :class="$style.subtitle"
