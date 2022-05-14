@@ -65,4 +65,8 @@ const eventDuration = computed(() =>
       </div>
     </div>
 
-    <div :class="$style.subtitle"
+    <div :class="$style.subtitle">Time</div>
+    <div :class="$style.params">
+      <div :class="$style.param">
+        <span>
+          <Icon name="time"
