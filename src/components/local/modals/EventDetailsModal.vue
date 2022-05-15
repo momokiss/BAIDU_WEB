@@ -73,3 +73,9 @@ const eventDuration = computed(() =>
         </span>
         <span>{{ DateTime.fromISO(event.createdTime).toHTTP() }}</span>
       </div>
+      <div :class="$style.param">
+        <span>
+          <Icon name="time" size="12" />Bets Close Time
+        </span>
+        <span>{{
+          
