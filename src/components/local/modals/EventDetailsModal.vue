@@ -69,4 +69,7 @@ const eventDuration = computed(() =>
     <div :class="$style.params">
       <div :class="$style.param">
         <span>
-          <Icon name="time"
+          <Icon name="time" size="12" />Created At
+        </span>
+        <span>{{ DateTime.fromISO(event.createdTime).toHTTP() }}</span>
+      </div>
