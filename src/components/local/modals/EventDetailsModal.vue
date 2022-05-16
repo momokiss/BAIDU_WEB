@@ -78,4 +78,9 @@ const eventDuration = computed(() =>
           <Icon name="time" size="12" />Bets Close Time
         </span>
         <span>{{
-          
+            DateTime.fromISO(event.betsCloseTime).toHTTP()
+        }}</span>
+      </div>
+    </div>
+
+    <div :class="$style.subt
