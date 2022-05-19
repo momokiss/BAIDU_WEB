@@ -92,4 +92,8 @@ const eventDuration = computed(() =>
         <span>{{ event.totalLiquidityProvided }}</span>
       </div>
 
-      <div :class="
+      <div :class="$style.param">
+        <span>
+          <Icon name="liquidity" size="12" /> Shares
+        </span>
+        <span>{{ event.totalL
