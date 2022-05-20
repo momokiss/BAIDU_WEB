@@ -101,4 +101,9 @@ const eventDuration = computed(() =>
 
       <div :class="$style.param">
         <span>
-          <Icon name="liquidity
+          <Icon name="liquidity" size="12" /> Percent
+        </span>
+        <span>{{ event.liquidityPercent * 100 }}%</span>
+      </div>
+
+      <div :class="$style.param">
