@@ -110,4 +110,9 @@ const eventDuration = computed(() =>
         <span>
           <Icon name="liquidity" size="12" /> Pool: Rise / Fall
         </span>
-        <span>{{ event.poolAboveEq }} / {{ 
+        <span>{{ event.poolAboveEq }} / {{ event.poolBelow }}</span>
+      </div>
+    </div>
+
+    <div :class="$style.subtitle">Price</div>
+    <div :class="$style.params">
