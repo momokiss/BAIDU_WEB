@@ -116,3 +116,8 @@ const eventDuration = computed(() =>
 
     <div :class="$style.subtitle">Price</div>
     <div :class="$style.params">
+      <div :class="$style.param">
+        <span>
+          <Icon name="money" size="12" /> Start Price
+        </span>
+        <span>{
