@@ -120,4 +120,9 @@ const eventDuration = computed(() =>
         <span>
           <Icon name="money" size="12" /> Start Price
         </span>
-        <span>{
+        <span>{{ event.startRate }}</span>
+      </div>
+
+      <div :class="$style.param">
+        <span>
+          <Icon name="money" si
