@@ -133,4 +133,12 @@ const eventDuration = computed(() =>
   </Modal>
 </template>
 
-<st
+<style module>
+.wrapper {}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+
