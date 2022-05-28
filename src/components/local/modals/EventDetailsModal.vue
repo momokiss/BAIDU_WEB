@@ -142,3 +142,12 @@ const eventDuration = computed(() =>
   line-height: 1.2;
   color: var(--text-primary);
 
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+
+  margin-bot
