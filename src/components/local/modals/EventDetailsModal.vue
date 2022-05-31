@@ -150,4 +150,16 @@ const eventDuration = computed(() =>
   font-weight: 700;
   color: var(--text-secondary);
 
-  margin-bot
+  margin-bottom: 16px;
+}
+
+/* Params */
+.params {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.params:last-of
