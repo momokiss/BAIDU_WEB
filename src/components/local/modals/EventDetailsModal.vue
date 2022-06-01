@@ -171,4 +171,14 @@ const eventDuration = computed(() =>
   justify-content: space-between;
 
   font-size: 14px;
-  line-height: 1
+  line-height: 1;
+  font-weight: 600;
+}
+
+.param span:nth-child(1) {
+  color: var(--text-tertiary);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  fill: var(
