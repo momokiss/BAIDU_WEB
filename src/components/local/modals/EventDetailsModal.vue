@@ -162,4 +162,13 @@ const eventDuration = computed(() =>
   margin-bottom: 24px;
 }
 
-.params:last-of
+.params:last-of-type {
+  margin-bottom: 0;
+}
+
+.param {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  line-height: 1
