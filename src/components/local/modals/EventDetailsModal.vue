@@ -181,4 +181,12 @@ const eventDuration = computed(() =>
   display: flex;
   align-items: center;
   gap: 6px;
-  fill: var(
+  fill: var(--opacity-40);
+}
+
+.param span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--text-secondary);
