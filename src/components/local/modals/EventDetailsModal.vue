@@ -190,3 +190,5 @@ const eventDuration = computed(() =>
   gap: 6px;
 
   color: var(--text-secondary);
+}
+</style>
