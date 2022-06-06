@@ -11,4 +11,9 @@ import Button from "@/components/ui/Button"
 /**
  * Tezos
  */
-import {
+import { validateAddress } from "@taquito/utils"
+
+export default defineComponent({
+  name: "FindParticipantModal",
+  props: { show: Boolean },
+ 
