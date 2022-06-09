@@ -16,4 +16,11 @@ import { validateAddress } from "@taquito/utils"
 export default defineComponent({
   name: "FindParticipantModal",
   props: { show: Boolean },
- 
+  emits: ["onAdd"],
+
+  setup(props, context) {
+    const { show } = toRefs(props)
+
+    const address = ref("")
+
+  
