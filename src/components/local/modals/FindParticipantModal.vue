@@ -23,4 +23,7 @@ export default defineComponent({
 
     const address = ref("")
 
-  
+    const buttonState = computed(() => {
+      switch (validateAddress(address.value)) {
+        case 0:
+          return { text
