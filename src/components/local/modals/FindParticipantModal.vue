@@ -26,4 +26,10 @@ export default defineComponent({
     const buttonState = computed(() => {
       switch (validateAddress(address.value)) {
         case 0:
-          return { text
+          return { text: "Invalid address format", disabled: true }
+
+        case 1:
+          return { text: "Invalid checksum", disabled: true }
+
+        case 2:
+   
