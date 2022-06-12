@@ -32,4 +32,8 @@ export default defineComponent({
           return { text: "Invalid checksum", disabled: true }
 
         case 2:
-   
+          return { text: "Invalid length", disabled: true }
+
+        case 3:
+          return { text: "Add user", disabled: false }
+
