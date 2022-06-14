@@ -37,3 +37,10 @@ export default defineComponent({
         case 3:
           return { text: "Add user", disabled: false }
 
+        default:
+          return { text: "Something went wrong", disabled: true }
+      }
+    })
+
+    const handleAdd = () => {
+      if (button
