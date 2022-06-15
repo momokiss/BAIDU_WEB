@@ -43,4 +43,10 @@ export default defineComponent({
     })
 
     const handleAdd = () => {
-      if (button
+      if (buttonState.value.disabled) return
+
+      context.emit("onAdd", address.value)
+    }
+
+    watch(show, () => {
+      if (!sho
