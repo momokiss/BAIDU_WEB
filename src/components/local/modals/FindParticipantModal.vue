@@ -49,4 +49,13 @@ export default defineComponent({
     }
 
     watch(show, () => {
-      if (!sho
+      if (!show.value) {
+        address.value = ""
+      }
+    })
+
+    return {
+      // eslint-disable-next-line vue/no-dupe-keys
+      show,
+      address,
+  
