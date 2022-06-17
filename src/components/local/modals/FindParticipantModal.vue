@@ -65,4 +65,13 @@ export default defineComponent({
 
   components: {
     Modal,
-    // eslint-disable-next-line vue/no-reserved-compo
+    // eslint-disable-next-line vue/no-reserved-component-names
+    Button,
+    // eslint-disable-next-line vue/no-reserved-component-names
+    Input,
+  },
+})
+</script>
+
+<template>
+  <Modal :sho
