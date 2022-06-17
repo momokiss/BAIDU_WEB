@@ -58,4 +58,11 @@ export default defineComponent({
       // eslint-disable-next-line vue/no-dupe-keys
       show,
       address,
-  
+      buttonState,
+      handleAdd,
+    }
+  },
+
+  components: {
+    Modal,
+    // eslint-disable-next-line vue/no-reserved-compo
