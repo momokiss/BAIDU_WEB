@@ -74,4 +74,5 @@ export default defineComponent({
 </script>
 
 <template>
-  <Modal :sho
+  <Modal :show="show" width="500" closable @onClose="$emit('onClose')">
+    <div :class="$style.title">Add participant
