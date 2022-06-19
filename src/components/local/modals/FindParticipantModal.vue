@@ -75,4 +75,8 @@ export default defineComponent({
 
 <template>
   <Modal :show="show" width="500" closable @onClose="$emit('onClose')">
-    <div :class="$style.title">Add participant
+    <div :class="$style.title">Add participant</div>
+
+    <Input type="text" v-model="address" label="Address" placeholder="Type user address" :class="$style.input" />
+
+    <Bu
