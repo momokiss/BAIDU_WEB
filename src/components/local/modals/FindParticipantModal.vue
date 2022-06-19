@@ -79,4 +79,5 @@ export default defineComponent({
 
     <Input type="text" v-model="address" label="Address" placeholder="Type user address" :class="$style.input" />
 
-    <Bu
+    <Button @click="handleAdd" :type="buttonState.disabled ? 'secondary' : 'primary'" size="large"
+      :disabled="buttonState.disabled" b
