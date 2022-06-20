@@ -89,4 +89,14 @@ export default defineComponent({
 
 .title {
   font-size: 20px;
-  font-weight: 6
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+
+  margin-bottom: 24px;
+}
+
+.input {
+  margin-bottom: 24px;
+}
+</style>
