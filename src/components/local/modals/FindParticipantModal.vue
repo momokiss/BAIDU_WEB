@@ -80,4 +80,13 @@ export default defineComponent({
     <Input type="text" v-model="address" label="Address" placeholder="Type user address" :class="$style.input" />
 
     <Button @click="handleAdd" :type="buttonState.disabled ? 'secondary' : 'primary'" size="large"
-      :disabled="buttonState.disabled" b
+      :disabled="buttonState.disabled" block>{{ buttonState.text }}</Button>
+  </Modal>
+</template>
+
+<style module>
+.wrapper {}
+
+.title {
+  font-size: 20px;
+  font-weight: 6
