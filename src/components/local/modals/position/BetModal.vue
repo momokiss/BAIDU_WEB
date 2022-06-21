@@ -148,3 +148,139 @@ export default defineComponent({
 
 				showHint.confirmationDelay = false
 				showHint.aborted = false
+			} else {
+				side.value = preselectedSide.value
+
+				document.addEventListener('keydown', onKeydown)
+
+				accountStore.updateBalance()
+
+				nextTick(() => {
+					amountInput.value.$el.querySelector('input').focus()
+				})
+			}
+		})
+
+		watch(amount, () => {
+			if (!amount.value) amount.value = ''
+		})
+
+		// eslint-disable-next-line vue/return-in-computed-property
+		const buttonState = computed(() => {
+			if (accountStore.pendingTransaction.awaiting) {
+				return {
+					text: 'Previous transaction in process',
+					disabled: true,
+				}
+			}
+
+			if (!side.value) {
+				return { text: 'Select your submission', disabled: true }
+			}
+
+			if (countdownStatus.value !== 'In progress') return { text: 'Acceptance of bets is closed', disabled: true }
+			if (sendingBet.value) return { text: 'Awaiting confirmation..', disabled: true }
+
+			if (amount.value > accountStore.balance) return { text: 'Insufficient funds', disabled: true }
+
+			switch (side.value) {
+				case 'Rise':
+				case 'Fall':
+					if (!amount.value) return { text: 'Select the bet amount', disabled: true }
+					if (amount.value) return { text: 'Place a bet', disabled: false }
+			}
+		})
+
+		const showHint = reactive({
+			confirmationDelay: false,
+			aborted: false,
+		})
+
+		const handleBet = () => {
+			if (buttonState.value.disabled) return
+
+			let betType
+			if (side.value == 'Rise') betType = 'aboveEq'
+			if (side.value == 'Fall') betType = 'below'
+
+			sendingBet.value = true
+
+			setTimeout(() => {
+				showHint.confirmationDelay = true
+			}, 5000)
+
+			juster.sdk
+				.bet(event.value.id, betType, BigNumber(amount.value), BigNumber(minReward.value))
+				.then((op) => {
+					/** Pending transaction label */
+					accountStore.pendingTransaction.awaiting = true
+
+					op.confirmation()
+						.then((result) => {
+							accountStore.pendingTransaction.awaiting = false
+
+							if (!result.completed) {
+								// todo: handle it?
+							}
+						})
+						.catch(() => {
+							accountStore.pendingTransaction.awaiting = false
+						})
+
+					sendingBet.value = false
+					showHint.confirmationDelay = false
+					showHint.aborted = false
+
+					/** slow notification to get attention */
+					setTimeout(() => {
+						notificationsStore.create({
+							notification: {
+								type: 'success',
+								title: 'Your bet has been accepted',
+								description: 'We need to process your bet, it will take 15-30 seconds',
+								autoDestroy: true,
+							},
+						})
+					}, 700)
+
+					/** analytics */
+					analytics.log('onBet', {
+						eventId: event.value.id,
+						amount: amount.value,
+						fm: fee.value.toNumber(),
+						tts: DateTime.fromISO(event.value.betsCloseTime).ts - DateTime.now().ts,
+					})
+
+					context.emit('onBet', {
+						side: betType == 'aboveEq' ? 'ABOVE_EQ' : 'BELOW',
+						amount: amount.value,
+						reward: minReward.value,
+					})
+				})
+				.catch((err) => {
+					/** analytics */
+					analytics.log('onError', {
+						eventId: event.value.id,
+						error: err.description,
+					})
+
+					if (err.title == 'Aborted') showHint.aborted = true
+
+					/** slow notification to get attention */
+					setTimeout(() => {
+						notificationsStore.create({
+							notification: {
+								type: 'warning',
+								title: 'Your bet was not accepted',
+								description: err.description,
+								autoDestroy: true,
+							},
+						})
+					}, 700)
+
+					sendingBet.value = false
+					showHint.confirmationDelay = false
+				})
+		}
+
+		/** Login */
