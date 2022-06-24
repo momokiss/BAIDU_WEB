@@ -284,3 +284,145 @@ export default defineComponent({
 		}
 
 		/** Login */
+		const handleLogin = async () => {
+			await juster.sdk.sync()
+			juster.sdk.getPkh().then((pkh) => {
+				accountStore.setPkh(pkh)
+			})
+
+			context.emit('onClose')
+		}
+
+		return {
+			accountStore,
+			countdownText,
+			countdownStatus,
+			amountInput,
+			selectTab,
+			side,
+			amount,
+			slippage,
+			sendingBet,
+			winDelta,
+			ratio,
+			ratioBeforeBet,
+			ratioAfterBet,
+			fee,
+			rewardText,
+			handleBet,
+			showHint,
+			handleLogin,
+			buttonState,
+			verifiedMakers,
+			currentNetwork,
+		}
+	},
+
+	components: {
+		Modal,
+		// eslint-disable-next-line vue/no-reserved-component-names
+		Input,
+		// eslint-disable-next-line vue/no-reserved-component-names
+		Button,
+		Spin,
+		Banner,
+		SplittedPool,
+		SlippageSelector,
+		PositionDirection,
+	},
+})
+</script>
+
+<template>
+	<Modal :show="show" width="500" closable @onClose="$emit('onClose')">
+		<template v-if="accountStore.isLoggined">
+			<div :class="$style.title">Place a bet</div>
+
+			<Banner v-if="currentNetwork !== 'mainnet'" icon="hammer" color="yellow" size="small" center
+				:class="$style.banner">
+				The transaction takes place on the Ithacanet
+			</Banner>
+
+			<PositionDirection :event="event" :amount="amount" :countdown="countdownText" :class="$style.direction" />
+
+			<Banner v-if="!verifiedMakers[currentNetwork].includes(event.creatorId)" icon="warning" color="yellow"
+				size="small" :class="$style.banner">
+				This event is Custom, its behavior may depend on the parameters
+			</Banner>
+
+			<div :class="$style.subtitle">The price will</div>
+
+			<div :class="$style.tabs">
+				<div @click="selectTab('Rise')" :class="[$style.tab, side == 'Rise' && $style.higher]">
+					<div :class="$style.tab_left">
+						<Icon name="higher" size="16" />Rise
+					</div>
+					<div :class="$style.tab_ratio">
+						<Icon name="close" size="10" />
+						{{ (1 + ratioBeforeBet.rise).toFixed(2) }}
+					</div>
+				</div>
+				<div @click="selectTab('Fall')" :class="[$style.tab, side == 'Fall' && $style.lower]">
+					<div :class="$style.tab_ratio">
+						<Icon name="close" size="10" />
+						{{ (1 + ratioBeforeBet.fall).toFixed(2) }}
+					</div>
+
+					<div :class="$style.tab_left">
+						Fall
+						<Icon name="lower" size="16" />
+					</div>
+				</div>
+			</div>
+
+			<Input ref="amountInput" type="number" :limit="10000" label="Amount" placeholder="Bet amount" subtext="ꜩ"
+				v-model="amount.value" :class="$style.amount_input">
+			<template v-slot:rightText>
+				<div :class="$style.potential_reward">
+					Reward:
+					<span>{{ rewardText }}</span> ꜩ
+				</div>
+			</template>
+			</Input>
+
+			<SplittedPool :event="event" :amount="amount.value" :winDelta="winDelta" :side="side" :class="$style.pool" />
+
+			<SlippageSelector v-model="slippage" :class="$style.slippage_block" />
+
+			<Button @click="handleBet" size="large" :type="buttonState.disabled ? 'secondary' : 'primary'" block
+				:loading="sendingBet" :disabled="buttonState.disabled">
+				<Spin v-if="sendingBet" size="16" />
+				<Icon v-else :name="!buttonState.disabled ? 'bolt' : 'lock'" size="16" />
+				{{ buttonState.text }}
+			</Button>
+
+			<div v-if="showHint.aborted" :class="$style.hint">
+				If you did not cancel the last transaction, then
+				<a>reconnect</a> the wallet
+			</div>
+			<div v-else-if="showHint.confirmationDelay" :class="$style.hint">
+				Confirmation not appearing?
+				<a href="https://juster.notion.site/Transaction-confirmation-is-not-received-for-a-long-time-18f589e67d8943f9bf5627a066769c92"
+					target="_blank">Read about possible solutions</a>
+			</div>
+		</template>
+
+		<template v-else>
+			<div :class="$style.title">Place a bet</div>
+			<div :class="$style.description">
+				You need to connect your wallet (with Beacon) to place liquidity and make bets
+			</div>
+
+			<Button @click="handleLogin" size="large" type="primary" block>
+				<Icon name="login" size="16" />Sign in to continue
+			</Button>
+		</template>
+	</Modal>
+</template>
+
+<style module>
+.wrapper {}
+
+.title {
+	font-size: 20px;
+	font-weight: 600;
