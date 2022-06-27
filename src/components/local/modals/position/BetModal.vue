@@ -426,3 +426,149 @@ export default defineComponent({
 .title {
 	font-size: 20px;
 	font-weight: 600;
+	line-height: 1.2;
+	color: var(--text-primary);
+
+	margin-bottom: 24px;
+}
+
+.direction {
+	margin-bottom: 32px;
+}
+
+.description {
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-tertiary);
+
+	margin-bottom: 24px;
+}
+
+.subtitle {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-secondary);
+
+	margin-bottom: 12px;
+}
+
+.tabs {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+
+	margin-bottom: 24px;
+}
+
+.tab {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+	color: var(--text-primary);
+
+	background: var(--btn-secondary-bg);
+	border-radius: 8px;
+	width: 100%;
+	height: 40px;
+	padding: 14px;
+
+	transition: all 0.15s ease;
+}
+
+.tab:hover {
+	background: var(--btn-secondary-bg-hover);
+}
+
+.tab_left {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.tab_ratio {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 700;
+	color: var(--text-tertiary);
+	fill: var(--text-tertiary);
+}
+
+.tab_left svg {
+	fill: var(--text-white);
+	transition: fill 0.15s ease;
+}
+
+.tab.higher {
+	background: var(--green);
+	color: var(--text-black);
+}
+
+.tab.higher .tab_left svg {
+	fill: var(--text-black);
+}
+
+.tab.higher .tab_ratio {
+	color: rgba(0, 0, 0, 0.6);
+	fill: rgba(0, 0, 0, 0.6);
+}
+
+.tab.lower {
+	background: var(--orange);
+	color: var(--text-black);
+}
+
+.tab.lower .tab_left svg {
+	fill: var(--text-black);
+}
+
+.tab.lower .tab_ratio {
+	color: rgba(0, 0, 0, 0.6);
+	fill: rgba(0, 0, 0, 0.6);
+}
+
+.amount_input {
+	margin-bottom: 24px;
+}
+
+.potential_reward {
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+}
+
+.potential_reward span {
+	cursor: pointer;
+	color: var(--text-secondary);
+}
+
+.pool {
+	margin-bottom: 24px;
+}
+
+.slippage_block {
+	margin-bottom: 24px;
+}
+
+.banner {
+	margin-bottom: 24px;
+}
+
+.hint {
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+	text-align: center;
+
+	margin-top: 12px;
+}
