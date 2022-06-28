@@ -572,3 +572,8 @@ export default defineComponent({
 
 	margin-top: 12px;
 }
+
+.hint a {
+	color: var(--text-blue);
+}
+</style>
