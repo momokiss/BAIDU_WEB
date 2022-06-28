@@ -120,3 +120,137 @@ export default defineComponent({
 					disabled: true,
 				}
 			}
+
+			if (countdownStatus.value !== 'In progress') return { text: 'Acceptance of bets is closed', disabled: true }
+			if (sendingLiquidity.value) return { text: 'Awaiting confirmation..', disabled: true }
+
+			if (amount.value > accountStore.balance) return { text: 'Insufficient funds', disabled: true }
+
+			if (!amount.value) return { text: 'Select the liquidity amount', disabled: true }
+			if (amount.value) return { text: 'Provide liquidity', disabled: false }
+		})
+
+		const showHint = reactive({
+			confirmationDelay: false,
+			aborted: false,
+		})
+
+		const handleProvideLiquidity = () => {
+			if (buttonState.value.disabled) return
+
+			sendingLiquidity.value = true
+
+			setTimeout(() => {
+				showHint.confirmationDelay = true
+			}, 5000)
+
+			juster.sdk
+				.provideLiquidity(
+					event.value.id,
+					new BigNumber(event.value.poolAboveEq),
+					new BigNumber(event.value.poolBelow),
+					new BigNumber(slippage.value / 100),
+					new BigNumber(amount.value)
+				)
+				.then((op) => {
+					/** Pending transaction label */
+					accountStore.pendingTransaction.awaiting = true
+
+					op.confirmation()
+						.then((result) => {
+							accountStore.pendingTransaction.awaiting = false
+
+							if (!result.completed) {
+								// todo: handle it?
+							}
+						})
+						// eslint-disable-next-line no-unused-vars
+						.catch((err) => {
+							accountStore.pendingTransaction.awaiting = false
+						})
+
+					sendingLiquidity.value = false
+					showHint.confirmationDelay = false
+					showHint.aborted = false
+
+					/** slow notification to get attention */
+					setTimeout(() => {
+						notificationsStore.create({
+							notification: {
+								type: 'success',
+								title: 'Your liquidity has been accepted',
+								description: 'We need to process your bet, it will take 15-30 seconds',
+								autoDestroy: true,
+							},
+						})
+					}, 700)
+
+					/** analytics */
+					analytics.log('onLiquidity', {
+						eventId: event.value.id,
+						amount: amount.value,
+						tts: DateTime.fromISO(event.value.betsCloseTime).ts - DateTime.now().ts,
+					})
+
+					context.emit('onClose')
+				})
+				.catch((err) => {
+					sendingLiquidity.value = false
+					showHint.confirmationDelay = false
+
+					if (err.title == 'Aborted') showHint.aborted = true
+				})
+		}
+
+		/** Login */
+		const handleLogin = async () => {
+			await juster.sdk.sync()
+			juster.sdk.getPkh().then((pkh) => {
+				accountStore.setPkh(pkh)
+			})
+
+			context.emit('onClose')
+		}
+
+		return {
+			accountStore,
+			countdownText,
+			countdownStatus,
+			amountInput,
+			amount,
+			slippage,
+			sendingLiquidity,
+			liquidityRatio,
+			shares,
+			showHint,
+			handleProvideLiquidity,
+			handleLogin,
+			buttonState,
+			verifiedMakers,
+			currentNetwork,
+		}
+	},
+
+	emits: ['onClose'],
+	components: {
+		Modal,
+		// eslint-disable-next-line vue/no-reserved-component-names
+		Input,
+		Stat,
+		// eslint-disable-next-line vue/no-reserved-component-names
+		Button,
+		Spin,
+		Banner,
+		PositionDirection,
+		SplittedPool,
+		SlippageSelector,
+	},
+})
+</script>
+
+<template>
+	<Modal :show="show" width="500" closable @onClose="$emit('onClose')">
+		<template v-if="accountStore.isLoggined">
+			<div :class="$style.title">Providing liquidity</div>
+
+			<Banner v-if="currentNetwork !== 'mainnet'" icon="hammer" color="yellow" size="small" center
