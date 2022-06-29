@@ -254,3 +254,129 @@ export default defineComponent({
 			<div :class="$style.title">Providing liquidity</div>
 
 			<Banner v-if="currentNetwork !== 'mainnet'" icon="hammer" color="yellow" size="small" center
+				:class="$style.banner">
+				The transaction takes place on the Ithacanet
+			</Banner>
+
+			<PositionDirection :event="event" :amount="amount" :countdown="countdownText" :class="$style.direction" />
+
+			<Input ref="amountInput" type="number" :limit="10000" label="Amount" placeholder="Liquidity amount" subtext="ꜩ"
+				v-model="amount.value" :error="amount.error" @clearError="amount.error = ''" :class="$style.amount_input" />
+
+			<SplittedPool :event="event" :amount="amount.value" side="Liquidity" :class="$style.pool" />
+
+			<SlippageSelector v-model="slippage" :class="$style.slippage_block" />
+
+			<div :class="$style.stats">
+				<Stat name="Reward for providing">{{ (event.liquidityPercent * 100).toFixed(0) }}%</Stat>
+
+				<Stat v-if="liquidityRatio" name="Ratio">
+					<Icon name="close" size="14" :class="$style.ratio_icon" />
+					{{ (1 + liquidityRatio.min).toFixed(2) }} -
+					{{ (1 + liquidityRatio.max).toFixed(2) }}
+				</Stat>
+			</div>
+
+			<Banner v-if="!verifiedMakers[currentNetwork].includes(event.creatorId)" icon="warning" color="red" size="small"
+				:class="$style.banner">
+				This event is Custom, its behavior may depend on the parameters
+			</Banner>
+
+			<Button @click="handleProvideLiquidity" size="large" :type="buttonState.disabled ? 'secondary' : 'primary'" block
+				:loading="sendingLiquidity" :disabled="buttonState.disabled">
+				<Spin v-if="sendingLiquidity" size="16" />
+				<Icon v-else :name="!buttonState.disabled ? 'bolt' : 'lock'" size="16" />
+				{{ buttonState.text }}
+			</Button>
+
+			<div v-if="showHint.aborted" :class="$style.hint">
+				If you did not cancel the last transaction, then
+				<a>reconnect</a> the wallet
+			</div>
+			<div v-else-if="showHint.confirmationDelay" :class="$style.hint">
+				Confirmation not appearing?
+				<a href="https://juster.notion.site/Transaction-confirmation-is-not-received-for-a-long-time-18f589e67d8943f9bf5627a066769c92"
+					target="_blank">Read about possible solutions</a>
+			</div>
+		</template>
+
+		<template v-else>
+			<div :class="$style.title">Providing liquidity</div>
+			<div :class="$style.description">
+				You need to connect your wallet (with Beacon) to place liquidity and make bets
+			</div>
+
+			<Button @click="handleLogin" size="large" type="primary" block>
+				<Icon name="login" size="16" />Sign in to continue
+			</Button>
+		</template>
+	</Modal>
+</template>
+
+<style module>
+.wrapper {}
+
+.title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--text-primary);
+
+	margin-bottom: 24px;
+}
+
+.direction {
+	margin-bottom: 32px;
+}
+
+.description {
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-tertiary);
+
+	margin-bottom: 24px;
+}
+
+.amount_input {
+	margin-bottom: 24px;
+}
+
+.pool {
+	margin-bottom: 24px;
+}
+
+.stats {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	margin-bottom: 24px;
+}
+
+.slippage_block {
+	margin-bottom: 24px;
+}
+
+.ratio_icon {
+	fill: var(--opacity-40);
+}
+
+.hint {
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+	text-align: center;
+
+	margin-top: 12px;
+}
+
+.hint a {
+	color: var(--text-blue);
+}
+
+.banner {
+	margin-bottom: 24px;
+}
+</style>
