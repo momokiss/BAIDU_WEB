@@ -125,3 +125,52 @@ const timing = computed(() => {
 }
 
 .crc img {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+}
+
+.crc svg {
+  box-sizing: content-box;
+  padding: 12px;
+  fill: var(--text-secondary);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.name svg {
+  fill: var(--green);
+}
+
+.subname {
+  font-size: 12px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.subname span {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.direction_icon {
+  fill: var(--text-tertiary);
+}
+</style>
