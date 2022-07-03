@@ -193,3 +193,142 @@ export default defineComponent({
             the previous ones stop accepting bets, so there's always
             at least one event available for betting.
           </div>
+
+          <div :class="$style.step_actions">
+            <Button @click="selectStep(2)" type="secondary" size="small">Next step
+              <Icon name="arrowright" size="16" />
+            </Button>
+          </div>
+        </div>
+
+        <!-- Connect your wallet -->
+        <div v-if="currentStep == 2" :class="$style.step">
+          <div :class="$style.step_title">Connect your wallet</div>
+          <div :class="$style.step_description">
+            If you click on "Bet" or "Liquidity" button on the Event
+            card Juster will first ask you to connect any Tezos
+            wallet, supporting Beacon. Make sure you have one and
+            enough funds for experimenting ;)
+          </div>
+
+          <div :class="$style.step_actions">
+            <Button @click="selectStep(3)" type="secondary" size="small">Next step
+              <Icon name="arrowright" size="16" />
+            </Button>
+          </div>
+        </div>
+
+        <!-- Place a bet -->
+        <div v-if="currentStep == 3" :class="$style.step">
+          <div :class="$style.step_title">Place a bet</div>
+          <div :class="$style.step_description">
+            Decide whether in your opinion the price will rise or
+            fall (during the time frame specified in the event), put
+            the amount you want to risk, and send the order.<br />
+            Your bet will be confirmed in approximately 30 seconds
+            and you will be able see it in the "My bets" list on the
+            Event page.
+          </div>
+
+          <div :class="$style.step_actions">
+            <Button @click="selectStep(4)" type="secondary" size="small">Next step
+              <Icon name="arrowright" size="16" />
+            </Button>
+          </div>
+        </div>
+
+        <!-- Track the price -->
+        <div v-if="currentStep == 4" :class="$style.step">
+          <div :class="$style.step_title">Track the price</div>
+          <div :class="$style.step_description">
+            The time for accepting bets ends and the starting price
+            is fixed. After that you can watch as the event tilts to
+            one or the other outcome until the final price is
+            settled. <br />Note that the price measurement may
+            happen with 1-2 blocks delay due to how price oracles
+            work.
+          </div>
+
+          <div :class="$style.step_actions">
+            <Button @click="selectStep(5)" type="secondary" size="small">Next step
+              <Icon name="arrowright" size="16" />
+            </Button>
+          </div>
+        </div>
+
+        <!-- Withdraw profit -->
+        <div v-if="currentStep == 5" :class="$style.step">
+          <div :class="$style.step_title">Withdraw profit</div>
+          <div :class="$style.step_description">
+            Finally, if your bet win you can withdraw the deposited
+            amount plus gains to your wallet! Your personal stats is
+            available in the profile section as well as the list of
+            pending and completed withdrawals.
+          </div>
+        </div>
+      </div>
+
+      <div :class="$style.block">
+        <div :class="$style.block_title">Detailed guides</div>
+
+        <div :class="$style.block_description">
+          Here are some useful links for the further reading
+        </div>
+
+        <div :class="$style.guides">
+          <GuideCard v-for="guide in guides" :key="guide.icon" @click="handleSkip" :guide="guide" />
+        </div>
+      </div>
+
+      <div :class="$style.onboarding_actions">
+        <Button type="primary" size="medium" @click="handleSkip">
+          <Icon name="spark" size="16" /> Start using Juster
+        </Button>
+        <Button type="secondary" size="medium" @click="handleOpenDocs">
+          <Icon name="book" size="16" /> Read the Docs
+        </Button>
+      </div>
+
+      <div :class="$style.hint">
+        <Icon name="help" size="14" />
+        You can always <span>return</span> to this window by clicking on
+        the question icon on the navigation bar
+      </div>
+    </div>
+  </div>
+</template>
+
+<style module>
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--app-bg);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+}
+
+.base {
+  max-width: 1080px;
+
+  position: relative;
+}
+
+.base {
+  overflow-y: auto;
+}
+
+.base::-webkit-scrollbar {
+  display: none;
+}
+
+.skip_btn {
+  position: absolute;
+  top: 140px;
+  right: 0;
+
+  display: flex;
