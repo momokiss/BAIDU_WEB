@@ -332,3 +332,118 @@ export default defineComponent({
   right: 0;
 
   display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-tertiary);
+
+  transition: color 0.2s ease;
+}
+
+.skip_btn svg {
+  fill: var(--icon);
+  transform: rotate(180deg);
+}
+
+.skip_btn:hover {
+  color: var(--text-primary);
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 8px;
+
+  margin: 60px 0 40px;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+  max-width: 600px;
+
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  max-width: 600px;
+
+  margin-bottom: 40px;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+.block_title {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.block_description {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  margin: 8px 0 20px 0;
+}
+
+.guides {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 16px;
+}
+
+.flow_steps {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.flow_step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+  background: var(--btn-secondary-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  height: 34px;
+  padding: 0 14px;
+  opacity: 0.4;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-tertiary);
+
+  transition: opacity 0.2s ease;
+}
+
+.flow_step svg {
+  fill: var(--blue);
+}
+
+.flow_step.active {
+  opacity: 1;
+}
