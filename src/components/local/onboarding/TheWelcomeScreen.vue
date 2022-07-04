@@ -447,3 +447,75 @@ export default defineComponent({
 .flow_step.active {
   opacity: 1;
 }
+
+.flow_step span {
+  color: var(--text-primary);
+}
+
+.flow_or {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.step {
+  background: #191919;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.step_title {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+
+  margin-bottom: 8px;
+}
+
+.step_description {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  margin-bottom: 24px;
+}
+
+.step_actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.onboarding_actions {
+  display: flex;
+  gap: 16px;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  margin: 20px 0 40px;
+}
+
+.hint svg {
+  fill: var(--orange);
+
+  margin-right: 8px;
+}
+
+.hint span {
+  color: var(--text-secondary);
+  margin: 0 5px;
+}
+</style>
