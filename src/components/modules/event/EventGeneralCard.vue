@@ -191,3 +191,126 @@ const endDiff = computed(() =>
 					}}</template>
 				</Tooltip>
 			</div>
+		</div>
+
+		<div :class="$style.card">
+			<div :class="$style.card__header">
+				<div :class="[
+					$style.card__status,
+					event.status == 'NEW' && $style.green,
+					event.status == 'STARTED' && $style.yellow,
+					event.status == 'FINISHED' && $style.gray,
+					event.status == 'CANCELED' && $style.gray,
+				]">
+					<template v-if="
+						(startStatus == 'In progress') &
+						(event.status == 'NEW')
+					">
+						<Icon name="event_new" size="14" /> New
+					</template>
+					<template v-else-if="
+						startStatus == 'Finished' && event.status == 'NEW'
+					">
+						<Icon name="event_new" size="14" /> Starting
+					</template>
+					<template v-else-if="
+						startStatus == 'Finished' &&
+						event.status == 'STARTED'
+					">
+						<Icon name="event_active" size="14" /> Running
+					</template>
+					<template v-else-if="
+						startStatus == 'Finished' &&
+						event.status == 'FINISHED'
+					">
+						<Icon name="event_finished" size="14" /> Finished
+					</template>
+					<template v-else-if="event.status == 'CANCELED'">
+						<Icon name="stop" size="14" /> Canceled
+					</template>
+				</div>
+
+				<div :class="$style.card__duration">
+					{{
+							toReadableDuration({
+								seconds: event.measurePeriod,
+								asObject: true,
+							}).val
+					}}
+					<span>
+						{{
+								pluralize(
+									toReadableDuration({
+										seconds: event.measurePeriod,
+										asObject: true,
+									}).val,
+									toReadableDuration({
+										seconds: event.measurePeriod,
+										asObject: true,
+									}).text,
+								)
+						}}
+					</span>
+				</div>
+			</div>
+
+			<div :class="[
+				$style.card__bottom,
+				event.bets.length >= 6 && $style.highdemand_radius,
+			]">
+				<div :class="[
+					$style.card__side,
+					$style.left,
+					['STARTED', 'FINISHED'].includes(event.status) &&
+					$style.opacity,
+				]">
+					<div :class="$style.card__time">
+						{{ timing.start.time
+						}}<span>, {{ timing.start.date }}</span>
+					</div>
+					<div :class="$style.card__day">{{ timing.start.day }}</div>
+				</div>
+
+				<div :class="[
+					$style.card__side,
+					$style.right,
+					event.status == 'FINISHED' && $style.opacity,
+				]">
+					<div :class="$style.card__time">
+						<span>{{ timing.end.date }}, </span>
+						{{ timing.end.time }}
+					</div>
+					<div :class="$style.card__day">{{ timing.end.day }}</div>
+				</div>
+
+				<Icon name="arrowright" size="14" :class="$style.card__arrow_icon" />
+			</div>
+
+			<div v-if="event.bets.length >= 6" :class="$style.card__highdemand">
+				<span>High-demand Event</span>
+				<span>{{ event.bets.length }} bets&nbsp;&nbsp;•&nbsp;&nbsp;{{
+						numberWithSymbol(event.totalValueLocked.toFixed(0), ",")
+				}}
+					liquidity</span>
+			</div>
+		</div>
+
+		<div :class="$style.params">
+			<!-- First Param -->
+			<!-- *New/Starting* -->
+			<div v-if="
+				['In progress', 'Finished'].includes(startStatus) &&
+				event.status == 'NEW'
+			" :class="$style.param">
+				<span>
+					<Icon name="time" size="12" />Start
+				</span>
+
+				<span v-if="startStatus == 'In progress'">
+					<!-- in X days -->
+					<template v-if="endDiff.hours > 24">
+						{{
+								DateTime.fromISO(event.betsCloseTime)
+									.setLocale("en")
+									.toRelative()
+						}}
