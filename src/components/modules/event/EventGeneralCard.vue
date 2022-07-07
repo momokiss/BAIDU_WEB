@@ -442,3 +442,154 @@ const endDiff = computed(() =>
 				</span>
 				<span v-else> 0.00 (0.00%) </span>
 			</div>
+
+			<!-- *Canceled* -->
+			<div v-if="event.status == 'CANCELED'" :class="$style.param">
+				<span>
+					<Icon name="sides" size="12" />
+					Price Dynamics
+				</span>
+
+				<span> 0.00 (0.00%) </span>
+			</div>
+		</div>
+
+		<EventActions primary @onBet="(target) => emit('onBet', target)" @onWithdraw="emit('onWithdraw')" :event="event"
+			:isWon="isWon" :positionForWithdraw="positionForWithdraw" :disabled="
+				event.totalLiquidityProvided == 0 || startStatus == 'Finished'
+			" :isWithdrawing="isWithdrawing" :class="$style.event_actions" />
+	</div>
+</template>
+
+<style module>
+.wrapper {
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	padding: 20px;
+	background: var(--card-bg);
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+
+	height: 20px;
+
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.title img {
+	display: flex;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 6px;
+}
+
+.title svg {
+	display: flex;
+
+	fill: var(--text-tertiary);
+
+	margin-right: 6px;
+}
+
+.title span {
+	color: var(--text-tertiary);
+
+	margin-left: 4px;
+}
+
+.users {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.participants {
+	display: flex;
+}
+
+.participant {
+	margin-left: -6px;
+}
+
+.creator {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	fill: var(--text-secondary);
+
+	width: 30px;
+	height: 30px;
+}
+
+.verified_icon {
+	fill: var(--orange);
+	background: var(--card-bg);
+	border-radius: 50%;
+
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	box-sizing: content-box;
+}
+
+.user_avatar {
+	width: 30px;
+	height: 30px;
+
+	background: rgb(35, 35, 35);
+	border-radius: 50px;
+	outline: 3px solid var(--card-bg);
+
+	padding: 2px;
+}
+
+.more_participants {
+	width: 30px;
+	height: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 11px;
+	line-height: 1.1;
+	font-weight: 700;
+	color: var(--text-blue);
+
+	background: rgb(35, 35, 35);
+	border-radius: 50px;
+	outline: 3px solid var(--card-bg);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	margin-top: 20px;
+}
+
+.card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 6px 6px 2px 2px;
+	padding: 0 14px;
+	height: 42px;
+}
