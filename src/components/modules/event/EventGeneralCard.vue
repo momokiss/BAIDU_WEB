@@ -314,3 +314,131 @@ const endDiff = computed(() =>
 									.setLocale("en")
 									.toRelative()
 						}}
+					</template>
+					<!-- 00:00:00 -->
+					<template v-else>
+						{{ startCountdown }}
+					</template>
+				</span>
+				<span v-else-if="startStatus == 'Finished'">Soon</span>
+			</div>
+
+			<!-- *Active* -->
+			<div v-else-if="
+				startStatus == 'Finished' && event.status == 'STARTED'
+			" :class="$style.param">
+				<span>
+					<Icon name="time" size="12" />Finish
+				</span>
+
+				<span v-if="finishStatus == 'In progress'">
+					<!-- in X days -->
+					<template v-if="endDiff.hours > 24">
+						{{
+								DateTime.fromISO(event.betsCloseTime)
+									.setLocale("en")
+									.plus({ second: event.measurePeriod })
+									.toRelative()
+						}}
+					</template>
+					<!-- 00:00:00 -->
+					<template v-else>
+						{{ finishCountdown }}
+					</template>
+				</span>
+				<span v-else-if="finishStatus == 'Finished'">Soon</span>
+			</div>
+
+			<!-- *Finished* -->
+			<div v-else-if="
+				startStatus == 'Finished' && event.status == 'FINISHED'
+			" :class="$style.param">
+				<span>
+					<Icon name="time" size="12" />Won Side
+				</span>
+
+				<span :class="
+					priceDynamics.diff > 0
+						? $style.green_icon
+						: $style.red_icon
+				">
+					<Icon name="higher" size="12" />{{
+							event.winnerBets == "ABOVE_EQ" ? "Up" : "Down"
+					}}
+				</span>
+			</div>
+
+			<!-- *Canceled* -->
+			<div v-else-if="event.status == 'CANCELED'" :class="$style.param">
+				<span>
+					<Icon name="time" size="12" />Won Side
+				</span>
+
+				<span>Draw</span>
+			</div>
+
+			<!-- Second Param -->
+			<!-- *New/Starting* -->
+			<Tooltip v-if="
+				['In progress', 'Finished'].includes(startStatus) &&
+				event.status == 'NEW'
+			" position="top" side="left" :button="{
+	icon: 'book',
+	text: 'Learn More',
+	url: '/docs',
+}">
+				<div :class="$style.param">
+					<span>
+						<Icon name="sides" size="12" />Target Dynamics
+					</span>
+
+					<span>
+						<Icon :name="
+							(event.targetDynamics == 1 && 'checkcircle') ||
+							([1.05, 0.95].includes(event.targetDynamics) &&
+								'warning') ||
+							'warning'
+						" size="12" :style="{
+	fill: `var(--${(event.targetDynamics == 1 && 'green') ||
+		([1.05, 0.95].includes(
+			event.targetDynamics,
+		) &&
+			'yellow') ||
+		'red'
+		})`,
+}" />
+
+						{{ event.targetDynamics * 100 - 100 }}%
+					</span>
+				</div>
+
+				<template #content>Price change that separates betting pools
+				</template>
+			</Tooltip>
+
+			<!-- *Active/Finished* -->
+			<div v-if="
+				startStatus == 'Finished' &&
+				['STARTED', 'FINISHED'].includes(event.status)
+			" :class="$style.param">
+				<span>
+					<img v-if="event.winnerBets == 'ABOVE_EQ'" :src="require('@/assets/icons/higher_won.svg')"
+						alt="won_side_icon" />
+					<img v-else-if="event.winnerBets == 'BELOW'" :src="require('@/assets/icons/lower_won.svg')"
+						alt="won_side_icon" />
+					<Icon v-else name="sides" size="12" />
+					Price Dynamics
+				</span>
+
+				<span v-if="priceDynamics.diff" :class="
+					priceDynamics.diff > 0
+						? $style.green_full
+						: $style.red_full
+				">
+					<Icon name="carret" size="12" />{{
+							Math.abs(priceDynamics.diff).toFixed(2)
+					}}
+					({{ priceDynamics.percent.toFixed(2) }}%)
+				</span>
+				<span v-else> 0.00 (0.00%) </span>
+			</div>
