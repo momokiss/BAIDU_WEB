@@ -710,3 +710,77 @@ const endDiff = computed(() =>
 	position: absolute;
 	top: 50%;
 	left: 50%;
+
+	transform: translateY(-50%) translateX(-50%);
+
+	fill: var(--text-tertiary);
+}
+
+/* Params */
+.params {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	margin-top: 32px;
+}
+
+.param {
+	display: flex;
+	justify-content: space-between;
+
+	width: 100%;
+
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+}
+
+.param span:nth-child(1) {
+	color: var(--text-tertiary);
+
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	fill: var(--opacity-40);
+}
+
+.param span:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	color: var(--text-secondary);
+}
+
+.param span:nth-child(2).green_full {
+	color: var(--green);
+	fill: var(--green);
+}
+
+.param span:nth-child(2).red_full {
+	color: var(--red);
+	fill: var(--red);
+}
+
+.param span:nth-child(2).green_icon {
+	fill: var(--green);
+}
+
+.param span:nth-child(2).red_icon {
+	fill: var(--red);
+}
+
+.param span:nth-child(2).red_icon svg,
+.param span:nth-child(2).red_full svg {
+	transform: rotate(180deg);
+}
+
+.param span:nth-child(1) img {
+	width: 12px;
+}
+
+.event_actions {
+	margin-top: 24px;
+}
+</style>
