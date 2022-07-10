@@ -200,3 +200,99 @@ const hasHedge = computed(() => {
     Exact calculations will be indicated at the end of the event
   </div>
 </template>
+
+<style module>
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  padding: 0 20px;
+}
+
+.sector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 84px;
+
+  flex: 1;
+}
+
+.sector:nth-child(1),
+.sector:nth-child(2) {
+  border-right: 1px solid var(--border);
+  padding-right: 18px;
+}
+
+.base {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.name {
+  font-size: 13px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.amount {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.amount span {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-tertiary);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--opacity-05);
+  fill: var(--text-secondary);
+}
+
+.icon.green {
+  background: rgba(26, 161, 104, 0.15);
+  fill: var(--green);
+}
+
+.icon.yellow {
+  background: rgba(245, 183, 43, 0.15);
+  fill: var(--yellow);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+  fill: var(--text-tertiary);
+
+  margin-top: 12px;
+}
+
+.hint span {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+</style>
