@@ -275,3 +275,41 @@ export default defineComponent({
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
+  color: var(--text-tertiary);
+
+  margin-top: 8px;
+}
+
+.rating_card {
+  margin-top: 24px;
+}
+
+.my_positions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
+  grid-gap: 16px;
+
+  margin-top: 24px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 16px;
+
+  margin-top: 24px;
+}
+
+@media (max-width: 500px) {
+  .head {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .items {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+</style>
