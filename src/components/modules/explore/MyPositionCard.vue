@@ -10,4 +10,8 @@ import Badge from "@/components/ui/Badge"
 /**
  * Services
  */
-import { supportedMarkets } from "@/services/conf
+import { supportedMarkets } from "@/services/config"
+import { toReadableDuration } from "@/services/utils/date"
+import { abbreviateNumber } from "@/services/utils/amounts"
+
+/**
