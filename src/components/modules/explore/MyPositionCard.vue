@@ -15,3 +15,10 @@ import { toReadableDuration } from "@/services/utils/date"
 import { abbreviateNumber } from "@/services/utils/amounts"
 
 /**
+ * Store
+ */
+import { useAccountStore } from "@/store/account"
+const accountStore = useAccountStore()
+
+const props = defineProps({
+  event: { typ
