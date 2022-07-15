@@ -21,4 +21,9 @@ import { useAccountStore } from "@/store/account"
 const accountStore = useAccountStore()
 
 const props = defineProps({
-  event: { typ
+  event: { type: Object, required: true },
+})
+
+const symbol = computed(() => props.event.currencyPair.symbol)
+
+const eventDuration = compute
