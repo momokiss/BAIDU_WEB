@@ -26,4 +26,9 @@ const props = defineProps({
 
 const symbol = computed(() => props.event.currencyPair.symbol)
 
-const eventDuration = compute
+const eventDuration = computed(() =>
+  toReadableDuration({ seconds: props.event.measurePeriod }),
+)
+
+const timing = computed(() => {
+  const eventDt = DateTime.fromISO(props.event.betsCl
