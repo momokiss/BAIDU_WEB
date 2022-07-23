@@ -54,4 +54,11 @@ const timing = computed(() => {
       day: endDt.toLocaleString({
         day: "numeric",
       }),
-      mon
+      month: endDt.toLocaleString({ month: "short" }),
+    },
+    showDay: eventDt.ordinal < endDt.ordinal,
+  }
+})
+
+const value = computed(() => {
+  const b
