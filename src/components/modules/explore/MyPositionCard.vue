@@ -47,4 +47,11 @@ const timing = computed(() => {
       month: eventDt.toLocaleString({ month: "short" }),
     },
     end: {
-      time: endDt.toLocale
+      time: endDt.toLocaleString({
+        hour: "numeric",
+        minute: "numeric",
+      }),
+      day: endDt.toLocaleString({
+        day: "numeric",
+      }),
+      mon
