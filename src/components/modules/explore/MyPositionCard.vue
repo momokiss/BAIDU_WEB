@@ -63,4 +63,10 @@ const timing = computed(() => {
 const value = computed(() => {
   const bets = props.event.bets.reduce((acc, curr) => {
     if (curr.userId == accountStore.pkh) {
-      return (acc += curr.amo
+      return (acc += curr.amount)
+    } else {
+      return acc
+    }
+  }, 0)
+  const liquidity = props.event.deposits.reduce((acc, curr) => {
+    if (curr.userId == accountStore.pkh) 
