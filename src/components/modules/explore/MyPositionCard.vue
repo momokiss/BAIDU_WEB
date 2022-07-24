@@ -61,4 +61,6 @@ const timing = computed(() => {
 })
 
 const value = computed(() => {
-  const b
+  const bets = props.event.bets.reduce((acc, curr) => {
+    if (curr.userId == accountStore.pkh) {
+      return (acc += curr.amo
