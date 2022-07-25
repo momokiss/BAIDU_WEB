@@ -69,4 +69,11 @@ const value = computed(() => {
     }
   }, 0)
   const liquidity = props.event.deposits.reduce((acc, curr) => {
-    if (curr.userId == accountStore.pkh) 
+    if (curr.userId == accountStore.pkh) {
+      return (acc += curr.amountAboveEq)
+    } else {
+      return acc
+    }
+  }, 0)
+
+  return abbreviat
