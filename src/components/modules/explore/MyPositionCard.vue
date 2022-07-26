@@ -76,4 +76,11 @@ const value = computed(() => {
     }
   }, 0)
 
-  return abbreviat
+  return abbreviateNumber(bets + liquidity)
+})
+</script>
+
+<template>
+  <router-link :to="`/events/${event.id}`">
+    <div :class="$style.wrapper">
+     
