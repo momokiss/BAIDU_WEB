@@ -83,4 +83,8 @@ const value = computed(() => {
 <template>
   <router-link :to="`/events/${event.id}`">
     <div :class="$style.wrapper">
-     
+      <div :class="$style.left">
+        <div :class="[
+          $style.event_icon,
+          (event.status == 'NEW' && $style.green) ||
+         
