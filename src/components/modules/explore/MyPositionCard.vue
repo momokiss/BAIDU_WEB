@@ -87,4 +87,8 @@ const value = computed(() => {
         <div :class="[
           $style.event_icon,
           (event.status == 'NEW' && $style.green) ||
+          (event.status == 'STARTED' && $style.yellow),
+        ]">
+          <Icon :name="
+            (event.status == 'NEW' && 'event_new') ||
          
