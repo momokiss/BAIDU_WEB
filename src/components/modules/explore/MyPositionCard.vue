@@ -91,4 +91,9 @@ const value = computed(() => {
         ]">
           <Icon :name="
             (event.status == 'NEW' && 'event_new') ||
-         
+            (event.status == 'STARTED' && 'event_active')
+          " size="16" />
+        </div>
+
+        <div :class="$style.info">
+          <div :cl
