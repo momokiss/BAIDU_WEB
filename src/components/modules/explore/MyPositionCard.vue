@@ -96,4 +96,6 @@ const value = computed(() => {
         </div>
 
         <div :class="$style.info">
-          <div :cl
+          <div :class="$style.title">
+            <img v-if="event.winnerBets == 'ABOVE_EQ'" :src="require('@/assets/icons/higher_won.svg')"
+              al
