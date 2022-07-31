@@ -101,3 +101,7 @@ const value = computed(() => {
               alt="won_side_icon" />
             <img v-else-if="event.winnerBets == 'BELOW'" :src="require('@/assets/icons/lower_won.svg')"
               alt="won_side_icon" />
+            <Icon v-else name="sides" size="16" />
+            {{
+                supportedMarkets[symbol] &&
+   
