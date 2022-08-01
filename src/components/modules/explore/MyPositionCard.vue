@@ -104,4 +104,9 @@ const value = computed(() => {
             <Icon v-else name="sides" size="16" />
             {{
                 supportedMarkets[symbol] &&
-   
+                supportedMarkets[symbol].description
+            }}
+            <span>price event</span>
+          </div>
+
+          <div :class="$style.t
