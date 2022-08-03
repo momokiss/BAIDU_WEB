@@ -109,4 +109,7 @@ const value = computed(() => {
             <span>price event</span>
           </div>
 
-          <div :class="$style.t
+          <div :class="$style.timing">
+            <div :class="$style.days">
+              {{
+                  `${timing.start.day} ${timing.showDay ? 
