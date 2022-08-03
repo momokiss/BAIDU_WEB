@@ -112,4 +112,9 @@ const value = computed(() => {
           <div :class="$style.timing">
             <div :class="$style.days">
               {{
-                  `${timing.start.day} ${timing.showDay ? 
+                  `${timing.start.day} ${timing.showDay ? `- ${timing.end.day}` : ``
+                  } ${timing.start.month}`
+              }}
+            </div>
+
+   
