@@ -117,4 +117,8 @@ const value = computed(() => {
               }}
             </div>
 
-   
+            <div :class="$style.dot" />
+
+            <div :class="$style.hrs">
+              {{ timing.start.time }}
+            
