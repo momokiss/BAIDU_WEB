@@ -121,4 +121,11 @@ const value = computed(() => {
 
             <div :class="$style.hrs">
               {{ timing.start.time }}
-            
+              <span>({{ eventDuration }})</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div :class="$style.right">
+  
