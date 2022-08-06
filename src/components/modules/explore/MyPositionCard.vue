@@ -131,4 +131,13 @@ const value = computed(() => {
         <Badge size="medium" color="gray">
           <Icon name="wallet" size="14" /> <span>Value:</span>
           {{ value }} ꜩ
-     
+        </Badge>
+      </div>
+    </div>
+  </router-link>
+</template>
+
+<style module>
+.wrapper {
+  display: flex;
+  align-it
