@@ -128,4 +128,7 @@ const value = computed(() => {
       </div>
 
       <div :class="$style.right">
-  
+        <Badge size="medium" color="gray">
+          <Icon name="wallet" size="14" /> <span>Value:</span>
+          {{ value }} ꜩ
+     
