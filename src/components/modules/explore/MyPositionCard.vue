@@ -140,4 +140,10 @@ const value = computed(() => {
 <style module>
 .wrapper {
   display: flex;
-  align-it
+  align-items: center;
+  justify-content: space-between;
+
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  bac
