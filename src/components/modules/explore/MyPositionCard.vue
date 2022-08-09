@@ -146,4 +146,16 @@ const value = computed(() => {
   height: 70px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  bac
+  background: var(--card-bg);
+
+  padding: 0 20px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.event_icon {
+  display: fle
