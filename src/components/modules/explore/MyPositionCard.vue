@@ -158,4 +158,14 @@ const value = computed(() => {
 }
 
 .event_icon {
-  display: fle
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 32px;
+  width: 32px;
+  border-radius: 8px;
+}
+
+.event_icon.green {
+  
