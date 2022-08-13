@@ -168,4 +168,10 @@ const value = computed(() => {
 }
 
 .event_icon.green {
-  
+  fill: var(--green);
+  background: rgba(26, 161, 104, 0.1);
+}
+
+.event_icon.yellow {
+  fill: var(--yellow);
+  background: rgba(245, 183, 43, 0.1
