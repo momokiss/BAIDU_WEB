@@ -185,4 +185,15 @@ const value = computed(() => {
 }
 
 .title {
-  display: flex
+  display: flex;
+  align-items: center;
+
+  height: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.title img {
+  display: flex;
