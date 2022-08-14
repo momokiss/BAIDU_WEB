@@ -174,4 +174,15 @@ const value = computed(() => {
 
 .event_icon.yellow {
   fill: var(--yellow);
-  background: rgba(245, 183, 43, 0.1
+  background: rgba(245, 183, 43, 0.1);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.title {
+  display: flex
