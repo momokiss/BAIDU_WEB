@@ -197,3 +197,16 @@ const value = computed(() => {
 
 .title img {
   display: flex;
+
+  width: 16px;
+  height: 16px;
+
+  margin-right: 6px;
+}
+
+.title svg {
+  display: flex;
+
+  fill: var(--text-tertiary);
+
+  m
