@@ -209,4 +209,15 @@ const value = computed(() => {
 
   fill: var(--text-tertiary);
 
-  m
+  margin-right: 6px;
+}
+
+.title span {
+  color: var(--text-tertiary);
+
+  margin-left: 4px;
+}
+
+.timing {
+  display: flex;
+  align-items
