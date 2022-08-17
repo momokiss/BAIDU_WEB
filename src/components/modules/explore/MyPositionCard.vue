@@ -241,4 +241,12 @@ const value = computed(() => {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  backgrou
+  background: var(--border);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+</style>
