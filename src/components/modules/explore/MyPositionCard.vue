@@ -230,4 +230,15 @@ const value = computed(() => {
 }
 
 .days {
-  color: var(
+  color: var(--text-tertiary);
+}
+
+.hrs span {
+  color: var(--text-tertiary);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  backgrou
