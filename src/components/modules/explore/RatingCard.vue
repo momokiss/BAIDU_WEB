@@ -160,3 +160,23 @@ const shorten = (address) => {
 
   .user:last-child {
     padding-bottom: 0;
+
+    border-bottom: initial;
+  }
+
+  .amount {
+    flex: 1;
+    text-align: right;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .amount {
+    display: none;
+  }
+}
+</style>
