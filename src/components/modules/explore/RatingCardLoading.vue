@@ -8,4 +8,14 @@
 
       <div :class="$style.avatar" />
 
-      <div :class=
+      <div :class="$style.address" />
+
+      <div :class="$style.amount" />
+    </div>
+  </div>
+</template>
+
+<style module>
+.wrapper {
+  display: flex;
+  
