@@ -35,4 +35,15 @@
   }
 
   50% {
-    background: #55555
+    background: #555555;
+  }
+
+  100% {
+    background: #2d2d2d;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px
