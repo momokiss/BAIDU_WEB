@@ -24,4 +24,15 @@
   background: var(--card-bg);
   border-radius: 8px;
   border: 1px solid var(--border);
-  min-heigh
+  min-height: 42px;
+
+  padding: 8px 24px 8px 8px;
+}
+
+@keyframes mig {
+  0% {
+    background: #2d2d2d;
+  }
+
+  50% {
+    background: #55555
