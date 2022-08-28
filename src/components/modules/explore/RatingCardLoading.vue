@@ -56,3 +56,15 @@
   border-radius: 6px;
 
   animation: mig 2s infinite;
+}
+
+.avatar {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--opacity-05);
+
+  animation: mig 2s infinite;
+}
+
+.address
