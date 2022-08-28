@@ -46,4 +46,13 @@
 .user {
   display: flex;
   align-items: center;
-  gap: 8px
+  gap: 8px;
+}
+
+.position {
+  min-width: 24px;
+  min-height: 24px;
+  background: var(--opacity-05);
+  border-radius: 6px;
+
+  animation: mig 2s infinite;
