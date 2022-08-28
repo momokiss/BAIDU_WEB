@@ -67,4 +67,14 @@
   animation: mig 2s infinite;
 }
 
-.address
+.address {
+  width: 80px;
+  height: 12px;
+  border-radius: 50px;
+  background: var(--opacity-05);
+
+  animation: mig 2s infinite;
+}
+
+.amount {
+  width: 55
