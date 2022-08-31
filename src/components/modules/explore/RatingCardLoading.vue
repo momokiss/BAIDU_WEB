@@ -77,4 +77,11 @@
 }
 
 .amount {
-  width: 55
+  width: 55px;
+  height: 12px;
+  border-radius: 50px;
+  background: var(--opacity-05);
+
+  animation: mig 2s infinite;
+}
+</style>
