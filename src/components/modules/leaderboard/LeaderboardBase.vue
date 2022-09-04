@@ -143,3 +143,138 @@ export default defineComponent({
     <div :class="$style.description">
       Liquidity provider leaderboard based on perfomance & earnings
     </div>
+
+    <div :class="$style.leaderboard">
+      <table>
+        <tr>
+          <th @click="sortBy('tier')">
+            user
+            <Icon name="arrow_down" size="10" :class="[
+              $style.icon,
+              sort.tier == 'asc' && $style.reverse,
+            ]" />
+          </th>
+          <th @click="sortBy('liquidity')">
+            liquidity
+            <Icon name="arrow_down" size="10" :class="[
+              $style.icon,
+              sort.liquidity == 'asc' && $style.reverse,
+            ]" />
+          </th>
+          <th @click="sortBy('perfomance')">
+            perfomance
+            <Icon name="arrow_down" size="10" :class="[
+              $style.icon,
+              sort.perfomance == 'asc' && $style.reverse,
+            ]" />
+          </th>
+          <th>earned</th>
+        </tr>
+
+        <tr v-for="user in users.slice(0, 5)" :key="user.tier">
+          <td>
+            <div :class="$style.user">
+              <div :class="$style.avatar" />
+
+              <div :class="$style.info">
+                <div :class="$style.username">
+                  {{ user.username }}
+                </div>
+                <div :class="$style.tier">
+                  Tier {{ user.tier }}
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>$ {{ numberWithSymbol(user.liquidity, ",") }}</td>
+          <td>{{ user.perfomance }}%</td>
+          <td>$ {{ numberWithSymbol(user.liquidity * 0.1, ",") }}</td>
+        </tr>
+      </table>
+
+      <div :class="$style.bottom">
+        <span>249 users</span>
+        <span>Updated 5 min ago</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style module>
+.wrapper {}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.leaderboard {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.leaderboard table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.leaderboard tr {
+  display: flex;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.leaderboard th {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-tertiary);
+
+  cursor: pointer;
+
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.leaderboard td {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+
+  flex: 1;
+  padding: 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  padding: 16px 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
