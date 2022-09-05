@@ -278,3 +278,30 @@ export default defineComponent({
   height: 32px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
+
+  margin-right: 14px;
+}
+
+.username {
+  margin-bottom: 6px;
+}
+
+.tier {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.icon {
+  fill: var(--icon);
+
+  margin-left: 6px;
+
+  transition: transform 0.2s ease;
+}
+
+.icon.reverse {
+  transform: rotate(180deg);
+}
+</style>
