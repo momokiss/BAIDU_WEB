@@ -391,3 +391,144 @@ export default defineComponent({
 	font-weight: 600;
 	color: var(--text-tertiary);
 	text-align: center;
+
+	width: 100%;
+
+	margin-bottom: 32px;
+}
+
+.progress {
+	width: 100%;
+
+	margin-bottom: 24px;
+}
+
+.head {
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 8px;
+}
+
+.tier {
+	font-size: 13px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.exp {
+	font-size: 13px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text-tertiary);
+}
+
+.line {
+	height: 6px;
+	border-radius: 10px;
+	background: var(--opacity-10);
+}
+
+.badges {
+	display: flex;
+	justify-content: space-between;
+	opacity: 0.5;
+}
+
+.badge {
+	width: 50px;
+}
+
+.statistics {
+	width: 100%;
+	height: 330px;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--card-bg);
+
+	padding: 26px;
+}
+
+.title {
+	margin-bottom: 20px;
+}
+
+.block {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background: var(--border);
+	margin: 24px 0;
+}
+
+.stat {
+	margin-right: 100px;
+}
+
+.key {
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+	white-space: nowrap;
+
+	margin-bottom: 12px;
+}
+
+.value {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1;
+	color: var(--text-primary);
+	white-space: nowrap;
+
+	margin-bottom: 12px;
+}
+
+.value span {
+	color: var(--text-tertiary);
+}
+
+.additional {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.additional span {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-tertiary);
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.right {
+	display: flex;
+	align-items: center;
+}
+
+.tip span {
+	color: var(--green);
+}
+
+.submissions {
+	margin-top: 60px;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.items {
+	display: grid;
