@@ -258,3 +258,136 @@ export default defineComponent({
 						<div :class="$style.key">Favorite Market</div>
 						<div :class="$style.value">TBD</div>
 					</div>
+				</div>
+
+				<div :class="$style.divider" />
+
+				<div :class="$style.additional">
+					<div :class="$style.left">
+						<a :href="`https://${currentNetwork == 'mainnet' ? '' : 'ithacanet.'
+						}tzkt.io/${address}`" target="_blank">
+							<Button type="secondary" size="small">
+								<Icon name="open" size="14" />View on TzKT
+							</Button>
+						</a>
+					</div>
+
+					<div :class="$style.right"></div>
+				</div>
+			</div>
+		</div>
+
+		<div v-if="isMyProfile && events.length" :class="$style.submissions">
+			<div :class="$style.top">
+				<div>
+					<h2>My submissions</h2>
+					<div :class="$style.description">
+						List of all current and archived events
+					</div>
+				</div>
+			</div>
+
+			<div :class="$style.items">
+				<EventCard v-for="event in paginatedEvents" :key="event.id" :event="event" />
+			</div>
+
+			<Pagination v-if="events.length > 6" v-model="selectedPageForEvents" :total="events.length" :limit="6"
+				:class="$style.pagination" />
+		</div>
+	</div>
+
+	<div v-if="!user && isProfileLoaded" :class="$style.empty_profile">
+		<img :src="`https://services.tzkt.io/v1/avatars/${accountStore.pkh}`" :class="$style.error_avatar"
+			alt="error_avatar" />
+
+		<div :class="$style.error_title">Your profile is not ready yet</div>
+		<div :class="$style.error_description">
+			Once you participate in any event, your profile will become
+			available!
+		</div>
+
+		<div :class="$style.error_buttons">
+			<router-link to="/">
+				<Button type="secondary" size="small">
+					<Icon name="spark" size="14" />Explore Juster
+				</Button>
+			</router-link>
+
+			<div :class="$style.error_description">or</div>
+
+			<Button @click="handleBack" type="secondary" size="small">Go back</Button>
+		</div>
+	</div>
+</template>
+
+<style module>
+.wrapper {}
+
+.profile_title {
+	margin-bottom: 16px;
+}
+
+.header {
+	display: flex;
+}
+
+.profile {
+	min-width: 300px;
+	height: 330px;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--card-bg);
+
+	padding: 26px;
+
+	margin-right: 16px;
+}
+
+.avatar {
+	width: 78px;
+	height: 78px;
+	border-radius: 50%;
+	border: 4px solid var(--border);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0 auto;
+	margin-top: 4px;
+	margin-bottom: 16px;
+}
+
+.image {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	user-select: none;
+}
+
+.username {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text-primary);
+
+	width: 100%;
+	cursor: pointer;
+
+	margin-bottom: 8px;
+}
+
+.username svg {
+	fill: var(--opacity-40);
+}
+
+.status {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-tertiary);
+	text-align: center;
