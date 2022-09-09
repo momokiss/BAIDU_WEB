@@ -532,3 +532,71 @@ export default defineComponent({
 
 .items {
 	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: 16px;
+
+	margin-top: 24px;
+}
+
+.description {
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-tertiary);
+
+	margin-top: 6px;
+}
+
+/* empty profile styles */
+
+.empty_profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 100px;
+}
+
+.error_avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+
+	margin-bottom: 20px;
+}
+
+.error_title {
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 600;
+	color: var(--text-primary);
+
+	margin-bottom: 12px;
+}
+
+.error_description {
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-tertiary);
+	text-align: center;
+
+	max-width: 400px;
+}
+
+.error_description span {
+	color: var(--text-secondary);
+}
+
+.error_buttons {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	margin-top: 24px;
+}
+
+.pagination {
+	margin-top: 24px;
+}
+</style>
