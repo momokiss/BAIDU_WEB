@@ -11,3 +11,10 @@ import Button from "@/components/ui/Button"
  */
 import {
   numberWithSymbol,
+  calcChange,
+  abbreviateNumber,
+} from "@/services/utils/amounts"
+import { supportedMarkets } from "@/services/config"
+
+/**
+ * St
