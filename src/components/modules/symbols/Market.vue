@@ -17,4 +17,12 @@ import {
 import { supportedMarkets } from "@/services/config"
 
 /**
- * St
+ * Store
+ */
+import { useMarketStore } from "@/store/market"
+
+export default defineComponent({
+  name: "Market",
+  props: { market: Object },
+
+  setup(p
