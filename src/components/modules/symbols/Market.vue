@@ -25,4 +25,9 @@ export default defineComponent({
   name: "Market",
   props: { market: Object },
 
-  setup(p
+  setup(props, context) {
+    const { market } = toRefs(props)
+
+    const marketStore = useMarketStore()
+    const quotes = computed(() => {
+      return marke
