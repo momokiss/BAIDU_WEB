@@ -30,4 +30,9 @@ export default defineComponent({
 
     const marketStore = useMarketStore()
     const quotes = computed(() => {
-      return marke
+      return marketStore.markets[market.value.symbol].quotes
+    })
+
+    const price = computed(() => {
+      return {
+        integer: number
