@@ -35,4 +35,8 @@ export default defineComponent({
 
     const price = computed(() => {
       return {
-        integer: number
+        integer: numberWithSymbol(
+          quotes.value[0].price.toString().split(".")[0],
+          ",",
+        ),
+        fraction: quotes.value[0].price.t
