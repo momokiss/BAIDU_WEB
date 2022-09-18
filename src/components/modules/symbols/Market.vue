@@ -39,4 +39,12 @@ export default defineComponent({
           quotes.value[0].price.toString().split(".")[0],
           ",",
         ),
-        fraction: quotes.value[0].price.t
+        fraction: quotes.value[0].price.toString().split(".")[1],
+      }
+    })
+
+    const color = ref("grey")
+    const change = computed(() => {
+      if (!quotes.value) return
+
+     
