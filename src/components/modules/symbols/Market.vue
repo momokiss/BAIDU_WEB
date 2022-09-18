@@ -50,4 +50,9 @@ export default defineComponent({
       if (!market.value.historyPrice) return "Loading"
 
       const { diff, percent, isIncreased } = calcChange(
-        quotes
+        quotes.value[0].price,
+        market.value.historyPrice,
+      )
+      color.value = isIncreased ? "green" : "red"
+
+  
