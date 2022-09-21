@@ -61,4 +61,14 @@ export default defineComponent({
       )}, ${percent.toFixed(2)}%, 1W`
     })
 
-    const handleJoin = () =>
+    const handleJoin = () => {
+      context.emit("onJoin")
+    }
+
+    return {
+      market,
+      quotes,
+      change,
+      color,
+      price,
+      su
