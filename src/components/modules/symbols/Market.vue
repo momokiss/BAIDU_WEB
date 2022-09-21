@@ -55,4 +55,10 @@ export default defineComponent({
       )
       color.value = isIncreased ? "green" : "red"
 
-  
+      return `${numberWithSymbol(
+        diff.toFixed(2),
+        " ",
+      )}, ${percent.toFixed(2)}%, 1W`
+    })
+
+    const handleJoin = () =>
