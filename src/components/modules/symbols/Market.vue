@@ -71,4 +71,15 @@ export default defineComponent({
       change,
       color,
       price,
-      su
+      supportedMarkets,
+      handleJoin,
+      abbreviateNumber,
+    }
+  },
+
+  components: { Button },
+})
+</script>
+
+<template>
+  <router-link :to
