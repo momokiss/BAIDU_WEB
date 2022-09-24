@@ -82,4 +82,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <router-link :to
+  <router-link :to="`/markets/${market.symbol}`" :class="$style.wrapper">
+    <div :class="$style.base">
+      <div :class="$style.name">
+        {{ market.symbol }
