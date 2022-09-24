@@ -85,4 +85,8 @@ export default defineComponent({
   <router-link :to="`/markets/${market.symbol}`" :class="$style.wrapper">
     <div :class="$style.base">
       <div :class="$style.name">
-        {{ market.symbol }
+        {{ market.symbol }},
+        <span>{{ supportedMarkets[market.symbol].description }}</span>
+      </div>
+
+      <h1 v-if="quotes.lengt
