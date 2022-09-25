@@ -94,4 +94,8 @@ export default defineComponent({
         }}<span>.{{ price.fraction.slice(0, 2) }}</span>
       </h1>
 
-      <div :class="[$
+      <div :class="[$style.diff, $style[color]]">
+        <Icon v-if="change !== 'Loading'" name="carret" size="12" />{{
+            change
+        }}
+      
