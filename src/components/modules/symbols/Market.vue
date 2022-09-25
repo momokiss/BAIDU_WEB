@@ -98,4 +98,9 @@ export default defineComponent({
         <Icon v-if="change !== 'Loading'" name="carret" size="12" />{{
             change
         }}
-      
+      </div>
+    </div>
+
+    <div :class="$style.right">
+      <div :class="$style.actions">
+        <Button @click="handleJoin" size=
