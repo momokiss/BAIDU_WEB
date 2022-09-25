@@ -89,4 +89,9 @@ export default defineComponent({
         <span>{{ supportedMarkets[market.symbol].description }}</span>
       </div>
 
-      <h1 v-if="quotes.lengt
+      <h1 v-if="quotes.length" :class="$style.price">
+        $ {{ price.integer
+        }}<span>.{{ price.fraction.slice(0, 2) }}</span>
+      </h1>
+
+      <div :class="[$
