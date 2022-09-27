@@ -103,4 +103,10 @@ export default defineComponent({
 
     <div :class="$style.right">
       <div :class="$style.actions">
-        <Button @click="handleJoin" size=
+        <Button @click="handleJoin" size="medium" type="secondary">
+          <Icon name="collection" size="16" />
+          View events
+        </Button>
+      </div>
+
+      <div
