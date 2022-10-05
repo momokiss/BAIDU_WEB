@@ -112,4 +112,11 @@ export default defineComponent({
       <div :class="$style.info">
         <div :class="$style.param">
           <span>Events:</span>
-          <span>{{ market.totalEvents }}
+          <span>{{ market.totalEvents }}</span>
+        </div>
+
+        <div :class="$style.dot" />
+
+        <div :class="$style.param">
+          <span>TVL:</span>
+          <span
