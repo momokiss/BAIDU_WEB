@@ -119,4 +119,10 @@ export default defineComponent({
 
         <div :class="$style.param">
           <span>TVL:</span>
-          <span
+          <span>{{
+              abbreviateNumber(market.totalValueLocked.toFixed(0))
+          }}
+            ꜩ</span>
+        </div>
+
+        <div :class
