@@ -125,4 +125,9 @@ export default defineComponent({
             ꜩ</span>
         </div>
 
-        <div :class
+        <div :class="$style.dot" />
+
+        <div :class="$style.param">
+          <span>Volume (24h):</span>
+          <span>{{
+              abbreviat
