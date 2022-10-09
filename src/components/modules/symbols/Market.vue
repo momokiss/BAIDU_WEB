@@ -151,4 +151,14 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
 
-  transition: border 0.2s 
+  transition: border 0.2s ease;
+}
+
+.wrapper:hover {
+  border: 1px solid var(--border-highlight);
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 500;
+  line-heig
