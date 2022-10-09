@@ -144,4 +144,11 @@ export default defineComponent({
   padding: 24px;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: var(--card-
+  background: var(--card-bg);
+  min-height: 132px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: border 0.2s 
