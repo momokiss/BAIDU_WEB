@@ -138,3 +138,10 @@ export default defineComponent({
     </div>
   </router-link>
 </template>
+
+<style module>
+.wrapper {
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-
