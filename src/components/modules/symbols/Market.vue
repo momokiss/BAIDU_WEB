@@ -130,4 +130,11 @@ export default defineComponent({
         <div :class="$style.param">
           <span>Volume (24h):</span>
           <span>{{
-              abbreviat
+              abbreviateNumber(market.totalVolume.toFixed(0))
+          }}
+            ꜩ</span>
+        </div>
+      </div>
+    </div>
+  </router-link>
+</template>
