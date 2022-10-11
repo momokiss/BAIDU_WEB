@@ -161,4 +161,15 @@ export default defineComponent({
 .name {
   font-size: 12px;
   font-weight: 500;
-  line-heig
+  line-height: 1;
+  color: var(--text-primary);
+
+  margin-bottom: 20px;
+}
+
+.name span {
+  color: var(--text-tertiary);
+}
+
+.price {
+  mar
