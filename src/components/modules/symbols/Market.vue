@@ -172,4 +172,14 @@ export default defineComponent({
 }
 
 .price {
-  mar
+  margin-bottom: 12px;
+}
+
+.price span {
+  color: var(--text-tertiary);
+}
+
+.diff {
+  font-size: 13px;
+  font-weight: 600;
+  line
