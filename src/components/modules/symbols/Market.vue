@@ -189,4 +189,14 @@ export default defineComponent({
   align-items: center;
   gap: 6px;
   padding: 4px;
-  border-radius:
+  border-radius: 5px;
+}
+
+.diff.grey {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.diff.green {
+  color: var(--green);
+  fill: var(--green);
+  backgro
