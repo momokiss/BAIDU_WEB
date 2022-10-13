@@ -182,4 +182,11 @@ export default defineComponent({
 .diff {
   font-size: 13px;
   font-weight: 600;
-  line
+  line-height: 1;
+
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border-radius:
