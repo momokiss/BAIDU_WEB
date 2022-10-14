@@ -199,4 +199,13 @@ export default defineComponent({
 .diff.green {
   color: var(--green);
   fill: var(--green);
-  backgro
+  background: rgba(26, 161, 104, 0.15);
+}
+
+.diff.red {
+  color: var(--red);
+  fill: var(--red);
+  background: rgba(224, 92, 67, 0.15);
+}
+
+.diff.red svg {
