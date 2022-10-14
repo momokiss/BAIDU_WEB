@@ -209,3 +209,11 @@ export default defineComponent({
 }
 
 .diff.red svg {
+  transform: rotate(180deg);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content:
