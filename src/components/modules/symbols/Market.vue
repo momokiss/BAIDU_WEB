@@ -216,4 +216,19 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content:
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.
