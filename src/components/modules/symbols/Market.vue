@@ -250,4 +250,9 @@ export default defineComponent({
 }
 
 .dot {
-  width: 4px
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--opacity-20);
+}
+</style>
