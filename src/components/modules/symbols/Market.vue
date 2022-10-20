@@ -241,4 +241,13 @@ export default defineComponent({
   font-weight: 500;
 }
 
-.
+.param span:first-child {
+  color: var(--text-tertiary);
+}
+
+.param span:last-child {
+  color: var(--text-primary);
+}
+
+.dot {
+  width: 4px
