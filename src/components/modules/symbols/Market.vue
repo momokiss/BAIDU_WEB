@@ -231,4 +231,14 @@ export default defineComponent({
   gap: 16px;
 }
 
+.param {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+}
+
 .
