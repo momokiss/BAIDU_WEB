@@ -198,3 +198,134 @@ export default defineComponent({
 		<div ref="header" :class="$style.header">
 			<div :class="$style.left">
 				<div :class="$style.day">
+					<span>Today</span>,
+					{{
+							DateTime.now().toLocaleString({
+								month: "long",
+								day: "numeric",
+							})
+					}}
+				</div>
+
+				<div :class="$style.filters">
+					<div @click="selectTab('Available')" :class="[
+						$style.filter,
+						selectedTab == 'Available' && $style.active,
+					]">
+						<Icon name="event_new" size="12" />New
+					</div>
+					<div :class="$style.dot" />
+					<div @click="selectTab('Closed')" :class="[
+						$style.filter,
+						selectedTab == 'Closed' && $style.active,
+					]">
+						<Icon name="event_active" size="12" />Active
+					</div>
+					<div :class="$style.dot" />
+					<div @click="selectTab('Finished')" :class="[
+						$style.filter,
+						selectedTab == 'Finished' && $style.active,
+					]">
+						<Icon name="checkcircle" size="12" />Finished
+					</div>
+				</div>
+			</div>
+
+			<div :class="$style.right">
+				<Button icon="filter" type="tertiary" size="small" />
+				<Button icon="calendar" type="tertiary" size="small" />
+			</div>
+		</div>
+
+		<transition name="fastfade" mode="out-in">
+			<div v-if="events.length" :class="$style.events">
+				<EventCard v-for="event in events.slice(
+					(currentPage - 1) * 8,
+					currentPage * 8,
+				)" :key="event.id" :event="event" />
+			</div>
+
+			<div v-else :class="$style.events">
+				<EventCardLoading />
+				<EventCardLoading />
+				<EventCardLoading />
+			</div>
+		</transition>
+
+		<Pagination v-if="events && events.length > 8" v-model="currentPage" :total="events.length" :limit="8"
+			:class="$style.pagination" />
+	</div>
+</template>
+
+<style module>
+.wrapper {}
+
+.breadcrumbs {
+	margin-bottom: 24px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	margin-top: 32px;
+}
+
+.day {
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 500;
+	color: var(--text-tertiary);
+}
+
+.day span {
+	color: var(--text-secondary);
+}
+
+.filters {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	height: 32px;
+	padding: 0 8px;
+
+	margin-top: 10px;
+}
+
+.filters .dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--opacity-10);
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	cursor: pointer;
+
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-tertiary);
+	fill: var(--text-tertiary);
+
+	transition: all 0.2s ease;
+}
+
+.filter:hover {
+	fill: var(--text-primary);
+	color: var(--text-primary);
+}
+
+.filter.active {
+	fill: var(--blue);
+	color: var(--text-primary);
+}
+
+.right {
