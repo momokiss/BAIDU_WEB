@@ -329,3 +329,20 @@ export default defineComponent({
 }
 
 .right {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.events {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 16px;
+
+	margin-top: 20px;
+}
+
+.pagination {
+	margin-top: 32px;
+}
+</style>
