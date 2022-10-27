@@ -25,3 +25,11 @@ import { analytics } from "@/services/sdk"
 const breadcrumbs = reactive([
   {
     name: "All Markets",
+    path: "/markets",
+  },
+])
+
+const marketStore = useMarketStore()
+
+onMounted(() => {
+  analytics.log("onPage", { name:
