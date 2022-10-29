@@ -46,4 +46,9 @@ useMeta({
 <template>
   <div :class="$style.wrapper">
     <metainfo>
-      <template v-slot:ti
+      <template v-slot:title="{ content }">{{ content }} • Juster</template>
+    </metainfo>
+
+    <Breadcrumbs :crumbs="breadcrumbs" :class="$style.breadcrumbs" />
+
+    <h1 :cla
