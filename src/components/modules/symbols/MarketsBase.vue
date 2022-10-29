@@ -32,4 +32,11 @@ const breadcrumbs = reactive([
 const marketStore = useMarketStore()
 
 onMounted(() => {
-  analytics.log("onPage", { name:
+  analytics.log("onPage", { name: "Markets" })
+})
+
+/** Meta */
+useMeta({
+  title: "All Markets",
+  description:
+    "Available markets for events, for providing liquidity and acc
