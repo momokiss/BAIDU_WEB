@@ -39,4 +39,11 @@ onMounted(() => {
 useMeta({
   title: "All Markets",
   description:
-    "Available markets for events, for providing liquidity and acc
+    "Available markets for events, for providing liquidity and accepting bets from users",
+})
+</script>
+
+<template>
+  <div :class="$style.wrapper">
+    <metainfo>
+      <template v-slot:ti
