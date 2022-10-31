@@ -51,4 +51,7 @@ useMeta({
 
     <Breadcrumbs :crumbs="breadcrumbs" :class="$style.breadcrumbs" />
 
-    <h1 :cla
+    <h1 :class="$style.title">Available Markets</h1>
+    <div :class="$style.description">
+      List of all currency pairs available for betting
+ 
