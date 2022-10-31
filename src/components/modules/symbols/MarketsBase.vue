@@ -54,4 +54,8 @@ useMeta({
     <h1 :class="$style.title">Available Markets</h1>
     <div :class="$style.description">
       List of all currency pairs available for betting
- 
+    </div>
+
+    <transition name="fade">
+      <div v-if="marketStore.isMarketsLoaded" :class="$style.markets">
+        <Market v-
