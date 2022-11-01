@@ -58,4 +58,8 @@ useMeta({
 
     <transition name="fade">
       <div v-if="marketStore.isMarketsLoaded" :class="$style.markets">
-        <Market v-
+        <Market v-for="market in marketStore.markets" :key="market.id" :market="market" />
+      </div>
+    </transition>
+  </div>
+</temp
