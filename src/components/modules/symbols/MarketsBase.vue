@@ -62,4 +62,16 @@ useMeta({
       </div>
     </transition>
   </div>
-</temp
+</template>
+
+<style module>
+.wrapper {}
+
+.breadcrumbs {
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  font-
