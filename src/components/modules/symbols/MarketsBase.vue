@@ -85,3 +85,6 @@ useMeta({
   flex-direction: column;
   gap: 8px;
 
+  margin-top: 24px;
+}
+</style>
