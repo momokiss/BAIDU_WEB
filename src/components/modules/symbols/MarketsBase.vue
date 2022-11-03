@@ -74,4 +74,14 @@ useMeta({
 .description {
   font-size: 14px;
   line-height: 1.6;
-  font-
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  margin-top: 8px;
+}
+
+.markets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
