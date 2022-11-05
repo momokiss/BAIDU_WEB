@@ -5,4 +5,12 @@ export default defineComponent({
   name: "Button",
   props: {
     size: {
-     
+      type: String,
+      default: "medium",
+    },
+    type: {
+      type: String,
+      default: "primary",
+    },
+    block: {
+ 
