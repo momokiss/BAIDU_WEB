@@ -13,4 +13,12 @@ export default defineComponent({
       default: "primary",
     },
     block: {
- 
+      type: Boolean,
+      default: false,
+    },
+    border: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Bo
