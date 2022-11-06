@@ -32,4 +32,7 @@ export default defineComponent({
   },
 
   setup(props, context) {
-    const sty
+    const style = useCssModule()
+    const { type, size, block, disabled, border, icon } = toRefs(props)
+
+    const hasSlot = computed(() => !!context.slots.defaul
