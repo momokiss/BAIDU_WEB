@@ -21,4 +21,15 @@ export default defineComponent({
       default: false,
     },
     disabled: {
-      type: Bo
+      type: Boolean,
+    },
+    loading: {
+      type: Boolean,
+    },
+    icon: {
+      type: String,
+    },
+  },
+
+  setup(props, context) {
+    const sty
