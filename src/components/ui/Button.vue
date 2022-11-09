@@ -51,4 +51,11 @@ export default defineComponent({
         block.value && style.block,
         hasCorrectSize && style[size.value],
         disabled.value && style.disabled,
-        ico
+        icon.value && style.icon,
+        border.value && style.border,
+      ]
+    }
+
+    return { getStyles, hasSlot }
+  },
+})
