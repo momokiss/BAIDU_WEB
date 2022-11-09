@@ -41,4 +41,11 @@ export default defineComponent({
       const hasCorrectSize = [
         "large",
         "medium",
-        
+        "small",
+        "mini",
+      ].includes(size.value)
+
+      return [
+        style.wrapper,
+        style[type.value],
+        block.value && styl
