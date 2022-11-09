@@ -48,4 +48,7 @@ export default defineComponent({
       return [
         style.wrapper,
         style[type.value],
-        block.value && styl
+        block.value && style.block,
+        hasCorrectSize && style[size.value],
+        disabled.value && style.disabled,
+        ico
