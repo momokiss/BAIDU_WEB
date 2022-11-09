@@ -35,4 +35,10 @@ export default defineComponent({
     const style = useCssModule()
     const { type, size, block, disabled, border, icon } = toRefs(props)
 
-    const hasSlot = computed(() => !!context.slots.defaul
+    const hasSlot = computed(() => !!context.slots.default)
+
+    const getStyles = () => {
+      const hasCorrectSize = [
+        "large",
+        "medium",
+        
