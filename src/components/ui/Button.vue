@@ -81,4 +81,16 @@ export default defineComponent({
   font-weight: 600;
   white-space: nowrap;
 
-  transition: all
+  transition: all 0.2s ease;
+}
+
+.wrapper span {
+  color: var(--text-tertiary);
+}
+
+.wrapper.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wrapper
