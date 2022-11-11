@@ -64,4 +64,11 @@ export default defineComponent({
 <template>
   <button :class="[...getStyles(), loading && $style.loading]">
     <slot v-if="!icon" />
-    <Icon v-el
+    <Icon v-else :name="icon" size="16" />
+  </button>
+</template>
+
+<style module>
+.wrapper {
+  display: flex;
+  align-items: center
