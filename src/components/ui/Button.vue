@@ -71,4 +71,14 @@ export default defineComponent({
 <style module>
 .wrapper {
   display: flex;
-  align-items: center
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border-radius: 7px;
+
+  color: var(--text-primary);
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition: all
