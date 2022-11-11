@@ -59,3 +59,9 @@ export default defineComponent({
     return { getStyles, hasSlot }
   },
 })
+</script>
+
+<template>
+  <button :class="[...getStyles(), loading && $style.loading]">
+    <slot v-if="!icon" />
+    <Icon v-el
