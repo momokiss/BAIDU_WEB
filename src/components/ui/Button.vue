@@ -102,3 +102,16 @@ export default defineComponent({
 .wrapper.large {
   height: 44px;
   font-size: 14px;
+}
+
+.wrapper.large.icon {
+  padding: 0 14px;
+}
+
+.wrapper.medium {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.wr
