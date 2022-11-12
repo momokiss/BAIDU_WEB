@@ -93,4 +93,12 @@ export default defineComponent({
   pointer-events: none;
 }
 
-.wrapper
+.wrapper.block {
+  width: 100%;
+  justify-content: center;
+}
+
+/** SIZES */
+.wrapper.large {
+  height: 44px;
+  font-size: 14px;
