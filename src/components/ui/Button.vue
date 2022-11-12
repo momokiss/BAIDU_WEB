@@ -114,4 +114,14 @@ export default defineComponent({
   font-size: 14px;
 }
 
-.wr
+.wrapper.medium.icon {
+  padding: 0 12px;
+}
+
+.wrapper.small {
+  height: 32px;
+  padding: 0 12px 0 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
