@@ -150,3 +150,11 @@ export default defineComponent({
   fill: var(--text-black);
   color: var(--text-black);
 }
+
+.wrapper.success:hover {
+  background: var(--btn-success-bg-hover);
+}
+
+.wrapper.primary {
+  background: var(--btn-primary-bg);
+  fill: var(--text
