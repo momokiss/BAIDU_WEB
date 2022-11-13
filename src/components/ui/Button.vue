@@ -125,3 +125,12 @@ export default defineComponent({
   border-radius: 6px;
 }
 
+.wrapper.small.icon {
+  padding: 0 10px;
+}
+
+.wrapper.mini {
+  height: 26px;
+  padding: 0 10px 0 10px;
+  font-size: 12px;
+ 
