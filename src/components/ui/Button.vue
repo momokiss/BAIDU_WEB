@@ -133,4 +133,15 @@ export default defineComponent({
   height: 26px;
   padding: 0 10px 0 10px;
   font-size: 12px;
- 
+  border-radius: 6px;
+}
+
+.wrapper.mini.icon {
+  padding: 0 10px;
+}
+
+.wrapper:active {
+  transform: translateY(1px);
+}
+
+/*
