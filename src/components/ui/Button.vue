@@ -144,4 +144,9 @@ export default defineComponent({
   transform: translateY(1px);
 }
 
-/*
+/** TYPES */
+.wrapper.success {
+  background: var(--btn-success-bg);
+  fill: var(--text-black);
+  color: var(--text-black);
+}
