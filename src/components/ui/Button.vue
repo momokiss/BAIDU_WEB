@@ -157,4 +157,12 @@ export default defineComponent({
 
 .wrapper.primary {
   background: var(--btn-primary-bg);
-  fill: var(--text
+  fill: var(--text-primary);
+}
+
+.wrapper.primary:hover {
+  background: var(--btn-primary-bg-hover);
+}
+
+.wrapper.secondary {
+  background: var(--o
