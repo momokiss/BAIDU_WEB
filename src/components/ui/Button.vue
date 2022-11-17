@@ -179,4 +179,10 @@ export default defineComponent({
 }
 
 .wrapper.tertiary:hover {
-  background: 
+  background: var(--btn-secondary-bg-hover);
+}
+
+/** OTHER */
+.wrapper.disabled {
+  opacity: 0.5;
+  pointer-events: none;
