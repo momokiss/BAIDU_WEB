@@ -165,4 +165,12 @@ export default defineComponent({
 }
 
 .wrapper.secondary {
-  background: var(--o
+  background: var(--opacity-05);
+  fill: var(--text-tertiary);
+}
+
+.wrapper.secondary:hover {
+  background: var(--opacity-10);
+}
+
+.wrapper.tertiary {
