@@ -174,3 +174,9 @@ export default defineComponent({
 }
 
 .wrapper.tertiary {
+  background: transparent;
+  fill: var(--text-tertiary);
+}
+
+.wrapper.tertiary:hover {
+  background: 
