@@ -186,3 +186,9 @@ export default defineComponent({
 .wrapper.disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.wrapper.border {
+  border: 1px solid var(--border);
+}
+</style>
