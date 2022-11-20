@@ -6,4 +6,10 @@ import { defineComponent, ref, reactive, watch, nextTick, toRefs } from "vue"
  */
 import { useOnOutsidePress } from "@/composable/onOutside"
 
-export default def
+export default defineComponent({
+  name: "Dropdown",
+  props: {
+    forceOpen: Boolean,
+    side: {
+      type: String,
+      default: "bot
