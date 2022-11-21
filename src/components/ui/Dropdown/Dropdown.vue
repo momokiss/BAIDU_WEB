@@ -12,4 +12,12 @@ export default defineComponent({
     forceOpen: Boolean,
     side: {
       type: String,
-      default: "bot
+      default: "bottom",
+    },
+  },
+  emits: ["onClose"],
+
+  setup(props, context) {
+    const { side, forceOpen } = toRefs(props)
+
+    const trigger
