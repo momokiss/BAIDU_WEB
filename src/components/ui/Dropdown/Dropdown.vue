@@ -25,4 +25,10 @@ export default defineComponent({
     const isOpen = ref(false)
 
     watch(forceOpen, () => {
-      isOp
+      isOpen.value = forceOpen.value
+    })
+
+    const toggleDropdown = (event) => {
+      event.stopPropagation()
+
+      isOpen.v
