@@ -20,4 +20,9 @@ export default defineComponent({
   setup(props, context) {
     const { side, forceOpen } = toRefs(props)
 
-    const trigger
+    const trigger = ref(null)
+    const dropdown = ref(null)
+    const isOpen = ref(false)
+
+    watch(forceOpen, () => {
+      isOp
