@@ -31,4 +31,9 @@ export default defineComponent({
     const toggleDropdown = (event) => {
       event.stopPropagation()
 
-      isOpen.v
+      isOpen.value = !isOpen.value
+    }
+    const close = (event) => {
+      if (event) event.stopPropagation()
+
+      i
