@@ -42,4 +42,11 @@ export default defineComponent({
     }
 
     const dropdownStyles = reactive({
-      top: `init
+      top: `initial`,
+      right: 0,
+      bottom: `initial`,
+    })
+
+    let removeOutside
+    watch(isOpen, () => {
+      if (!isOpen
