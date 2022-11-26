@@ -36,4 +36,10 @@ export default defineComponent({
     const close = (event) => {
       if (event) event.stopPropagation()
 
-      i
+      isOpen.value = false
+
+      context.emit("onClose")
+    }
+
+    const dropdownStyles = reactive({
+      top: `init
