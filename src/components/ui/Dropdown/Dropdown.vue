@@ -49,4 +49,9 @@ export default defineComponent({
 
     let removeOutside
     watch(isOpen, () => {
-      if (!isOpen
+      if (!isOpen.value) {
+        removeOutside()
+
+        document.removeEventListener("keydown", onKeydown)
+      } else {
+        document.addEventListe
