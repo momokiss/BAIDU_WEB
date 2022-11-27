@@ -54,4 +54,9 @@ export default defineComponent({
 
         document.removeEventListener("keydown", onKeydown)
       } else {
-        document.addEventListe
+        document.addEventListener("keydown", onKeydown)
+
+        const triggerHeight =
+          trigger.value.getBoundingClientRect().height
+
+        if (side.value =
