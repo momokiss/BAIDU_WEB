@@ -59,4 +59,8 @@ export default defineComponent({
         const triggerHeight =
           trigger.value.getBoundingClientRect().height
 
-        if (side.value =
+        if (side.value == "bottom") {
+          dropdownStyles.top = `${triggerHeight + 6}px`
+        }
+        if (side.value == "top") {
+          dr
