@@ -63,4 +63,8 @@ export default defineComponent({
           dropdownStyles.top = `${triggerHeight + 6}px`
         }
         if (side.value == "top") {
-          dr
+          dropdownStyles.bottom = `${triggerHeight + 6}px`
+        }
+
+        nextTick(() => {
+          removeOutside = useOnOutsidePress(dropdow
