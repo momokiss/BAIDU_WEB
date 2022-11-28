@@ -67,4 +67,13 @@ export default defineComponent({
         }
 
         nextTick(() => {
-          removeOutside = useOnOutsidePress(dropdow
+          removeOutside = useOnOutsidePress(dropdown, close)
+        })
+      }
+    })
+
+    const onKeydown = (event) => {
+      if (event.key == "Escape") close()
+    }
+
+    return
