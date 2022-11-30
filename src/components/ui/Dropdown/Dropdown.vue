@@ -76,4 +76,14 @@ export default defineComponent({
       if (event.key == "Escape") close()
     }
 
-    return
+    return {
+      trigger,
+      dropdown,
+      isOpen,
+      toggleDropdown,
+      close,
+      dropdownStyles,
+    }
+  },
+})
+</scr
