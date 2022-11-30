@@ -86,4 +86,8 @@ export default defineComponent({
     }
   },
 })
-</scr
+</script>
+
+<template>
+  <div ref="dropdown" :class="$style.wrapper">
+    <div ref="trigger" @click="toggleDropdown" :class="$style.trigger
