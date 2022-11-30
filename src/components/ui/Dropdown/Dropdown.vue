@@ -90,4 +90,9 @@ export default defineComponent({
 
 <template>
   <div ref="dropdown" :class="$style.wrapper">
-    <div ref="trigger" @click="toggleDropdown" :class="$style.trigger
+    <div ref="trigger" @click="toggleDropdown" :class="$style.trigger">
+      <slot name="trigger" />
+    </div>
+
+    <transition name="popup">
+      <div v-if="isOpen" @click
