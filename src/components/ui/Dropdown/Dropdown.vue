@@ -95,4 +95,9 @@ export default defineComponent({
     </div>
 
     <transition name="popup">
-      <div v-if="isOpen" @click
+      <div v-if="isOpen" @click="close" :class="$style.dropdown" :style="dropdownStyles">
+        <slot name="dropdown" />
+      </div>
+    </transition>
+  </div>
+</template>
