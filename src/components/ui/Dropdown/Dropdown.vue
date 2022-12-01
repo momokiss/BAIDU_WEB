@@ -101,3 +101,17 @@ export default defineComponent({
     </transition>
   </div>
 </template>
+
+<style module>
+.wrapper {
+  position: relative;
+}
+
+.trigger {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+
+  z-index: 1000;
