@@ -1,4 +1,11 @@
 <script>
 import { defineComponent } from "vue"
 
-ex
+export default defineComponent({
+  name: "DropdownDivider",
+})
+</script>
+
+<template>
+  <div :class="$style.wrapper" />
+</template>
