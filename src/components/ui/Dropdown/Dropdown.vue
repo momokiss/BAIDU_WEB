@@ -115,3 +115,8 @@ export default defineComponent({
   position: absolute;
 
   z-index: 1000;
+  padding: 8px 0;
+  border-radius: 8px;
+  background: var(--dropdown-bg);
+}
+</style>
