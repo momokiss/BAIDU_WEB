@@ -12,4 +12,14 @@ export default defineComponent({
 <template>
   <div :class="[$style.wrapper, disabled && $style.disabled]">
     <slot />
-  </di
+  </div>
+</template>
+
+<style module>
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  min-width: 120px;
+  height: 32px;
+  p
