@@ -30,3 +30,12 @@ export default defineComponent({
   line-height: 1.1;
   font-weight: 500;
   color: var(--text-primary);
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.wrapper.disabled {
+  
