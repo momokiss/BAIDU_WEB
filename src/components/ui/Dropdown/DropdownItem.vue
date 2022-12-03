@@ -22,4 +22,11 @@ export default defineComponent({
 
   min-width: 120px;
   height: 32px;
-  p
+  padding: 0 16px 0 8px;
+  margin: 0 8px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--text-primary);
