@@ -38,4 +38,14 @@ export default defineComponent({
 }
 
 .wrapper.disabled {
-  
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wrapper svg {
+  fill: var(--opacity-40);
+
+  margin-right: 10px;
+}
+
+.w
