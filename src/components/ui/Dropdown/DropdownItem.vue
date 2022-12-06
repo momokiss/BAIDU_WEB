@@ -48,4 +48,7 @@ export default defineComponent({
   margin-right: 10px;
 }
 
-.w
+.wrapper:hover {
+  background: var(--opacity-05);
+}
+</style>
