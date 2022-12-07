@@ -98,3 +98,49 @@ export default defineComponent({
 
 <style module>
 .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.2);
+
+  z-index: 1001;
+}
+
+.modal {
+  position: relative;
+
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 1px, rgb(0 0 0 / 20%) 0px 20px 40px;
+  border: 1px solid var(--border);
+
+  padding: 32px 32px 24px 32px;
+  margin: 0 20px;
+}
+
+.close_icon {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+
+  fill: var(--icon);
+  background: transparent;
+  box-sizing: content-box;
+  border-radius: 5px;
+  padding: 4px;
+
+  transition: fill 0.2s ease, background 0.2s ease;
+}
+
+.close_icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+</style>
