@@ -166,3 +166,13 @@ export default {
 
 .base input::-webkit-outer-spin-button,
 .base input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+}
+</style>
