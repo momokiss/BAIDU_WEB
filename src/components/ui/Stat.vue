@@ -10,4 +10,13 @@ export default defineComponent({
 <template>
 	<div :class="$style.wrapper">
 		<div :class="$style.key">{{ name }}</div>
-		<di
+		<div :class="$style.value">
+			<slot />
+		</div>
+	</div>
+</template>
+
+<style module>
+.wrapper {
+	display: flex;
+	align-
