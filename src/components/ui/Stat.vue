@@ -19,4 +19,12 @@ export default defineComponent({
 <style module>
 .wrapper {
 	display: flex;
-	align-
+	align-items: center;
+	justify-content: space-between;
+}
+
+.key {
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-te
