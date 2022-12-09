@@ -27,4 +27,15 @@ export default defineComponent({
 	font-size: 14px;
 	line-height: 1.6;
 	font-weight: 500;
-	color: var(--text-te
+	color: var(--text-tertiary);
+}
+
+.value {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-pr
