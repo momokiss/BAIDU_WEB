@@ -64,3 +64,22 @@ const toggle = () => {
 }
 
 .lock svg {
+  fill: var(--text-secondary);
+}
+
+.wrapper.active {
+  background: var(--blue);
+}
+
+.wrapper.active .slider {
+  left: 16px;
+}
+
+.wrapper:active .slider {
+  width: 14px;
+}
+
+.wrapper.active:active .slider {
+  width: 12px;
+}
+</style>
