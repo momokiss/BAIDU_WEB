@@ -38,4 +38,10 @@ export default defineComponent({
 	font-size: 14px;
 	line-height: 1.6;
 	font-weight: 500;
-	color: var(--text-pr
+	color: var(--text-primary);
+}
+
+.value span {
+	color: var(--text-tertiary);
+}
+</style>
