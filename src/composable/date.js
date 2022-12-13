@@ -13,4 +13,10 @@ export const useCountdown = target => {
   let countdownInterval
 
   const start = () => {
-    const { d, h, m, s, distan
+    const { d, h, m, s, distance } = countdown({
+      target: target.value,
+      now: new Date().getTime(),
+    })
+
+    if (distance < 0) {
+      status.val
