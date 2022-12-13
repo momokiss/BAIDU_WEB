@@ -19,4 +19,8 @@ export const useCountdown = target => {
     })
 
     if (distance < 0) {
-      status.val
+      status.value = "Finished"
+      return { countdownText, status }
+    }
+
+    countdownText.value = `${h < 10 ? `0${h}` : h}:${m < 10 ? `
