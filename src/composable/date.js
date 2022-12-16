@@ -31,4 +31,8 @@ export const useCountdown = target => {
     time.m = m
 
     countdownInterval = setInterval(() => {
-      c
+      const now = new Date().getTime()
+      const { d, h, m, s, distance } = countdown({
+        target: target.value,
+        now,
+      }
