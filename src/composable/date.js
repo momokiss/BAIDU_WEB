@@ -53,4 +53,10 @@ export const useCountdown = target => {
   }
 
   const stop = () => {
-    clearInterval(co
+    clearInterval(countdownInterval)
+  }
+
+  watch(target, () => start())
+  if (target.value) start()
+
+  return { countdownText, status, time, stop 
