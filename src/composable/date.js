@@ -46,4 +46,11 @@ export const useCountdown = target => {
         countdownText.value = `00:00:00`
         clearInterval(countdownInterval)
       } else {
-        countdownText.value = `${h < 10 ? `0${h}` : h}:${m < 10
+        countdownText.value = `${h < 10 ? `0${h}` : h}:${m < 10 ? `0${m}` : m
+          }:${s < 10 ? `0${s}` : s}`
+      }
+    }, 1000)
+  }
+
+  const stop = () => {
+    clearInterval(co
