@@ -59,4 +59,5 @@ export const useCountdown = target => {
   watch(target, () => start())
   if (target.value) start()
 
-  return { countdownText, status, time, stop 
+  return { countdownText, status, time, stop }
+}
