@@ -146,3 +146,62 @@ export const useMarket = () => {
     marketStore.isMarketsLoaded = true
 
     /** quotes */
+    const prevWeekDt = DateTime.now()
+      .set({ hour: 0, minute: 0, second: 0, millisecond: 0 })
+      .minus({ day: 7 })
+      .toISO()
+
+    markets.value.forEach(async market => {
+      const quotes = await fetchQuotesByMarket({
+        id: market.id,
+        limit: 1000,
+      })
+      marketStore.setQuotes({ target: market.symbol, quotes })
+
+      /** weekly diff */
+      const historyQuote = await fetchQuoteByTimestamp({
+        id: market.id,
+        ts: prevWeekDt,
+      })
+      marketStore.setHistoryPrice({
+        target: market.symbol,
+        price: historyQuote[0] ? historyQuote[0].price : 0,
+      })
+
+      /**
+       * Subscriptions
+       */
+
+      /** Quotes */
+      juster.gql
+        .subscription({
+          quotesWma: [
+            {
+              where: {
+                currencyPairId: { _eq: market.id },
+              },
+              order_by: { timestamp: "desc" },
+              limit: 1,
+            },
+            {
+              currencyPairId: true,
+              price: true,
+              timestamp: true,
+            },
+          ],
+        })
+        .subscribe({
+          next: data => {
+            const quote = data.quotesWma[0]
+            marketStore.updateQuotes({
+              target: market.symbol,
+              quote,
+            })
+          },
+          error: console.error,
+        })
+    })
+  }
+
+  return { setupMarket, setupUser, updateWithdrawals, markets }
+}
