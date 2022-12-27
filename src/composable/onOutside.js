@@ -15,4 +15,9 @@ export function useOnOutsidePress(el, onOutsidePressCallback) {
 }
 
 export function useEvent(el, name, listener, options) {
-  let rem
+  let remove = () => { }
+
+  if (el) {
+    const element = isRef(el) ? el : ref(el)
+
+    const removeEventListener = e => e.removeEventListe
