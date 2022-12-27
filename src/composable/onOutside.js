@@ -5,4 +5,10 @@ const events = ["mousedown", "touchstart"]
 export function useOnOutsidePress(el, onOutsidePressCallback) {
   const element = isRef(el) ? el : ref(el)
 
-  const handler
+  const handler = e =>
+    element.value &&
+    !element.value.contains(e.target) &&
+    onOutsidePressCallback(e)
+
+  const event = events.find(x => `on${x}`)
+  
