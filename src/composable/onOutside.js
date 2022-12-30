@@ -20,4 +20,8 @@ export function useEvent(el, name, listener, options) {
   if (el) {
     const element = isRef(el) ? el : ref(el)
 
-    const removeEventListener = e => e.removeEventListe
+    const removeEventListener = e => e.removeEventListener(name, listener)
+    const addEventListener = e =>
+      e.addEventListener(name, listener, options)
+
+    const removeWatch =
