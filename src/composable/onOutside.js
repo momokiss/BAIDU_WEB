@@ -37,4 +37,9 @@ export function useEvent(el, name, listener, options) {
 
     remove = () => {
       removeEventListener(element.value)
-      removeWat
+      removeWatch()
+    }
+  }
+
+  return remove
+}
