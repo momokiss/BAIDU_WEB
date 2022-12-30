@@ -24,4 +24,9 @@ export function useEvent(el, name, listener, options) {
     const addEventListener = e =>
       e.addEventListener(name, listener, options)
 
-    const removeWatch =
+    const removeWatch = watch(
+      element,
+      (n, _, cleanUp) => {
+        if (n) {
+          addEventListener(n)
+          cleanUp(() => removeEventListener(n))
