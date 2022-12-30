@@ -30,3 +30,11 @@ export function useEvent(el, name, listener, options) {
         if (n) {
           addEventListener(n)
           cleanUp(() => removeEventListener(n))
+        }
+      },
+      { immediate: true },
+    )
+
+    remove = () => {
+      removeEventListener(element.value)
+      removeWat
