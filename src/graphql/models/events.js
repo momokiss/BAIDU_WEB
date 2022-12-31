@@ -8,4 +8,10 @@ export const event = {
   totalBetsAmount: true,
   totalLiquidityProvided: true,
   totalLiquidityShares: true,
-  totalValueLocked
+  totalValueLocked: true,
+  liquidityPercent: true,
+  measurePeriod: true,
+  closedOracleTime: true,
+  createdTime: true,
+  startRate: true,
+  closedRa
