@@ -3,4 +3,9 @@ export const event = {
   status: true,
   betsCloseTime: true,
   creatorId: true,
-  pool
+  poolAboveEq: true,
+  poolBelow: true,
+  totalBetsAmount: true,
+  totalLiquidityProvided: true,
+  totalLiquidityShares: true,
+  totalValueLocked
