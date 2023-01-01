@@ -37,3 +37,5 @@ export const event = {
     userId: true,
     createdTime: true,
     shares: true,
+  },
+}
