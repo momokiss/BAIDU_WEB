@@ -14,4 +14,12 @@ export const event = {
   closedOracleTime: true,
   createdTime: true,
   startRate: true,
-  closedRa
+  closedRate: true,
+  winnerBets: true,
+  targetDynamics: true,
+  currencyPair: {
+    symbol: true,
+    id: true,
+  },
+  bets: {
+    id: true
