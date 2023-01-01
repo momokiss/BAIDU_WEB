@@ -22,4 +22,12 @@ export const event = {
     id: true,
   },
   bets: {
-    id: true
+    id: true,
+    side: true,
+    reward: true,
+    amount: true,
+    createdTime: true,
+    userId: true,
+  },
+  deposits: {
+    amo
