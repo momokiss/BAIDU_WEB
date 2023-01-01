@@ -30,4 +30,10 @@ export const event = {
     userId: true,
   },
   deposits: {
-    amo
+    amountAboveEq: true,
+    amountBelow: true,
+    eventId: true,
+    id: true,
+    userId: true,
+    createdTime: true,
+    shares: true,
