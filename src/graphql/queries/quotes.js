@@ -37,3 +37,22 @@ export const getQuoteByTimestamp = gql`
     quotesWma(
       where: { currencyPairId: { _eq: $id }, timestamp: { _eq: $ts } }
       order_by: { timestamp: desc }
+      limit: 1
+    ) {
+      currencyPairId
+      price
+      timestamp
+    }
+  }
+`
+
+export const getTVLByEventId = gql`
+  query getTVLByEventId($id: Int) {
+    totalValueLocked(where: { eventId: { _eq: $id } }) {
+      eventId
+      cumSum
+      createdTime
+      amount
+    }
+  }
+`
