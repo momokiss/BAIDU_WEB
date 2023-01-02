@@ -11,4 +11,10 @@ export const eventSub = {
 	poolBelow: true,
 	totalBetsAmount: true,
 	totalLiquidityProvided: true,
-	totalLiquiditySh
+	totalLiquidityShares: true,
+	totalValueLocked: true,
+	liquidityPercent: true,
+	measurePeriod: true,
+	closedOracleTime: true,
+	createdTime: true,
+	startRate: t
