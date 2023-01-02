@@ -4,3 +4,11 @@ export const eventSub = {
 	betsCloseTime: true,
 	creatorId: true,
 	currencyPair: {
+		symbol: true,
+		id: true,
+	},
+	poolAboveEq: true,
+	poolBelow: true,
+	totalBetsAmount: true,
+	totalLiquidityProvided: true,
+	totalLiquiditySh
