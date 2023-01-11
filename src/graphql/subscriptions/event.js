@@ -26,4 +26,12 @@ export const eventSub = {
 		side: true,
 		reward: true,
 		amount: true,
-		createdT
+		createdTime: true,
+		userId: true,
+	},
+	deposits: {
+		amountAboveEq: true,
+		amountBelow: true,
+		eventId: true,
+		id: true,
+		userId: true
