@@ -17,4 +17,13 @@ export const eventSub = {
 	measurePeriod: true,
 	closedOracleTime: true,
 	createdTime: true,
-	startRate: t
+	startRate: true,
+	closedRate: true,
+	winnerBets: true,
+	targetDynamics: true,
+	bets: {
+		id: true,
+		side: true,
+		reward: true,
+		amount: true,
+		createdT
