@@ -34,4 +34,8 @@ export const eventSub = {
 		amountBelow: true,
 		eventId: true,
 		id: true,
-		userId: true
+		userId: true,
+		createdTime: true,
+		shares: true,
+	},
+}
