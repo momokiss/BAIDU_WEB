@@ -21,4 +21,15 @@ const app = createApp({
  */
 app.use(router)
 app.use(createPinia())
-app.use(createMetaManager(
+app.use(createMetaManager())
+app.use(VueGtag, { config: { id: "G-58LD5WNLR4" } })
+
+/**
+ * Provide
+ */
+app.provide("amplitude", amplitude.getInstance())
+
+/**
+ * Global components
+ */
+import Icon 
