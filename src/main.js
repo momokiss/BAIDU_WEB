@@ -32,4 +32,7 @@ app.provide("amplitude", amplitude.getInstance())
 /**
  * Global components
  */
-import Icon 
+import Icon from "@/components/icons/Icon"
+app.component("Icon", Icon)
+
+app.mount("#app")
