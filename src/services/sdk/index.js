@@ -7,3 +7,7 @@ export {
   juster,
   analytics,
   currentNetwork,
+  switchNetwork,
+  withdrawAll,
+  fetchBalance,
+}
