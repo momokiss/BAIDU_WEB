@@ -18,4 +18,12 @@ export const withdrawAll = async ({ eventIds, address }) => {
     eventIds.forEach(id => {
       transactions.push({
         kind: OpKind.TRANSACTION,
-        ...contract.methods.withdraw(id, address).toTransferPar
+        ...contract.methods.withdraw(id, address).toTransferParams(),
+      })
+    })
+
+    const batch = await juster.sdk._tezos.wallet.batch(transactions)
+
+    const batchOp = await batch.send()
+
+    return { succe
