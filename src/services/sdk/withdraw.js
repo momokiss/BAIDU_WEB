@@ -15,4 +15,7 @@ export const withdrawAll = async ({ eventIds, address }) => {
     if (!eventIds.length || !address) return
 
     const transactions = []
-    eventIds.forEac
+    eventIds.forEach(id => {
+      transactions.push({
+        kind: OpKind.TRANSACTION,
+        ...contract.methods.withdraw(id, address).toTransferPar
