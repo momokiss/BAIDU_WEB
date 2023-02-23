@@ -26,4 +26,8 @@ export const withdrawAll = async ({ eventIds, address }) => {
 
     const batchOp = await batch.send()
 
-    return { succe
+    return { success: true, hash: batchOp.hash }
+  } catch (error) {
+    return { success: false, title: error.title, message: error.message }
+  }
+}
