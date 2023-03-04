@@ -3,4 +3,14 @@ export const formatQuote = amount => {
 }
 
 export const numberWithSymbol = (target, symbol) => {
-  if (!target) r
+  if (!target) return
+
+  let num = parseFloat(target)
+
+  if (num % 1 === 0) {
+    num = num.toFixed(0)
+  } else {
+    num = num.toFixed(2)
+  }
+
+  r
