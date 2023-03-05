@@ -21,4 +21,10 @@ export const calcChange = (a, b) => {
   const percent = (100 * Math.abs(a - b)) / ((a + b) / 2)
   const isIncreased = Math.sign(diff) > 0
 
-  return { diff: Math.abs(diff), percent, i
+  return { diff: Math.abs(diff), percent, isIncreased }
+}
+
+/** Abbreviate */
+export const abbreviateNumber = (num, digits = 1) => {
+  const lookup = [
+    { value: 1, symbol: 
