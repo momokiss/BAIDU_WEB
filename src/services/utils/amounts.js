@@ -18,4 +18,7 @@ export const numberWithSymbol = (target, symbol) => {
 
 export const calcChange = (a, b) => {
   const diff = a - b
-  c
+  const percent = (100 * Math.abs(a - b)) / ((a + b) / 2)
+  const isIncreased = Math.sign(diff) > 0
+
+  return { diff: Math.abs(diff), percent, i
