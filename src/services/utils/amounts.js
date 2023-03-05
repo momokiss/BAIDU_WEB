@@ -27,4 +27,8 @@ export const calcChange = (a, b) => {
 /** Abbreviate */
 export const abbreviateNumber = (num, digits = 1) => {
   const lookup = [
-    { value: 1, symbol: 
+    { value: 1, symbol: "" },
+    { value: 1e3, symbol: "k" },
+    { value: 1e6, symbol: "M" },
+    { value: 1e9, symbol: "G" },
+    { value: 
