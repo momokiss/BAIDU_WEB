@@ -13,4 +13,9 @@ export const numberWithSymbol = (target, symbol) => {
     num = num.toFixed(2)
   }
 
-  r
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, symbol)
+}
+
+export const calcChange = (a, b) => {
+  const diff = a - b
+  c
