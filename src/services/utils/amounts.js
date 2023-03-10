@@ -48,3 +48,9 @@ export const abbreviateNumber = (num, digits = 1) => {
 }
 
 export const f = num => {
+  if (num % 1 === 0) {
+    return num.toFixed(0)
+  } else {
+    return num.toFixed(2)
+  }
+}
