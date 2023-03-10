@@ -41,4 +41,10 @@ export const abbreviateNumber = (num, digits = 1) => {
     .reverse()
     .find(function (item) {
       return num >= item.value
-    
+    })
+  return item
+    ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol
+    : "0"
+}
+
+export const f = num => {
