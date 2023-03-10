@@ -35,4 +35,10 @@ export const abbreviateNumber = (num, digits = 1) => {
     { value: 1e15, symbol: "P" },
     { value: 1e18, symbol: "E" },
   ]
-  const rx = /\.0+$|(\.[0-9]*[1-
+  const rx = /\.0+$|(\.[0-9]*[1-9])0+$/
+  var item = lookup
+    .slice()
+    .reverse()
+    .find(function (item) {
+      return num >= item.value
+    
