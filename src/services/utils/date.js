@@ -41,3 +41,7 @@ export const toReadableDuration = ({ seconds, asObject }) => {
       return {
         val: dur.as("hours"),
         text: "hour",
+      }
+    }
+  }
+}
