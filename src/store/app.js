@@ -1,3 +1,11 @@
 import { defineStore } from "pinia"
 
-export co
+export const useAppStore = defineStore({
+  id: "app",
+
+  state() {
+    return {
+      version: "",
+    }
+  },
+})
