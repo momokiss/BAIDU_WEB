@@ -11,4 +11,11 @@ export const useMarketStore = defineStore({
 
       events: [],
 
-      markets: 
+      markets: {
+        "BTC-USD": {
+          events: [],
+          quotes: [],
+          historyPrice: 0,
+        },
+        "ETH-USD": {
+ 
