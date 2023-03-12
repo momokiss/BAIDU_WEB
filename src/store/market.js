@@ -18,4 +18,10 @@ export const useMarketStore = defineStore({
           historyPrice: 0,
         },
         "ETH-USD": {
- 
+          events: [],
+          quotes: [],
+          historyPrice: 0,
+        },
+        "XTZ-USD": {
+          events: [],
+          quote
