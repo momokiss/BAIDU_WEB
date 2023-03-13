@@ -32,4 +32,8 @@ export const useMarketStore = defineStore({
   },
   actions: {
     setMarket({ target, symbol }) {
-      this.markets[tar
+      this.markets[target] = { ...this.markets[target], ...symbol }
+    },
+
+    setQuotes({ target, quotes }) {
+      this.markets[target].quotes = [..
