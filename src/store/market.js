@@ -36,4 +36,8 @@ export const useMarketStore = defineStore({
     },
 
     setQuotes({ target, quotes }) {
-      this.markets[target].quotes = [..
+      this.markets[target].quotes = [...quotes]
+    },
+    clearQuotes() {
+      Object.keys(this.markets).forEach(symbol => {
+        this.markets[symbol].quotes =
