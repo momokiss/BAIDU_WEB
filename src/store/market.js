@@ -24,4 +24,12 @@ export const useMarketStore = defineStore({
         },
         "XTZ-USD": {
           events: [],
-          quote
+          quotes: [],
+          historyPrice: 0,
+        },
+      },
+    }
+  },
+  actions: {
+    setMarket({ target, symbol }) {
+      this.markets[tar
