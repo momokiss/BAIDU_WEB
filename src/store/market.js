@@ -50,4 +50,9 @@ export const useMarketStore = defineStore({
 
     updEvent(newEvent) {
       let event = this.events.find(event => event.id == newEvent.id)
-      const indexOfEvent = this.events.ind
+      const indexOfEvent = this.events.indexOf(event)
+
+      if (event.status !== newEvent.status) {
+        this.events.splice(indexOfEvent, 1)
+      } else {
+        
