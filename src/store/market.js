@@ -48,4 +48,6 @@ export const useMarketStore = defineStore({
       this.markets[target].historyPrice = price
     },
 
-    updEvent(newEv
+    updEvent(newEvent) {
+      let event = this.events.find(event => event.id == newEvent.id)
+      const indexOfEvent = this.events.ind
