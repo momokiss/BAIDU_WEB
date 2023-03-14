@@ -40,4 +40,12 @@ export const useMarketStore = defineStore({
     },
     clearQuotes() {
       Object.keys(this.markets).forEach(symbol => {
-        this.markets[symbol].quotes =
+        this.markets[symbol].quotes = []
+      })
+    },
+
+    setHistoryPrice({ target, price }) {
+      this.markets[target].historyPrice = price
+    },
+
+    updEvent(newEv
