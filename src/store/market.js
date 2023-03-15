@@ -60,4 +60,10 @@ export const useMarketStore = defineStore({
     },
 
     updateQuotes({ target, quote }) {
-      if (quote.timestamp == this
+      if (quote.timestamp == this.markets[target].quotes[0].timestamp)
+        return
+
+      this.markets[target].quotes.unshift(quote)
+    },
+  },
+})
