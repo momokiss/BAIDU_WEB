@@ -17,4 +17,9 @@ export default {
 }
 </script>
 
-<template
+<template>
+  <Page>
+    <div :class="$style.title">
+      Sorry, <span>but there is nothing here</span>
+    </div>
+    <div :class="$style.de
