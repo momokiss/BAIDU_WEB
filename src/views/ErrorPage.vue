@@ -9,4 +9,12 @@ import Page from "@/components/base/Page"
  */
 import Button from "@/components/ui/Button"
 
-expor
+export default {
+  name: "ErrorPage",
+
+  // eslint-disable-next-line vue/no-reserved-component-names
+  components: { Page, Button },
+}
+</script>
+
+<template
