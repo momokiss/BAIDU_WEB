@@ -22,4 +22,6 @@ export default {
     <div :class="$style.title">
       Sorry, <span>but there is nothing here</span>
     </div>
-    <div :class="$style.de
+    <div :class="$style.description">
+      The page you are trying to access does not exist. This might be
+      because you have entered the 
