@@ -24,4 +24,8 @@ export default {
     </div>
     <div :class="$style.description">
       The page you are trying to access does not exist. This might be
-      because you have entered the 
+      because you have entered the web address incorrectly or the page has
+      moved.
+    </div>
+    <div :class="$style.description">
+      If you are sure that there must b
