@@ -28,4 +28,9 @@ export default {
       moved.
     </div>
     <div :class="$style.description">
-      If you are sure that there must b
+      If you are sure that there must be something here, write to us
+      <span>help@juster.fi</span>.
+    </div>
+
+    <router-link to="/">
+      <Button type="
