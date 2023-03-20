@@ -55,4 +55,12 @@ export default {
   color: var(--text-tertiary);
 }
 
-.descri
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  max-width: 600px;
+
+  margin-b
