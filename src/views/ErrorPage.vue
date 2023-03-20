@@ -45,4 +45,14 @@ export default {
 .title {
   font-size: 32px;
   line-height: 1.4;
-  font-weig
+  font-weight: 600;
+  color: var(--text-primary);
+
+  margin: 60px 0 16px;
+}
+
+.title span {
+  color: var(--text-tertiary);
+}
+
+.descri
