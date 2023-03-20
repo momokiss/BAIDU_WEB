@@ -36,4 +36,13 @@ export default {
       <Button type="secondary" size="small" :class="$style.back_btn">
         <Icon name="back" size="16" /> Back to
         <span>Explore</span>
-    
+      </Button>
+    </router-link>
+  </Page>
+</template>
+
+<style module>
+.title {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weig
