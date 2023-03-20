@@ -63,4 +63,16 @@ export default {
 
   max-width: 600px;
 
-  margin-b
+  margin-bottom: 16px;
+}
+
+.description:last-child {
+  margin-bottom: 24px;
+}
+
+.description span {
+  color: var(--text-secondary);
+}
+
+.back_btn {
+  
