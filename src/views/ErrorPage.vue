@@ -75,4 +75,10 @@ export default {
 }
 
 .back_btn {
-  
+  color: var(--text-tertiary) !important;
+}
+
+.back_btn span {
+  color: var(--text-primary);
+}
+</style>
