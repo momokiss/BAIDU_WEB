@@ -9,4 +9,10 @@ import Page from "@/components/base/Page"
  */
 import Button from "@/components/ui/Button"
 
-e
+export default {
+  name: "LandingPage",
+
+  // eslint-disable-next-line vue/no-reserved-component-names
+  components: { Page, Button },
+}
+</s
