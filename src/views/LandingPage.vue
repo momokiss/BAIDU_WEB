@@ -15,4 +15,10 @@ export default {
   // eslint-disable-next-line vue/no-reserved-component-names
   components: { Page, Button },
 }
-</s
+</script>
+
+<template>
+  <Page :class="$style.wrapper">
+    <div :class="$style.header">
+      <!-- <a
+                href="https
