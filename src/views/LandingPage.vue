@@ -21,4 +21,6 @@ export default {
   <Page :class="$style.wrapper">
     <div :class="$style.header">
       <!-- <a
-                href="https
+                href="https://verbose-krill-7ef.notion.site/Juster-Roadmap-786c58fbd0a8435994d2890202c0ddbf"
+                target="_blank"
+    
