@@ -23,4 +23,8 @@ export default {
       <!-- <a
                 href="https://verbose-krill-7ef.notion.site/Juster-Roadmap-786c58fbd0a8435994d2890202c0ddbf"
                 target="_blank"
-    
+                :class="$style.roadmap"
+            >
+                <Icon name="map" size="16" />
+
+                <div :class="$style.
