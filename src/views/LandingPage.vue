@@ -27,4 +27,8 @@ export default {
             >
                 <Icon name="map" size="16" />
 
-                <div :class="$style.
+                <div :class="$style.roadmap_name">
+                    First Step — <span>MVP</span>
+                </div>
+
+        
