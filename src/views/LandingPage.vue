@@ -36,4 +36,6 @@ export default {
                 <div :class="$style.roadmap_link">View our Roadmap</div>
             </a>-->
 
-      <h1>D
+      <h1>Decentralized Betting Protocol</h1>
+      <div :class="$style.description">
+        <span>Juster</span> is an on-chain smart 
