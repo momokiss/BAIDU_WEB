@@ -38,4 +38,6 @@ export default {
 
       <h1>Decentralized Betting Protocol</h1>
       <div :class="$style.description">
-        <span>Juster</span> is an on-chain smart 
+        <span>Juster</span> is an on-chain smart contract platform
+        allowing users to take part in an automated betting market by
+        creating events, providing liquidity 
