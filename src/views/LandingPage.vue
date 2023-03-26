@@ -40,4 +40,9 @@ export default {
       <div :class="$style.description">
         <span>Juster</span> is an on-chain smart contract platform
         allowing users to take part in an automated betting market by
-        creating events, providing liquidity 
+        creating events, providing liquidity to them, and making bets.
+      </div>
+
+      <div :class="$style.buttons">
+        <router-link to="/">
+          <Button type="primary
