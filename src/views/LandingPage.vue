@@ -49,4 +49,6 @@ export default {
             <Icon name="spark" size="16" />Launch Juster app
           </Button>
         </router-link>
-    
+        <router-link to="/docs">
+          <Button type="secondary" size="medium">
+            <Icon name="book" size="16" />Re
