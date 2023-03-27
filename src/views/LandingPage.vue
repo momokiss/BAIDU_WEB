@@ -45,4 +45,8 @@ export default {
 
       <div :class="$style.buttons">
         <router-link to="/">
-          <Button type="primary
+          <Button type="primary" size="medium">
+            <Icon name="spark" size="16" />Launch Juster app
+          </Button>
+        </router-link>
+    
