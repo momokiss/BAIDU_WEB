@@ -51,4 +51,10 @@ export default {
         </router-link>
         <router-link to="/docs">
           <Button type="secondary" size="medium">
-            <Icon name="book" size="16" />Re
+            <Icon name="book" size="16" />Read the docs
+          </Button>
+        </router-link>
+      </div>
+
+      <div :class="$style.promo">
+        <div :class
