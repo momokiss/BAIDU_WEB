@@ -61,4 +61,10 @@ export default {
           <iframe width="560" height="315"
             src="https://www.youtube.com/embed/rOYu2Qpbpdw?controls=0&modestbranding=1&rel=0" title="Juster promo"
             frameborder="0" allow allowfullscreen></iframe>
- 
+        </div>
+      </div>
+
+      <!-- <img
+                src="@/assets/landing/app.png"
+                width="1100"
+                heigh
