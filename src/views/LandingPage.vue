@@ -67,4 +67,9 @@ export default {
       <!-- <img
                 src="@/assets/landing/app.png"
                 width="1100"
-                heigh
+                height="734"
+                :class="$style.app_img"
+            />-->
+
+      <div :class="$style.hint">
+        <Icon
