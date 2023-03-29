@@ -59,4 +59,6 @@ export default {
       <div :class="$style.promo">
         <div :class="$style.promo_video">
           <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/rOYu2Qpbpdw
+            src="https://www.youtube.com/embed/rOYu2Qpbpdw?controls=0&modestbranding=1&rel=0" title="Juster promo"
+            frameborder="0" allow allowfullscreen></iframe>
+ 
