@@ -57,4 +57,6 @@ export default {
       </div>
 
       <div :class="$style.promo">
-        <div :class
+        <div :class="$style.promo_video">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/rOYu2Qpbpdw
