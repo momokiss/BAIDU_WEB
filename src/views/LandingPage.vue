@@ -72,4 +72,6 @@ export default {
             />-->
 
       <div :class="$style.hint">
-        <Icon
+        <Icon name="help" size="14" />Juster is built on
+        <span>Tezos</span> blockchain and uses
+        <span>Harbinger</span> or
