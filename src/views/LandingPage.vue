@@ -87,4 +87,6 @@ export default {
                         Transparent platform
                     </div>
                     <div :class="$style.benefit_description">
-     
+                        A platform based on a smart contract and aimed not at
+                        profit, but at users
+               
