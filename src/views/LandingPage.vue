@@ -80,4 +80,7 @@ export default {
 
     <!-- <div :class="$style.block">
             <div :class="$style.benefits">
-                <
+                <div :class="$style.benefit">
+                    <img src="@/assets/landing/benefit_1.svg" />
+
+                    <div :class="
