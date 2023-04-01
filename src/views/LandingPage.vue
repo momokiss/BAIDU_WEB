@@ -83,4 +83,8 @@ export default {
                 <div :class="$style.benefit">
                     <img src="@/assets/landing/benefit_1.svg" />
 
-                    <div :class="
+                    <div :class="$style.benefit_name">
+                        Transparent platform
+                    </div>
+                    <div :class="$style.benefit_description">
+     
