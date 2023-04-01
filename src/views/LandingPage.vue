@@ -89,4 +89,7 @@ export default {
                     <div :class="$style.benefit_description">
                         A platform based on a smart contract and aimed not at
                         profit, but at users
-               
+                    </div>
+                </div>
+                <div :class="$style.benefit">
+                    <img src="@/assets/landing/ben
