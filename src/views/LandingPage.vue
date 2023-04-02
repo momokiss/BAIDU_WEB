@@ -92,4 +92,9 @@ export default {
                     </div>
                 </div>
                 <div :class="$style.benefit">
-                    <img src="@/assets/landing/ben
+                    <img src="@/assets/landing/benefit_2.svg" />
+
+                    <div :class="$style.benefit_name">
+                        Built for speed
+                    </div>
+   
