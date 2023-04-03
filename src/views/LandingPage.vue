@@ -106,4 +106,6 @@ export default {
                     <img src="@/assets/landing/benefit_3.svg" />
 
                     <div :class="$style.benefit_name">
-          
+                        Lowest commission
+                    </div>
+                    <div :class="$style.benefit_description
