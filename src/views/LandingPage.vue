@@ -102,4 +102,8 @@ export default {
                         PC or phone
                     </div>
                 </div>
-                <div :class="$style.
+                <div :class="$style.benefit">
+                    <img src="@/assets/landing/benefit_3.svg" />
+
+                    <div :class="$style.benefit_name">
+          
