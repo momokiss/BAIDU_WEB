@@ -98,4 +98,8 @@ export default {
                         Built for speed
                     </div>
                     <div :class="$style.benefit_description">
-                        No waiting or spinners, use the app on the fl
+                        No waiting or spinners, use the app on the fly from your
+                        PC or phone
+                    </div>
+                </div>
+                <div :class="$style.
