@@ -97,4 +97,5 @@ export default {
                     <div :class="$style.benefit_name">
                         Built for speed
                     </div>
-   
+                    <div :class="$style.benefit_description">
+                        No waiting or spinners, use the app on the fl
