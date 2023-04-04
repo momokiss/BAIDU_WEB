@@ -111,4 +111,10 @@ export default {
                     <div :class="$style.benefit_description">
                         Our commissions range 0% - 0.9% and will never grow
                         higher
-              
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div :class="$style.block">
+      
