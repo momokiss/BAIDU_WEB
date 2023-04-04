@@ -117,4 +117,7 @@ export default {
         </div>
 
         <div :class="$style.block">
-      
+            <h2>Three easy steps</h2>
+            <p>
+                Immediately after logging into your account, you can use the
+  
