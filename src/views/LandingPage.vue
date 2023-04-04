@@ -120,4 +120,6 @@ export default {
             <h2>Three easy steps</h2>
             <p>
                 Immediately after logging into your account, you can use the
-  
+                <span>Explore page</span>. Choose among the top events or on the
+                currency pair page.
+          
