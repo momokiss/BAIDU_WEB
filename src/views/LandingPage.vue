@@ -130,4 +130,6 @@ export default {
             </div>
 
             <div :class="$style.steps">
-                <div :class
+                <div :class="$style.step">
+                    <div :class="$style.step_img">
+                        <img src="@/assets/la
