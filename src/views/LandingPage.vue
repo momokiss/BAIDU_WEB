@@ -126,4 +126,8 @@ export default {
 
             <div :class="$style.hint">
                 <Icon name="help" size="14" />Please note that the closer the
-       
+                event starts, the higher the commission
+            </div>
+
+            <div :class="$style.steps">
+                <div :class
