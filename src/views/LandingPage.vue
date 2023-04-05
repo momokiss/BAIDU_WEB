@@ -122,4 +122,8 @@ export default {
                 Immediately after logging into your account, you can use the
                 <span>Explore page</span>. Choose among the top events or on the
                 currency pair page.
-          
+            </p>
+
+            <div :class="$style.hint">
+                <Icon name="help" size="14" />Please note that the closer the
+       
