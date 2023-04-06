@@ -136,4 +136,8 @@ export default {
                     </div>
 
                     <div :class="$style.step_base">
-                        <div
+                        <div :class="$style.step_name">
+                            1 <span>Choose an event</span>
+                        </div>
+
+       
