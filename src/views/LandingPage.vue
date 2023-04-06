@@ -140,4 +140,6 @@ export default {
                             1 <span>Choose an event</span>
                         </div>
 
-       
+                        <div :class="$style.step_description">
+                            Based on the analysis or your preferences, choose an
+                          
