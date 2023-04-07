@@ -146,4 +146,6 @@ export default {
                         </div>
                     </div>
                 </div>
-           
+                <div :class="$style.step">
+                    <div :class="$style.step_img">
+                        <img src="@/assets/landing/s
