@@ -142,4 +142,8 @@ export default {
 
                         <div :class="$style.step_description">
                             Based on the analysis or your preferences, choose an
-                          
+                            event for a specific currency pair
+                        </div>
+                    </div>
+                </div>
+           
