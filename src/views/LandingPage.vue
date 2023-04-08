@@ -152,4 +152,8 @@ export default {
                     </div>
 
                     <div :class="$style.step_base">
-                        <di
+                        <div :class="$style.step_name">
+                            2 <span>Make a bet</span>
+                        </div>
+
+                  
