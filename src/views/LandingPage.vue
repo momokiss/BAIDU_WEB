@@ -156,4 +156,6 @@ export default {
                             2 <span>Make a bet</span>
                         </div>
 
-                  
+                        <div :class="$style.step_description">
+                            Choose the amount (about <span>5%</span> of the
+                        
