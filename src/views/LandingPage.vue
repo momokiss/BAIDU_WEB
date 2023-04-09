@@ -158,4 +158,7 @@ export default {
 
                         <div :class="$style.step_description">
                             Choose the amount (about <span>5%</span> of the
-                        
+                            balance) and place a bet on the desired event
+                        </div>
+                    </div>
+                </div
