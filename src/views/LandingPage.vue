@@ -161,4 +161,7 @@ export default {
                             balance) and place a bet on the desired event
                         </div>
                     </div>
-                </div
+                </div>
+                <div :class="$style.step">
+                    <div :class="$style.step_img">
+                        <img src="@/assets/landing/s
