@@ -172,4 +172,6 @@ export default {
                             3 <span>Win & Withdraw</span>
                         </div>
 
-                        <div 
+                        <div :class="$style.step_description">
+                            For the won event, get a reward and make an instant
+                            withdraw
