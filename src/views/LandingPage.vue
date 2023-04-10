@@ -168,4 +168,8 @@ export default {
                     </div>
 
                     <div :class="$style.step_base">
-                        <div :class="$styl
+                        <div :class="$style.step_name">
+                            3 <span>Win & Withdraw</span>
+                        </div>
+
+                        <div 
