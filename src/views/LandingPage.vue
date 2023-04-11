@@ -174,4 +174,11 @@ export default {
 
                         <div :class="$style.step_description">
                             For the won event, get a reward and make an instant
-                            withdraw
+                            withdrawal without expectations
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
