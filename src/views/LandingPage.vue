@@ -184,4 +184,7 @@ export default {
         <div :class="$style.block">
             <h2>The right approach to betting</h2>
             <p>
-                Immediately after logging into your account, 
+                Immediately after logging into your account, you can use the
+                <span>Explore page</span>. Choose among the top events or on the
+                currency pair page.
+   
