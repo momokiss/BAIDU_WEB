@@ -181,4 +181,7 @@ export default {
             </div>
         </div>
 
-        <div
+        <div :class="$style.block">
+            <h2>The right approach to betting</h2>
+            <p>
+                Immediately after logging into your account, 
