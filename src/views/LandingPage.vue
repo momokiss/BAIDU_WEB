@@ -200,4 +200,6 @@ export default {
                         <div :class="$style.highlight" />
                     </div>
 
+                    <div :class="$style.stat_value">12+</div>
+                    <div :class="$style.stat_description">
                
