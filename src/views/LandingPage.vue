@@ -202,4 +202,7 @@ export default {
 
                     <div :class="$style.stat_value">12+</div>
                     <div :class="$style.stat_description">
-               
+                        currency pairs currently available for betting
+                    </div>
+                </div>
+                <div :cl
