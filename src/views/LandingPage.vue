@@ -205,4 +205,7 @@ export default {
                         currency pairs currently available for betting
                     </div>
                 </div>
-                <div :cl
+                <div :class="$style.stat">
+                    <div :class="$style.line">
+                        <div :class="$style.highlight" />
+      
