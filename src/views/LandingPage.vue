@@ -211,4 +211,8 @@ export default {
                     </div>
 
                     <div :class="$style.stat_value">0 <span>—</span> 0.9%</div>
-                    <div :c
+                    <div :class="$style.stat_description">
+                        low commissions throughout the event
+                    </div>
+                </div>
+                
