@@ -215,4 +215,6 @@ export default {
                         low commissions throughout the event
                     </div>
                 </div>
-                
+                <div :class="$style.stat">
+                    <div :class="$style.line">
+                        <div :class="$style.h
