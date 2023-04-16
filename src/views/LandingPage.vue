@@ -217,4 +217,7 @@ export default {
                 </div>
                 <div :class="$style.stat">
                     <div :class="$style.line">
-                        <div :class="$style.h
+                        <div :class="$style.highlight" />
+                    </div>
+
+                    <div :class="$style.stat_value"><span>~</span>15 sec<
