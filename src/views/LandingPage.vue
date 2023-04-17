@@ -220,4 +220,7 @@ export default {
                         <div :class="$style.highlight" />
                     </div>
 
-                    <div :class="$style.stat_value"><span>~</span>15 sec<
+                    <div :class="$style.stat_value"><span>~</span>15 sec</div>
+                    <div :class="$style.stat_description">
+                        minimum amount of time to accept your bet
+                    </di
