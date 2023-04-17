@@ -223,4 +223,8 @@ export default {
                     <div :class="$style.stat_value"><span>~</span>15 sec</div>
                     <div :class="$style.stat_description">
                         minimum amount of time to accept your bet
-                    </di
+                    </div>
+                </div>
+                <div :class="$style.stat">
+                    <div :class="$style.line">
+                        
