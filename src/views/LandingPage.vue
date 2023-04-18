@@ -227,4 +227,8 @@ export default {
                 </div>
                 <div :class="$style.stat">
                     <div :class="$style.line">
-                        
+                        <div :class="$style.highlight" />
+                    </div>
+
+                    <div :class="$style.stat_value">3</div>
+                    <div :cla
