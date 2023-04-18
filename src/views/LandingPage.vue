@@ -233,4 +233,9 @@ export default {
                     <div :class="$style.stat_value">3</div>
                     <div :class="$style.stat_description">
                         time periods available for events (1h, 6h, 24h)
-                    </di
+                    </div>
+                </div>
+            </div>
+
+            <div :class="$style.hint">
+                <Icon name="help" size="14" />Please not
