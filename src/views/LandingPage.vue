@@ -238,4 +238,9 @@ export default {
             </div>
 
             <div :class="$style.hint">
-                <Icon name="help" size="14" />Please not
+                <Icon name="help" size="14" />Please note that the closer the
+                event starts, the higher the commission
+            </div>
+        </div>
+
+        <div :class="$style.
