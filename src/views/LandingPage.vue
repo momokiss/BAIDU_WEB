@@ -231,4 +231,6 @@ export default {
                     </div>
 
                     <div :class="$style.stat_value">3</div>
-                    <div :cla
+                    <div :class="$style.stat_description">
+                        time periods available for events (1h, 6h, 24h)
+                    </di
