@@ -246,4 +246,9 @@ export default {
         <div :class="$style.block">
             <h2>Key features</h2>
             <p>
-                Immediately after logging into your account, you can u
+                Immediately after logging into your account, you can use the
+                Explore page. Choose among the top events or on the currency
+                pair page.
+            </p>
+
+            <div
