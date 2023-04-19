@@ -251,4 +251,6 @@ export default {
                 pair page.
             </p>
 
-            <div
+            <div :class="$style.features">
+                <div :class="[$style.feat, $style.small]">
+                    <div :class="$s
