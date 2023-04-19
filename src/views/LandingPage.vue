@@ -253,4 +253,6 @@ export default {
 
             <div :class="$style.features">
                 <div :class="[$style.feat, $style.small]">
-                    <div :class="$s
+                    <div :class="$style.feat_subtitle">Monitoring</div>
+                    <div :class="$style.feat_title">
+                        Watch event chan
