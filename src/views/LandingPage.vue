@@ -243,4 +243,7 @@ export default {
             </div>
         </div>
 
-        <div :class="$style.
+        <div :class="$style.block">
+            <h2>Key features</h2>
+            <p>
+                Immediately after logging into your account, you can u
