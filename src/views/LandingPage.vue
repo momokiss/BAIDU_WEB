@@ -258,4 +258,9 @@ export default {
                         Watch event changes in real time.
                         <span
                             >We will show you all the information you need to
-    
+                            track the result.</span
+                        >
+                    </div>
+
+                    <img
+                        src="@/ass
