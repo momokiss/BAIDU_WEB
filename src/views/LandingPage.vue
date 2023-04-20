@@ -255,4 +255,7 @@ export default {
                 <div :class="[$style.feat, $style.small]">
                     <div :class="$style.feat_subtitle">Monitoring</div>
                     <div :class="$style.feat_title">
-                        Watch event chan
+                        Watch event changes in real time.
+                        <span
+                            >We will show you all the information you need to
+    
