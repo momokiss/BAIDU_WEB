@@ -267,4 +267,6 @@ export default {
                         width="413"
                         height="246"
                     />
-           
+                </div>
+                <div :class="[$style.feat, $style.large]">
+                    <div :class="$style.feat_subtitle
