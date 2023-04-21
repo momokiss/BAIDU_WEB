@@ -263,4 +263,8 @@ export default {
                     </div>
 
                     <img
-                        src="@/ass
+                        src="@/assets/landing/feat_1.png"
+                        width="413"
+                        height="246"
+                    />
+           
