@@ -276,4 +276,9 @@ export default {
                             >Don't waste time looking for the right event, we
                             have placed all the necessary information in a
                             compact format & Quick bet with the Join
-                            butt
+                            button.</span
+                        >
+                    </div>
+
+                    <img src="@/assets/landing/feat_2.png" height="215" />
+    
