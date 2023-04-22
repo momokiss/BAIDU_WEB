@@ -274,4 +274,6 @@ export default {
                         All the information you need at a glance.
                         <span
                             >Don't waste time looking for the right event, we
-                           
+                            have placed all the necessary information in a
+                            compact format & Quick bet with the Join
+                            butt
