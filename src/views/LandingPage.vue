@@ -272,4 +272,6 @@ export default {
                     <div :class="$style.feat_subtitle">Details</div>
                     <div :class="$style.feat_title">
                         All the information you need at a glance.
-        
+                        <span
+                            >Don't waste time looking for the right event, we
+                           
