@@ -269,4 +269,7 @@ export default {
                     />
                 </div>
                 <div :class="[$style.feat, $style.large]">
-                    <div :class="$style.feat_subtitle
+                    <div :class="$style.feat_subtitle">Details</div>
+                    <div :class="$style.feat_title">
+                        All the information you need at a glance.
+        
