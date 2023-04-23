@@ -285,4 +285,6 @@ export default {
             </div>
             <div :class="$style.features">
                 <div :class="[$style.feat, $style.large]">
-                   
+                    <div :class="$style.feat_subtitle">Discussions</div>
+                    <div :class="$style.feat_title">
+               
