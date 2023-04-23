@@ -287,4 +287,6 @@ export default {
                 <div :class="[$style.feat, $style.large]">
                     <div :class="$style.feat_subtitle">Discussions</div>
                     <div :class="$style.feat_title">
-               
+                        Chat with other users
+                        <span
+                            >and discuss the possible outcome of
