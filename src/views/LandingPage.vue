@@ -289,4 +289,6 @@ export default {
                     <div :class="$style.feat_title">
                         Chat with other users
                         <span
-                            >and discuss the possible outcome of
+                            >and discuss the possible outcome of the event. Be
+                            careful, other users may be wrong. By placing a bet,
+                            you r
