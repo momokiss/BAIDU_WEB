@@ -281,4 +281,8 @@ export default {
                     </div>
 
                     <img src="@/assets/landing/feat_2.png" height="215" />
-    
+                </div>
+            </div>
+            <div :class="$style.features">
+                <div :class="[$style.feat, $style.large]">
+                   
