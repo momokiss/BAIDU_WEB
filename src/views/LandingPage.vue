@@ -291,4 +291,6 @@ export default {
                         <span
                             >and discuss the possible outcome of the event. Be
                             careful, other users may be wrong. By placing a bet,
-                            you r
+                            you risk your own funds. Pay attention to the number
+                            of likes under the post.</span
+      
