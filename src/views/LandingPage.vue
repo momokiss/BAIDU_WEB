@@ -293,4 +293,8 @@ export default {
                             careful, other users may be wrong. By placing a bet,
                             you risk your own funds. Pay attention to the number
                             of likes under the post.</span
-      
+                        >
+                    </div>
+
+                    <img src="@/assets/landing/feat_3.png" height="223" />
+          
