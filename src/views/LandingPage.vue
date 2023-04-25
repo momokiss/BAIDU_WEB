@@ -301,4 +301,7 @@ export default {
                 <div :class="[$style.feat, $style.small]">
                     <div :class="$style.feat_subtitle">Filters</div>
                     <div :class="$style.feat_title">
-                        Quickly search for event
+                        Quickly search for events using filters.
+                        <span
+                            >You can filter events by status, amount of
+           
