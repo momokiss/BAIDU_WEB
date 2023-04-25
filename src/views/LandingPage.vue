@@ -297,4 +297,6 @@ export default {
                     </div>
 
                     <img src="@/assets/landing/feat_3.png" height="223" />
-          
+                </div>
+                <div :class="[$style.feat, $style.small]">
+                    <div :class="$style.feat_subtitle">Filters</d
