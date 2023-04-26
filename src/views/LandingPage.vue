@@ -304,4 +304,7 @@ export default {
                         Quickly search for events using filters.
                         <span
                             >You can filter events by status, amount of
-           
+                            liquidity, TVL, etc.</span
+                        >
+                    </div>
+                    <div :class="$style.feat_ti
