@@ -310,4 +310,9 @@ export default {
                     <div :class="$style.feat_title">
                         Quickly search for events using filters.
                         <span
-                            >You can filter ev
+                            >You can filter events by status, amount of
+                            liquidity, TVL, etc.</span
+                        >
+                    </div>
+
+  
