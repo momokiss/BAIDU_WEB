@@ -307,4 +307,7 @@ export default {
                             liquidity, TVL, etc.</span
                         >
                     </div>
-                    <div :class="$style.feat_ti
+                    <div :class="$style.feat_title">
+                        Quickly search for events using filters.
+                        <span
+                            >You can filter ev
