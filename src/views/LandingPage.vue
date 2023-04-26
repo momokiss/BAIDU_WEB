@@ -315,4 +315,8 @@ export default {
                         >
                     </div>
 
-  
+                    <img src="@/assets/landing/feat_4.png" height="74" />
+                </div>
+            </div>
+
+            <div :class="
