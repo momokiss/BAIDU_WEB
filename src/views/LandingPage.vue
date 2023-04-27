@@ -322,4 +322,9 @@ export default {
             <div :class="$style.hint">
                 <Icon name="help" size="14" />
                 Other users can manipulate your opinion in
-    
+                <span>Discussions</span>to influence the event ratio
+            </div>
+        </div>
+
+        <div :class="$style.block">
+            <h2>Are
