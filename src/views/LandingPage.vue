@@ -319,4 +319,7 @@ export default {
                 </div>
             </div>
 
-            <div :class="
+            <div :class="$style.hint">
+                <Icon name="help" size="14" />
+                Other users can manipulate your opinion in
+    
