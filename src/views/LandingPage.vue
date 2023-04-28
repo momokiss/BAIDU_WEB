@@ -330,4 +330,8 @@ export default {
             <h2>Are you ready?</h2>
             <p>
                 Immediately after logging into your account, you can use the
-                Expl
+                Explore page. Choose among the top events or on the currency
+                pair page.
+            </p>
+
+      
