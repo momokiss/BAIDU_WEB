@@ -327,4 +327,7 @@ export default {
         </div>
 
         <div :class="$style.block">
-            <h2>Are
+            <h2>Are you ready?</h2>
+            <p>
+                Immediately after logging into your account, you can use the
+                Expl
