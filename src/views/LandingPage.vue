@@ -336,4 +336,8 @@ export default {
 
             <div :class="$style.buttons">
                 <router-link to="/"
-                    ><Button type="primary" size=
+                    ><Button type="primary" size="medium"
+                        ><Icon name="spark" size="16" />Explore the
+                        Juster</Button
+                    ></router-link
+        
