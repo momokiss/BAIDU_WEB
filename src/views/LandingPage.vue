@@ -334,4 +334,6 @@ export default {
                 pair page.
             </p>
 
-      
+            <div :class="$style.buttons">
+                <router-link to="/"
+                    ><Button type="primary" size=
