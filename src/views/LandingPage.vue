@@ -340,4 +340,7 @@ export default {
                         ><Icon name="spark" size="16" />Explore the
                         Juster</Button
                     ></router-link
-        
+                >
+                <router-link to="/docs">
+                    <Button type="secondary" size="medium"
+                   
