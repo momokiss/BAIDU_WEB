@@ -343,4 +343,7 @@ export default {
                 >
                 <router-link to="/docs">
                     <Button type="secondary" size="medium"
-                   
+                        ><Icon name="book" size="16" />Learn the Juster
+                        Docs</Button
+                    ></router-link
+ 
