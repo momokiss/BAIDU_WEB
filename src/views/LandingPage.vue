@@ -346,4 +346,13 @@ export default {
                         ><Icon name="book" size="16" />Learn the Juster
                         Docs</Button
                     ></router-link
- 
+                >
+            </div>
+        </div>-->
+  </Page>
+</template>
+
+<style module>
+.wrapper {
+  max-width: 1170px;
+  
