@@ -377,3 +377,9 @@ export default {
   margin-bottom: 150px;
 }
 
+.roadmap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 50px;
+  background: #141
