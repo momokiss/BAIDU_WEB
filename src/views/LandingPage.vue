@@ -355,4 +355,12 @@ export default {
 <style module>
 .wrapper {
   max-width: 1170px;
-  
+  min-width: 1170px;
+  margin: 0 auto;
+}
+
+.wrapper h1 {
+  font-size: 48px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: cente
