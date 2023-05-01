@@ -382,4 +382,10 @@ export default {
   align-items: center;
   gap: 12px;
   border-radius: 50px;
-  background: #141
+  background: #141414;
+  border: 1px solid var(--border);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+
+  padding: 0 12px;
+  height: 36px;
+  margin: 60px 0
