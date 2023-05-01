@@ -363,4 +363,17 @@ export default {
   font-size: 48px;
   line-height: 1.4;
   font-weight: 600;
-  text-align: cente
+  text-align: center;
+
+  max-width: 800px;
+
+  margin-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
