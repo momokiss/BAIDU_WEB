@@ -398,4 +398,11 @@ export default {
 }
 
 .roadmap svg {
-  fill: v
+  fill: var(--opacity-40);
+}
+
+.roadmap_name {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-te
