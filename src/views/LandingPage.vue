@@ -388,4 +388,14 @@ export default {
 
   padding: 0 12px;
   height: 36px;
-  margin: 60px 0
+  margin: 60px 0 32px;
+
+  transition: border 0.2s ease;
+}
+
+.roadmap:hover {
+  border: 1px solid var(--border-highlight);
+}
+
+.roadmap svg {
+  fill: v
