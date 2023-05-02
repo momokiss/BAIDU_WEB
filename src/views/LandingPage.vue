@@ -405,4 +405,13 @@ export default {
   font-size: 14px;
   line-height: 1.4;
   font-weight: 600;
-  color: var(--text-te
+  color: var(--text-tertiary);
+}
+
+.roadmap_name span {
+  color: var(--text-secondary);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
