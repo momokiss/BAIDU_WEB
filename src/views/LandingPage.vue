@@ -422,4 +422,12 @@ export default {
 .roadmap_link {
   font-size: 14px;
   line-height: 1.4;
-  font
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-te
