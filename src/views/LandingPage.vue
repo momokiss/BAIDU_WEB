@@ -415,3 +415,11 @@ export default {
 .dot {
   width: 6px;
   height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.roadmap_link {
+  font-size: 14px;
+  line-height: 1.4;
+  font
