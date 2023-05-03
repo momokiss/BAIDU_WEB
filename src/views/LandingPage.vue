@@ -442,4 +442,15 @@ export default {
   color: var(--text-secondary);
 }
 
-.b
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.promo {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.promo_video {
+  position: relative;
