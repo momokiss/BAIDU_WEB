@@ -430,4 +430,16 @@ export default {
   font-size: 18px;
   line-height: 1.6;
   font-weight: 400;
-  color: var(--text-te
+  color: var(--text-tertiary);
+  text-align: center;
+
+  max-width: 600px;
+
+  margin-bottom: 40px;
+}
+
+.description span {
+  color: var(--text-secondary);
+}
+
+.b
