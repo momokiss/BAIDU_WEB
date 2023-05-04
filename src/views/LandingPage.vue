@@ -454,3 +454,9 @@ export default {
 
 .promo_video {
   position: relative;
+  padding-bottom: 56.25%;
+  background: #1b1b1b;
+  height: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(0, 
