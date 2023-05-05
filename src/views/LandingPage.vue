@@ -472,4 +472,15 @@ export default {
 
   font-size: 12px;
   line-height: 1;
-  font-weigh
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.hint svg {
+  fill: var(--opacity-40);
+
+  margin-right: 8px;
+}
+
+.hint span {
+  color: var(--text-secondary);
