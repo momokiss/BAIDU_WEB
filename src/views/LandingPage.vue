@@ -459,4 +459,17 @@ export default {
   height: 0;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 1px 10px rgba(0, 
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.app_img {
+  margin-top: 40px;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1;
+  font-weigh
