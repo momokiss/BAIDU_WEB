@@ -484,3 +484,17 @@ export default {
 
 .hint span {
   color: var(--text-secondary);
+  margin: 0 5px;
+}
+
+.block {
+  margin-bottom: 140px;
+}
+
+.block h2 {
+  font-size: 32px;
+
+  margin-bottom: 20px;
+}
+
+.block
