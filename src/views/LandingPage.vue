@@ -505,4 +505,16 @@ export default {
 
   max-width: 550px;
 
-  m
+  margin-bottom: 20px;
+}
+
+.block p:last-child {
+  margin-bottom: 0;
+}
+
+.block p span {
+  color: var(--text-secondary);
+}
+
+.benefits {
+  displ
