@@ -526,4 +526,12 @@ export default {
 }
 
 .benefit_name {
-  font-size: 1
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+
+  margin: 16px 0 8px;
+}
+
+.benefit_des
