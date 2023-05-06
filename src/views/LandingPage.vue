@@ -517,4 +517,13 @@ export default {
 }
 
 .benefits {
-  displ
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefit {
+  max-width: 260px;
+}
+
+.benefit_name {
+  font-size: 1
