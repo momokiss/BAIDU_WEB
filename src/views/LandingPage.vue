@@ -543,4 +543,12 @@ export default {
 
 .steps {
   display: flex;
-  jus
+  justify-content: space-between;
+
+  margin-top: 40px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: spac
