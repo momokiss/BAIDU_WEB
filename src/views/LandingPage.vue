@@ -558,4 +558,15 @@ export default {
   padding: 20px;
   background: var(--card-background);
   width: 370px;
-  heigh
+  height: 252px;
+
+  transition: border 0.2s ease;
+}
+
+.step:hover {
+  border: 1px solid var(--border-highlight);
+}
+
+.step_img {
+  display: flex;
+  alig
