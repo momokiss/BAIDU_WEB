@@ -534,4 +534,13 @@ export default {
   margin: 16px 0 8px;
 }
 
-.benefit_des
+.benefit_description {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.steps {
+  display: flex;
+  jus
