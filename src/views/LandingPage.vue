@@ -551,4 +551,11 @@ export default {
 .step {
   display: flex;
   flex-direction: column;
-  justify-content: spac
+  justify-content: space-between;
+
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  background: var(--card-background);
+  width: 370px;
+  heigh
