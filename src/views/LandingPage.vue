@@ -569,4 +569,13 @@ export default {
 
 .step_img {
   display: flex;
-  alig
+  align-items: center;
+  justify-content: center;
+
+  height: 104px;
+}
+
+.step_base {
+  display: flex;
+  flex-direction: column;
+ 
