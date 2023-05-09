@@ -588,3 +588,13 @@ export default {
   color: var(--text-tertiary);
 
   display: flex;
+  gap: 12px;
+}
+
+.step_name span {
+  color: var(--text-primary);
+}
+
+.step_description {
+  font-size: 14px;
+  line-heig
