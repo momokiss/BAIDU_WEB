@@ -578,4 +578,13 @@ export default {
 .step_base {
   display: flex;
   flex-direction: column;
- 
+  gap: 8px;
+}
+
+.step_name {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-tertiary);
+
+  display: flex;
