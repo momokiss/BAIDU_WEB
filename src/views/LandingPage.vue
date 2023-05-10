@@ -607,4 +607,16 @@ export default {
 }
 
 .stats {
-  display
+  display: flex;
+  justify-content: space-between;
+
+  margin: 50px 0;
+}
+
+.stat {
+  position: relative;
+  max-width: 260px;
+}
+
+.line {
+  position: absolute
