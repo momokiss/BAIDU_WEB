@@ -597,4 +597,14 @@ export default {
 
 .step_description {
   font-size: 14px;
-  line-heig
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.step_description span {
+  color: var(--text-secondary);
+}
+
+.stats {
+  display
