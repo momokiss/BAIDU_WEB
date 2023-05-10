@@ -619,4 +619,16 @@ export default {
 }
 
 .line {
-  position: absolute
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 1px;
+  background: var(--border);
+}
+
+.highlight {
+  width: 2px;
+  height: 24px;
+  background: var(--
