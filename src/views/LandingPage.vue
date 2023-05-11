@@ -631,4 +631,13 @@ export default {
 .highlight {
   width: 2px;
   height: 24px;
-  background: var(--
+  background: var(--blue);
+}
+
+.stat_value {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--text-primary);
+
+  margin-left: 20
