@@ -640,4 +640,13 @@ export default {
   font-weight: 600;
   color: var(--text-primary);
 
-  margin-left: 20
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.stat_value span {
+  color: var(--text-tertiary);
+}
+
+.stat_description {
+  font-s
