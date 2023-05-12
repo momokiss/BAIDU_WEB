@@ -658,4 +658,14 @@ export default {
 }
 
 .features {
-  displ
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  margin-bottom: 32px;
+}
+
+.feat {
+  height: 400px;
+  border-radius: 16px;
+  border:
