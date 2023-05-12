@@ -668,4 +668,11 @@ export default {
 .feat {
   height: 400px;
   border-radius: 16px;
-  border:
+  border: 1px solid var(--border);
+  background: var(--card-background);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.feat.small {
+  width: 440px
