@@ -649,4 +649,13 @@ export default {
 }
 
 .stat_description {
-  font-s
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--text-tertiary);
+
+  margin-left: 20px;
+}
+
+.features {
+  displ
