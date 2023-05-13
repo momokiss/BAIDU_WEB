@@ -675,4 +675,15 @@ export default {
 }
 
 .feat.small {
-  width: 440px
+  width: 440px;
+}
+
+.feat.large {
+  flex: 1;
+}
+
+.feat_subtitle {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  colo
