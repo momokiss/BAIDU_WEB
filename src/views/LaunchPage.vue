@@ -174,3 +174,60 @@ const handleSwitch = () => {
 }
 
 .content {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	max-width: 600px;
+
+	margin-top: 44px;
+}
+
+.content p {
+	font-size: 16px;
+	line-height: 1.6;
+	font-weight: 400;
+	color: var(--text-secondary);
+}
+
+.content p a {
+	color: var(--text-blue);
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	margin-top: 40px;
+	margin-bottom: 200px;
+}
+
+.interactive_block {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.hint {
+	font-size: 13px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: var(--text-tertiary);
+	text-align: center;
+
+	max-width: 400px;
+
+	margin: 8px auto 20px auto;
+}
+
+.switch_btn svg {
+	fill: var(--blue);
+}
+
+@media (max-width: 450px) {
+	.wrapper {
+		padding: 0 20px;
+	}
+}
+</style>
