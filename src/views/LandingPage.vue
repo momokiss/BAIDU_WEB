@@ -695,4 +695,12 @@ export default {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 600;
-  color: var(
+  color: var(--text-primary);
+
+  margin-bottom: 24px;
+}
+
+.feat_title span {
+  color: var(--text-tertiary);
+}
+</style>
