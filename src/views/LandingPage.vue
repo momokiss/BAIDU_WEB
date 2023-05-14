@@ -686,4 +686,13 @@ export default {
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
-  colo
+  color: var(--blue);
+
+  margin-bottom: 16px;
+}
+
+.feat_title {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(
