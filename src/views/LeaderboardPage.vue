@@ -18,4 +18,14 @@ export default defineComponent({
 })
 </script>
 
-<templ
+<template>
+	<Page>
+		<LeaderboardBase />
+	</Page>
+</template>
+
+<style module>
+.wrapper {
+	max-width: 1250px;
+}
+</style>
