@@ -10,18 +10,18 @@ import Page from "@/components/base/Page"
 /**
  * Module
  */
-import MarketBase from "@/components/modules/symbols/MarketBase"
+import MarketsBase from "@/components/modules/symbols/MarketsBase"
 
 export default defineComponent({
-  name: "MarketPage",
+  name: "MarketsPage",
 
-  components: { Page, MarketBase },
+  components: { Page, MarketsBase },
 })
 </script>
 
 <template>
   <Page>
-    <MarketBase />
+    <MarketsBase />
   </Page>
 </template>
 
