@@ -6,3 +6,118 @@
 "@achrinza/node-ipc@^9.2.5":
   version "9.2.5"
   resolved "https://registry.npmjs.org/@achrinza/node-ipc/-/node-ipc-9.2.5.tgz"
+  integrity sha512-kBX7Ay911iXZ3VZ1pYltj3Rfu7Ow9H7sK4H4RSfWIfWR2JKNB40K808wppoRIEzE2j2hXLU+r6TJgCAliCGhyQ==
+  dependencies:
+    "@node-ipc/js-queue" "2.0.3"
+    event-pubsub "4.3.0"
+    js-message "1.0.7"
+
+"@airgap/beacon-core@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/@airgap/beacon-core/-/beacon-core-3.1.3.tgz"
+  integrity sha512-AU8VCS5DeK4aXLIeiW6ie377gwEXkuxDS+UiH60yID5VYGc4YgD+kTrjh0BawCJbQumj/+H5OphGl6n+XJX6Ww==
+  dependencies:
+    "@airgap/beacon-types" "^3.1.3"
+    "@airgap/beacon-utils" "^3.1.2"
+    "@types/libsodium-wrappers" "0.7.9"
+    bs58check "2.1.2"
+    libsodium-wrappers "0.7.9"
+
+"@airgap/beacon-dapp@^3.0.0":
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/@airgap/beacon-dapp/-/beacon-dapp-3.1.3.tgz"
+  integrity sha512-iyXZK9VTL/YRxY2JQDJSWT1+wHuVJ28+JL5ArmQRoOlhEUTVSBKdtSYX34ojOSsqQEGUuW9MTLIM/0vrWQYR3Q==
+  dependencies:
+    "@airgap/beacon-core" "^3.1.3"
+    "@airgap/beacon-transport-matrix" "^3.1.3"
+    "@airgap/beacon-transport-postmessage" "^3.1.3"
+    "@airgap/beacon-ui" "^3.1.3"
+    qrcode-generator "1.4.4"
+
+"@airgap/beacon-transport-matrix@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/@airgap/beacon-transport-matrix/-/beacon-transport-matrix-3.1.3.tgz"
+  integrity sha512-pbehQ4IfMU4lR5mkLTYU5QorrbMvxvOXiWisqziIG0XCAj7FwiZVx30ljT22vWiqygGSTrVGGTwUuhbqX6aKtA==
+  dependencies:
+    "@airgap/beacon-core" "^3.1.3"
+    "@airgap/beacon-utils" "^3.1.2"
+    axios "0.24.0"
+
+"@airgap/beacon-transport-postmessage@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/@airgap/beacon-transport-postmessage/-/beacon-transport-postmessage-3.1.3.tgz"
+  integrity sha512-Cv2Bjpvex5XZ1n9GVfi4iPA4l1hz8LcvBSec6iCEI0Ejjt8bYTPqJESZyxh5Z5A4VXG/gSSS2i1WhzzoyorbfA==
+  dependencies:
+    "@airgap/beacon-core" "^3.1.3"
+    "@airgap/beacon-types" "^3.1.3"
+    "@airgap/beacon-utils" "^3.1.2"
+    "@types/libsodium-wrappers" "0.7.9"
+    libsodium-wrappers "0.7.9"
+
+"@airgap/beacon-types@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/@airgap/beacon-types/-/beacon-types-3.1.3.tgz"
+  integrity sha512-UCsba/Dut6cUrYIe2bnLlCOGsCyQOD/A4gQGdCuviLfqomMQv5m/XoJTtl9jKOlOIm2ytvyl8Z/zrNhK7SZMmA==
+  dependencies:
+    "@types/chrome" "0.0.163"
+
+"@airgap/beacon-ui@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.npmjs.org/@airgap/beacon-ui/-/beacon-ui-3.1.3.tgz"
+  integrity sha512-H6L9lynsn/JsjrKEBrN5lYr1S/d8l3aY48lciNfxJALOR1mOjVBn+tepKP/tVZPansvvf27/8yKwUTMVnp4Qwg==
+  dependencies:
+    "@airgap/beacon-core" "^3.1.3"
+    "@airgap/beacon-transport-postmessage" "^3.1.3"
+    "@airgap/beacon-types" "^3.1.3"
+    "@airgap/beacon-utils" "^3.1.2"
+
+"@airgap/beacon-utils@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.npmjs.org/@airgap/beacon-utils/-/beacon-utils-3.1.2.tgz"
+  integrity sha512-kaDFDSes54Zn/cc6Pvk9BfrrvrLwqTPNuEg15uzAQkDRsZ8e/t7SZ7KTNytw2OJPI0qG792zvd5uJwSG8a0Jdg==
+  dependencies:
+    "@types/libsodium-wrappers" "0.7.9"
+    bs58check "2.1.2"
+    libsodium-wrappers "0.7.9"
+
+"@amplitude/analytics-connector@1.4.4":
+  version "1.4.4"
+  resolved "https://registry.npmjs.org/@amplitude/analytics-connector/-/analytics-connector-1.4.4.tgz"
+  integrity sha512-6JcE1nxrprJt6pHqqDQb7FXRqJmFHG7KJPe0jNZaAvfll4mWKVqZu8W9IV3XiN1P+xgHIV1NN+i3PLOAZWEhXg==
+  dependencies:
+    "@amplitude/ua-parser-js" "0.7.31"
+
+"@amplitude/types@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.npmjs.org/@amplitude/types/-/types-1.10.0.tgz"
+  integrity sha512-xN0gnhutztv6kqHaZ2bre18anQV5GDmMXOeipTvI670g2VjNbPfOzMwu1LN4p1NadYq+GqYI223UcZrXR+R4Pw==
+
+"@amplitude/ua-parser-js@0.7.31":
+  version "0.7.31"
+  resolved "https://registry.npmjs.org/@amplitude/ua-parser-js/-/ua-parser-js-0.7.31.tgz"
+  integrity sha512-+z8UGRaj13Pt5NDzOnkTBy49HE2CX64jeL0ArB86HAtilpnfkPB7oqkigN7Lf2LxscMg4QhFD7mmCfedh3rqTg==
+
+"@amplitude/utils@^1.0.5":
+  version "1.10.0"
+  resolved "https://registry.npmjs.org/@amplitude/utils/-/utils-1.10.0.tgz"
+  integrity sha512-/R8j8IzFH0GYfA6ehQDm5IEzt71gIeMdiYYFIzZp6grERQlgJcwNJMAiza0o2JwwTDIruzqdB3c/vLVjuakp+w==
+  dependencies:
+    "@amplitude/types" "^1.10.0"
+    tslib "^1.9.3"
+
+"@ampproject/remapping@^2.1.0":
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.0.tgz"
+  integrity sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==
+  dependencies:
+    "@jridgewell/gen-mapping" "^0.1.0"
+    "@jridgewell/trace-mapping" "^0.3.9"
+
+"@apollo/client@^3.6.9":
+  version "3.6.9"
+  resolved "https://registry.npmjs.org/@apollo/client/-/client-3.6.9.tgz"
+  integrity sha512-Y1yu8qa2YeaCUBVuw08x8NHenFi0sw2I3KCu7Kw9mDSu86HmmtHJkCAifKVrN2iPgDTW/BbP3EpSV8/EQCcxZA==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.1.1"
+    "@wry/context" "^0.6.0"
+    "@wry/equality" "^0.5.0"
