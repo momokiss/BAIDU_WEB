@@ -1,2 +1,8 @@
 module.exports = {
-  lintOnSave: fals
+  lintOnSave: false,
+  transpileDependencies: ["vue-meta"],
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+    
